@@ -75,8 +75,9 @@ public class Twokenize {
     static String arbitraryAbbrev = "(?:" + aa1 +"|"+ aa2 + "|" + standardAbbreviations + ")";
     static String separators  = "(?:--+|―|—|~|–|=)";
     static String decorations = "(?:[♫♪]+|[★☆]+|[♥❤♡]+|[\\u2639-\\u263b]+|[\\ue001-\\uebbb]+)";
-    static String thingsThatSplitWords = "[^\\s\\.,?\"]";
-    static String embeddedApostrophe = thingsThatSplitWords+"+['’′]" + thingsThatSplitWords + "*";
+    //static String thingsThatSplitWords = "[^\\s\\.,?\"]"; // Versi tokenizer
+    static String thingsThatSplitWords = "[^\\s\\.,\\d?\"]"; // versi fawwaz 
+    static String embeddedApostrophe = thingsThatSplitWords+"+['’′]" + thingsThatSplitWords + "*"; 
     
     public static String OR(String... parts) {
         String prefix="(?:";
@@ -161,9 +162,9 @@ public class Twokenize {
     static String tanggal 		= "((?:3[01]|[12][0-9]|[0]?+[1-9])(?>th|st|nd|rd)?)"; // tidak mungkin ada tangal 99 pilihan 
     static String bulan_1 		= "(?:1[012]|0?+[1-9])"; // tidak mungkin ada bulan 13
     static String bulan_2 		= "(?i)(?>januari|februari|maret|april|mei|juni|juli|agustus|september|oktober|november|desember)";
-    static String bulan_3 		= "(?i)(?>jan|feb|mar|apr|mei|jun|jul|agt|sep|okt|nov|des)"; 
-    static String bulan_4 		= "(?i)(?>January|february|march|april|may|june|july|august|september|october|november|december)";
-    static String bulan_5 		= "(?i)(?>jan|feb|mar|apr|may|jun|jul|aug|sept|oct|nov|dec)"; // masih ada yang overlap
+    static String bulan_3 		= "(?i)(?<!\\w)(?>jan|feb|mar|apr|mei|jun|jul|agt|sep|okt|nov|des)(?!\\w)";  // kalau hanya (?i)()(?>jan|feb|mar|apr|mei|jun|jul|agt|sep|okt|nov|des) aneh pada landmark berubah jadi land,mar,k 
+    static String bulan_4 		= "(?i)(?>january|february|march|april|may|june|july|august|september|october|november|december)";
+    static String bulan_5 		= "(?i)(?<!\\w)(?>jan|feb|mar|apr|may|jun|jul|aug|sept|oct|nov|dec)(?!\\w)"; // masih ada yang overlap
     static String varian_bulan	= "(?>"+bulan_1+"|"+bulan_2+"|"+bulan_4+"|"+bulan_3+"|"+bulan_5+")";
     static String tahun 		= "((?:19|20)?\\d\\d)";
     static String awalan_jam	= "(?i)(?>jam|pk|pukul|pk\\.)";
@@ -177,11 +178,11 @@ public class Twokenize {
     static String norumah		= "("+kodearea + "[ ]?[-]?[ ]?"+ "\\d{7}" + ")";
     static String diskon		= "(1?\\d\\d%)";
     static String multiplier	= "(?:(?i)(K|jt|juta|ribu|rb))";
-    static String matauang		= "(\\d+[ ]?"+multiplier+")";
+    static String matauang		= "(?<!\\w)(\\d+[ ]?"+multiplier+")";
     static String separator_tgl	= "[/\\-' \\.\\u2013]{0,3}";
-    static String durasi		= "[-/]";
+    static String durasi		= "(?<=\\d{1,2})[-/](?=\\d{1,2})";
     
-    static String waktu_jam_1	= "((?:"+awalan_jam+"[ ]?)?"+jam+"(?:(?:"+separator_jam+menit+")|(?:"+durasi+"[ ]?"+jam+"))?)"; // Coba dibikin lebih efektif lagi gimana biar bisa accept varian varian ini 7-9 (durasi) 7pm-9 21:00-19:00
+    static String waktu_jam_1	= "((?:"+awalan_jam+"[ ]?)?"+jam+"(?:(?:"+separator_jam+menit+")|(?:[-][ ]?"+jam+"))?)"; // Coba dibikin lebih efektif lagi gimana biar bisa accept varian varian ini 7-9 (durasi) 7pm-9 21:00-19:00
     static String waktu_tgl_1	= "((?:"+hari+"[ -,]{0,3})?"+tanggal+"(?:"+durasi+tanggal+")?(?:"+separator_tgl+")?(?:"+varian_bulan+")?(?:"+separator_tgl+")?(?:"+tahun+")?)";
     static String waktu_mundur	= "((?i)[HJ][-]"+tanggal+")";
     static String pinBB			= "([a-f0-9]{8})"; // awas bisa bahaya 
@@ -209,20 +210,21 @@ public class Twokenize {
                     url,
                     Email,
                     nohp,
-                    norumah,
+                    //#norumah,
                     diskon,
                     matauang,
                     pinBB,
                     durasi,
+                    //#tanggal,
                     bulan_2,
-                    bulan_4,
+            		bulan_4,
                     bulan_3,
                     bulan_5,
-                    //waktu_mundur,
-                    //waktu_tgl_1,
-                    //waktu_jam_1,
+                    //#waktu_mundur,
+                    //#waktu_tgl_1,
+                    //#waktu_jam_1,
                     timeLike,
-                    //numNum,
+                    //#numNum,
                     numberWithCommas,
                     numComb,
                     emoticon,
@@ -269,7 +271,6 @@ public class Twokenize {
 
     // The main work of tokenizing a tweet.
     private static List<String> simpleTokenize (String text) {
-
         // Do the no-brainers first
         String splitPunctText = splitEdgePunct(text);
         int textLength = splitPunctText.length();

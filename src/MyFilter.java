@@ -72,10 +72,13 @@ public class MyFilter {
 		try{
 			preparedstatement = connection.prepareStatement("SELECT twitter_tweet_id,tweet from filtered_tweet");
 			resultset = preparedstatement.executeQuery();
+			Integer a = 0;
 			while(resultset.next()){
+				System.out.println(a);
 				//doupdatemodifiedlength(resultset.getString("tweet"), resultset.getLong("twitter_tweet_id"));
 				//doupdatewordcounter(resultset.getString("tweet"), resultset.getLong("twitter_tweet_id"));
 				fill_modified_tweet_1(resultset.getString("tweet"), resultset.getLong("twitter_tweet_id"));
+				a++;
 			}
 			System.out.println("[INFO] Successful inserted");
 		}catch(SQLException e){
@@ -90,6 +93,14 @@ public class MyFilter {
 		Twokenize twokenizer = new Twokenize();
 		ArrayList<String> tweets = new ArrayList<>();
 		tweets.addAll(twokenizer.tokenizeRawTweetText(tweet));
+		StringBuffer sb2 = new StringBuffer();
+		for (int i = 0; i < tweets.size(); i++) {
+			sb2.append(tweets.get(i));
+			if(i<tweets.size()){
+				sb2.append(" ");
+			}
+		}
+		
 		StringBuffer sb = new StringBuffer();
 		
 		for (int i = 0; i < tweets.size(); i++) {
@@ -125,6 +136,8 @@ public class MyFilter {
 			}
 		}
 		String tweetmodified = sb.toString();
+		System.out.println("[>] Tweet before:" + tweet);
+		//System.out.println("[###] Tokenized:" + sb2.toString());
 		System.out.println("[UPDATED] Tweet modified:" + tweetmodified);
 		
 	}

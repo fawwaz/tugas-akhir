@@ -84,14 +84,21 @@ public class MyTokenizer {
 		instancelist.addThruPipe(new ArrayDataAndTargetIterator(trainingdata, label));
 		*/
 		
-		// Test filter
+		// Test filter		
 		/*
 		MyFilter mf = new MyFilter();
 		mf.startConnection();
 		mf.updateFilteredTweet();
 		mf.CloseConnection();
 		*/
-		WriteFile(doTokenization(), "hasil_tokenisasi_paling_akhir");
+		
+		// MEncoba tokenisasi
+		ArrayList<String> hasil = doTokenization();
+		hasil.add(Twokenize.embeddedApostrophe.toString());
+		hasil.add(Twokenize.EdgePunctLeft.toString());
+		hasil.add(Twokenize.EdgePunctRight.toString());
+		WriteFile(hasil, "hasil_tokenisasi_paling_akhir");
+		
 		
 		/*
 		MyMallet mm = new MyMallet();
