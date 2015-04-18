@@ -1,0 +1,43 @@
+Dukungan Operating system terhadap sistem terdistribusi 
+Tujuan:
+Enkapsulasi resource yng ada pada  server
+Abstraksi resource yang ada pada server
+Mekanisme invokasi (perhatikan berbeda dengan RPC – remote procedure call) termasuk invokasi, scheduling dan komunikasi antar proses sehingga os layer berada dibawah middleware layer
+Peran utama, mengubah multiple image (heteroginity) menjadi single image sehingga sluruhnya menjadi transparan (os,konkurensi,lokasi) 
+
+Pada middleware fungsi utamanya adalah mengkombinasikan local resource yang ada untuk mengimplementasikan remote invocation antar object
+
+Ada 3 pendekatan dalam sister
+-RPC = remote procedure call
+-RMI = remote method invocation (Generic model)
+-Event Based = hampir sama dengan rmi (programming model)
+
+hasil dari proses diatas
+location transparacny -> apakah tempatnya sama atau beda
+communication protocol -> apakah make tcp atau udp ?
+operating system -> independen terhadap operating system
+Computer hardware
+
+untuk itu perlu dilengkapi
+ada interface peru pendefinisian proses pengiriman request/reply pada proces yang berbeda beda
+
+
+berkaitan degnan model objek diperlukan objct reference cara memanggil objek, bisa dengan namanya atau bisa dengan propertiesnya.
+argumen apa , return valuenya apa dll.
+tercakup disana ada exceptions dan garbage collection.
+
+akibat keragaman internet, intranet dll.
+keragaman platform (mainframe, server dsb)
+keragagaman os (linux,windows)
+keragaman bahasa pemrograman
+
+diberlukan berbagai macam interface dan CORBA adalah usaha untuk itu
+application interface -> manufacturing, medicine
+domain interface -> tumbuh sesuai perkembangan aplikasi
+
+
+termasuk low level distributed programming
+
+langguage mapping follow up idl pada semua supporting language
+
+CORBA = distributed heterogeneous object oriented computing environment

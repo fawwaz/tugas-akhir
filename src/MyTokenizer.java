@@ -93,12 +93,29 @@ public class MyTokenizer {
 		*/
 		
 		// MEncoba tokenisasi
+		/*
 		ArrayList<String> hasil = doTokenization();
 		hasil.add(Twokenize.embeddedApostrophe.toString());
 		hasil.add(Twokenize.EdgePunctLeft.toString());
 		hasil.add(Twokenize.EdgePunctRight.toString());
 		WriteFile(hasil, "hasil_tokenisasi_paling_akhir");
+		*/
 		
+		// Mecoba anotasi ke teks
+		/*
+		MyAnotatorText ma = new MyAnotatorText(doTokenization());
+		WriteFile(ma.getExtractedFeature(), "hasil_tokenisasi_paling_akhir_anotasi");
+		*/
+		
+		// mencoba anotasi ke database
+		/*
+		MyAnotatorDB madb = new MyAnotatorDB();
+		madb.startConnection();
+		//madb.insertTokentoAnotasiDB();
+		madb.CloseConnection();
+		*/
+		
+		System.out.println("halo");
 		
 		/*
 		MyMallet mm = new MyMallet();

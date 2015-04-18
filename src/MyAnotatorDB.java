@@ -4,57 +4,42 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
+import java.util.List;
 
 
-public class MyDBConnector {
+public class MyAnotatorDB {
 	private Connection connection = null;
 	private Statement statement = null;
 	private PreparedStatement preparedstatement = null;
 	private ResultSet resultset = null;
-
-
-	public ArrayList<String> getTweetFromLocalDB(){
-		ArrayList<String> retval = new ArrayList<>();
+	
+	
+	/*
+	 * ITERASI SELURUH DB
+	 * */
+	
+	public void insertTokentoAnotasiDB(){
+		Twokenize tokenizer = new Twokenize();
+		
 		try{
-			preparedstatement = connection.prepareStatement("SELECT tweet from raw_tweet LIMIT 180");
+			preparedstatement = connection.prepareStatement("SELECT twitter_tweet_id,tweet from filtered_tweet where label = 1 LIMIT 180");
 			resultset = preparedstatement.executeQuery();
+			Integer a = 0;
 			while(resultset.next()){
-				retval.add(resultset.getString("tweet"));
+				String tweet 			= resultset.getString("tweet").toLowerCase();
+				Long twitter_tweet_id 	= resultset.getLong("twitter_tweet_id"); 
+				System.out.println("Tweet :"+tweet);
+				List<String> tokenized = tokenizer.tokenizeRawTweetText(tweet);
+				for(String token : tokenized){
+					InsertTokenToAnotasiTweet(token, twitter_tweet_id);
+				}
 			}
+			System.out.println("[INFO] Successful inserted");
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
-		return retval;
 	}
 	
-	public ArrayList<String> getTweetFromLocalDBWhereGuessedTrue(){
-		ArrayList<String> retval = new ArrayList<>();
-		try{
-			preparedstatement = connection.prepareStatement("SELECT tweet from filtered_tweet WHERE guessed=1 LIMIT 180");
-			resultset = preparedstatement.executeQuery();
-			while(resultset.next()){
-				retval.add(resultset.getString("tweet"));
-			}
-		}catch(SQLException e){
-			e.printStackTrace();
-		}
-		return retval;
-	}
-	
-	public ArrayList<String> getTweetFromLocalDBWhereLabelTrue(){
-		ArrayList<String> retval = new ArrayList<>();
-		try{
-			preparedstatement = connection.prepareStatement("SELECT tweet from filtered_tweet WHERE label=1 LIMIT 180");
-			resultset = preparedstatement.executeQuery();
-			while(resultset.next()){
-				retval.add(resultset.getString("tweet"));
-			}
-		}catch(SQLException e){
-			e.printStackTrace();
-		}
-		return retval;
-	}
 	
 	public void startConnection(){
 		try {
@@ -100,11 +85,14 @@ public class MyDBConnector {
 		}
 	}
 	
-	public void InsertTokenToAnotasiTweet(String token,Long twitter_tweet_id){
+	/*
+	 * Memasukan tweet tertokenisasi ke database
+	 * */
+	private void InsertTokenToAnotasiTweet(String token,Long twitter_tweet_id){
 		try{
 			preparedstatement = connection.prepareStatement("INSERT into anotasi_tweet (token,twitter_tweet_id) VALUES (?,?)");
 			preparedstatement.setString(1, token);
-			preparedstatement.setLong(1, twitter_tweet_id);
+			preparedstatement.setLong(2, twitter_tweet_id);
 			preparedstatement.executeUpdate();
 		}catch(SQLException e){
 			e.printStackTrace();

@@ -158,7 +158,7 @@ public class Twokenize {
     public static String Email = "(?<=" +Bound+ ")[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}(?=" +Bound+")";
     
     //## Fawwaz Start
-    static String hari			= "(?>senin|selasa|rabu|kamis|jumat|sabtu|minggu|ahad|sunday|monday|tuesday|wednesday|thursday|friday|saturday|sun|mon|tues|wed|thu|fri|sat|snn|sls|rb|kms|jmt|sab|ming)";
+    static String hari			= "(?>senin|selasa|rabu|kamis|jumat|sabtu|minggu|ahad|sunday|monday|tuesday|wednesday|thursday|friday|saturday|sun|mon|tues|tue|wed|thu|fri|sat|snn|sls|rb|kms|jmt|sab|ming)";
     static String tanggal 		= "((?:3[01]|[12][0-9]|[0]?+[1-9])(?>th|st|nd|rd)?)"; // tidak mungkin ada tangal 99 pilihan 
     static String bulan_1 		= "(?:1[012]|0?+[1-9])"; // tidak mungkin ada bulan 13
     static String bulan_2 		= "(?i)(?>januari|februari|maret|april|mei|juni|juli|agustus|september|oktober|november|desember)";
@@ -250,7 +250,7 @@ public class Twokenize {
     // Note the 'smart quotes' (http://en.wikipedia.org/wiki/Smart_quotes)
     static String edgePunctChars    = "'\"“”‘’«»{}\\(\\)\\[\\]\\*&"; //add \\p{So}? (symbols)
     static String edgePunct    = "[" + edgePunctChars + "]";
-    static String notEdgePunct = "[a-zA-Z0-9]"; // content characters
+    static String notEdgePunct = "[a-zA-Z]"; // content characters // versi twokenize [a-zA-Z0-9]
     static String offEdge = "(^|$|:|;|\\s|\\.|,)";  // colon here gets "(hello):" ==> "( hello ):"
     static Pattern EdgePunctLeft  = Pattern.compile(offEdge + "("+edgePunct+"+)("+notEdgePunct+")");
     static Pattern EdgePunctRight = Pattern.compile("("+notEdgePunct+")("+edgePunct+"+)" + offEdge);
