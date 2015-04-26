@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `raw_tweet`
 --
 
-CREATE TABLE IF NOT EXISTS `raw_tweet` (
+CREATE TABLE IF NOT EXISTS `raw_tweet_final` (
   `id_raw_tweet` int(11) NOT NULL AUTO_INCREMENT,
   `twitter_account_id` bigint(20) NOT NULL,
   `twitter_account_name` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
