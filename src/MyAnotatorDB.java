@@ -40,6 +40,27 @@ public class MyAnotatorDB {
 		}
 	}
 	
+	public void insertTokentoWrongTweet(){
+		Twokenize tokenizer = new Twokenize();
+		
+		try{
+			preparedstatement = connection.prepareStatement("SELECT twitter_tweet_id,tweet from filtered_tweet where label = 2 LIMIT 180");
+			resultset = preparedstatement.executeQuery();
+			Integer a = 0;
+			while(resultset.next()){
+				String tweet 			= resultset.getString("tweet").toLowerCase();
+				Long twitter_tweet_id 	= resultset.getLong("twitter_tweet_id"); 
+				System.out.println("Tweet :"+tweet);
+				List<String> tokenized = tokenizer.tokenizeRawTweetText(tweet);
+				for(String token : tokenized){
+					InsertTokenToWrongAnotation(token, twitter_tweet_id);
+				}
+			}
+			System.out.println("[INFO] Successful inserted");
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+	}
 	
 	public void startConnection(){
 		try {
@@ -91,6 +112,17 @@ public class MyAnotatorDB {
 	private void InsertTokenToAnotasiTweet(String token,Long twitter_tweet_id){
 		try{
 			preparedstatement = connection.prepareStatement("INSERT into anotasi_tweet (token,twitter_tweet_id) VALUES (?,?)");
+			preparedstatement.setString(1, token);
+			preparedstatement.setLong(2, twitter_tweet_id);
+			preparedstatement.executeUpdate();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+	}
+	
+	private void InsertTokenToWrongAnotation(String token,Long twitter_tweet_id){
+		try{
+			preparedstatement = connection.prepareStatement("INSERT into wrong_tweet (token,twitter_tweet_id) VALUES (?,?)");
 			preparedstatement.setString(1, token);
 			preparedstatement.setLong(2, twitter_tweet_id);
 			preparedstatement.executeUpdate();

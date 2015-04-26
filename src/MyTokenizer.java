@@ -69,7 +69,7 @@ public class MyTokenizer {
 		label.add("label1");
 		label.add("label3");
 		label.add("label2");
-		
+		// harus sequence
 		
 		ArrayList<Pipe> pipelist = new ArrayList<>();
 		pipelist.add(new CharSequence2TokenSequence());
@@ -83,7 +83,11 @@ public class MyTokenizer {
 		InstanceList instancelist = new InstanceList(processpipe);
 		instancelist.addThruPipe(new ArrayDataAndTargetIterator(trainingdata, label));
 		*/
-		
+		// Insert to 
+		MyAnotatorDB madb = new MyAnotatorDB();
+		madb.startConnection();
+		madb.insertTokentoWrongTweet();
+		madb.CloseConnection();
 		// Test filter		
 		/*
 		MyFilter mf = new MyFilter();
@@ -98,7 +102,7 @@ public class MyTokenizer {
 		hasil.add(Twokenize.embeddedApostrophe.toString());
 		hasil.add(Twokenize.EdgePunctLeft.toString());
 		hasil.add(Twokenize.EdgePunctRight.toString());
-		WriteFile(hasil, "hasil_tokenisasi_paling_akhir");
+		//WriteFile(hasil, "hasil_tokenisasi_paling_akhir");
 		*/
 		
 		// Mecoba anotasi ke teks
@@ -115,7 +119,7 @@ public class MyTokenizer {
 		madb.CloseConnection();
 		*/
 		
-		System.out.println("halo");
+		
 		
 		/*
 		MyMallet mm = new MyMallet();
