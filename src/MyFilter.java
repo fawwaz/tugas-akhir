@@ -27,25 +27,25 @@ public class MyFilter {
 	 * */
 	public void evaluate(){
 		try{
-			preparedstatement = connection.prepareStatement("SELECT count(*) from filtered_tweet where label = 1 AND guessed = 1");
+			preparedstatement = connection.prepareStatement("SELECT count(*) from filtered_tweet_final where label = 1 AND `guessed-rule1` = 1");
 			resultset = preparedstatement.executeQuery();
 			
 			resultset.next();
 			Integer truepositive = resultset.getInt("count(*)");
 			
-			preparedstatement = connection.prepareStatement("SELECT count(*) from filtered_tweet where label = 1 AND guessed = 2");
+			preparedstatement = connection.prepareStatement("SELECT count(*) from filtered_tweet_final where label = 1 AND `guessed-rule1` = 2");
 			resultset = preparedstatement.executeQuery();
 			
 			resultset.next();
 			Integer falsepositive = resultset.getInt("count(*)");
 			
-			preparedstatement = connection.prepareStatement("SELECT count(*) from filtered_tweet where label = 2 AND guessed = 2");
+			preparedstatement = connection.prepareStatement("SELECT count(*) from filtered_tweet_final where label = 2 AND `guessed-rule1` = 2");
 			resultset = preparedstatement.executeQuery();
 			
 			resultset.next();
 			Integer truenegative = resultset.getInt("count(*)");
 			
-			preparedstatement = connection.prepareStatement("SELECT count(*) from filtered_tweet where label = 2 AND guessed = 1");
+			preparedstatement = connection.prepareStatement("SELECT count(*) from filtered_tweet_final where label = 2 AND `guessed-rule1` = 1");
 			resultset = preparedstatement.executeQuery();
 			
 			resultset.next();
@@ -70,14 +70,14 @@ public class MyFilter {
 	 * */
 	public void updateFilteredTweet(){
 		try{
-			preparedstatement = connection.prepareStatement("SELECT twitter_tweet_id,tweet from filtered_tweet");
+			preparedstatement = connection.prepareStatement("SELECT twitter_tweet_id,tweet from filtered_tweet_final");
 			resultset = preparedstatement.executeQuery();
 			Integer a = 0;
 			while(resultset.next()){
 				System.out.println(a);
-				//doupdatemodifiedlength(resultset.getString("tweet"), resultset.getLong("twitter_tweet_id"));
+				doupdatemodifiedlength(resultset.getString("tweet"), resultset.getLong("twitter_tweet_id"));
 				//doupdatewordcounter(resultset.getString("tweet"), resultset.getLong("twitter_tweet_id"));
-				fill_modified_tweet_1(resultset.getString("tweet"), resultset.getLong("twitter_tweet_id"));
+				//fill_modified_tweet_1(resultset.getString("tweet"), resultset.getLong("twitter_tweet_id"));
 				a++;
 			}
 			System.out.println("[INFO] Successful inserted");
@@ -152,7 +152,7 @@ public class MyFilter {
 		Integer jumlah_kata = counter.length;
 		try{
 			System.out.println("[UPDATED] Tweet id :" + twitter_tweet_id + " counter character :" +jumlah_kata);
-			preparedstatement2 = connection.prepareStatement("UPDATE filtered_tweet SET word_counter = ? WHERE twitter_tweet_id = ? ");
+			preparedstatement2 = connection.prepareStatement("UPDATE filtered_tweet_final SET word_counter = ? WHERE twitter_tweet_id = ? ");
 			preparedstatement2.setInt(1, jumlah_kata);
 			preparedstatement2.setLong(2, twitter_tweet_id);
 			//System.out.println("EXECUTE UPDATE MASIH DI IDABLED BIAR GAK KEPENCET");
@@ -172,11 +172,14 @@ public class MyFilter {
 		// pre process dulu strignnya kaya hitung jumlah karakter, jumlah symbol @ dst
 		
 		Integer jumlah_karakter = text.length();
-		Integer prediction = (sisakarakter(text)>83) ? 1 : 2; 
+		Integer prediction = (sisakarakter(text)>83) ? 1 : 2;
+		//Integer modified_length = sisakarakter(text);
 		try{
-			System.out.println("[UPDATED] Tweet id :" + twitter_tweet_id + " modified_length :" + sisakarakter(text));
-			preparedstatement2 = connection.prepareStatement("UPDATE filtered_tweet SET guessed = ? WHERE twitter_tweet_id = ? ");
+			//System.out.println("[UPDATED] Tweet id :" + twitter_tweet_id + " modified_length :" + sisakarakter(text));
+			preparedstatement2 = connection.prepareStatement("UPDATE filtered_tweet_final SET `guessed-rule1` = ? WHERE twitter_tweet_id = ? ");
+			//preparedstatement2 = connection.prepareStatement("UPDATE filtered_tweet_final SET modified_length = ? WHERE twitter_tweet_id = ? ");
 			preparedstatement2.setInt(1, prediction);
+			//preparedstatement2.setInt(1, modified_length);
 			preparedstatement2.setLong(2, twitter_tweet_id);
 			//System.out.println("EXECUTE UPDATE MASIH DI IDABLED BIAR GAK KEPENCET");
 			preparedstatement2.executeUpdate();
@@ -190,10 +193,10 @@ public class MyFilter {
 	 * */
 	public void insertFilterTweet(){
 		try{
-			preparedstatement = connection.prepareStatement("SELECT id_raw_tweet,twitter_tweet_id,tweet,label from raw_tweet limit 180");
+			preparedstatement = connection.prepareStatement("SELECT id_raw_tweet,twitter_tweet_id,tweet,label from raw_tweet_final where label <> 0");
 			resultset = preparedstatement.executeQuery();
 			while(resultset.next()){
-				preparedstatement2 = connection.prepareStatement("INSERT INTO filtered_tweet (id_raw_tweet,twitter_tweet_id,tweet,label) VALUES (?,?,?,?)");
+				preparedstatement2 = connection.prepareStatement("INSERT INTO filtered_tweet_final (id_raw_tweet,twitter_tweet_id,tweet,label) VALUES (?,?,?,?)");
 				preparedstatement2.setInt(1, resultset.getInt("id_raw_tweet"));
 				preparedstatement2.setLong(2, resultset.getLong("twitter_tweet_id"));
 				preparedstatement2.setString(3, resultset.getString("tweet"));

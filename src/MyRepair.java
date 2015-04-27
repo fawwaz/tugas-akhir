@@ -23,12 +23,47 @@ public class MyRepair {
 	
 	public void CrawlTweet(){
 		System.out.println("[INFO] Connecting to twitter");
+		
+		// Configuration builder akun pertama :
+//		ConfigurationBuilder conf = new ConfigurationBuilder();
+//		conf.setDebugEnabled(true)
+//			.setOAuthConsumerKey("dmDMgfbO9cA0aH3uiNvEcgAPu")
+//			.setOAuthConsumerSecret("vdGlY077SK4Cw1y26oNxcfmBwe0oyFv1Xj17wKai72wZwBZsd6")
+//			.setOAuthAccessToken("470084145-mFLzF9yv4wlfQuRWqUcARJ9Wpfjq4fQBG3Z52MNQ")
+//			.setOAuthAccessTokenSecret("fkULaBtZKHfd7IUIYhmwYWgH0Fjm34QHygCeT5EoYgjlN");
+		
+		// Configuration builder akun kedua 
+//		ConfigurationBuilder conf = new ConfigurationBuilder();
+//		conf.setDebugEnabled(true)
+//			.setOAuthConsumerKey("iCkRoIfXUpzu2UeppuBcvM0IH")
+//			.setOAuthConsumerSecret("S3fNYVS0qR9rtQSbOWpbbUADxCvS6b93Cf5xDrY4KEsdAFCBl9")
+//			.setOAuthAccessToken("3213949031-XkPnBkOBozbmnh1UCynGRmHk0euUnB2tOsgfQSx")
+//			.setOAuthAccessTokenSecret("ql9zWICi0MvbJBBI7EqSN41jwqwcaXjiLJjWP1uCr5eWE");
+		
+		// Configuartion builder akun ketiga
 		ConfigurationBuilder conf = new ConfigurationBuilder();
 		conf.setDebugEnabled(true)
-			.setOAuthConsumerKey("dmDMgfbO9cA0aH3uiNvEcgAPu")
-			.setOAuthConsumerSecret("vdGlY077SK4Cw1y26oNxcfmBwe0oyFv1Xj17wKai72wZwBZsd6")
-			.setOAuthAccessToken("470084145-mFLzF9yv4wlfQuRWqUcARJ9Wpfjq4fQBG3Z52MNQ")
-			.setOAuthAccessTokenSecret("fkULaBtZKHfd7IUIYhmwYWgH0Fjm34QHygCeT5EoYgjlN");
+			.setOAuthConsumerKey("SNLe1piD2RCHTd9JZJO9WNQNy")
+			.setOAuthConsumerSecret("tIYB9BkPfYxjEOrideAv21TcOd08apo8YAnweZoKb2CvadTLxt")
+			.setOAuthAccessToken("3213949031-RWUhQyr39e4JXS5FLmbcE74XrmFnI1EN6MXTJXs")
+			.setOAuthAccessTokenSecret("dDfW347PjYW6uHx263Ifg4t1ljylcz4YVfyPeBy9O4LW4");
+		
+		// Configuration builder akun keempat
+//		ConfigurationBuilder conf = new ConfigurationBuilder();
+//		conf.setDebugEnabled(true)
+//			.setOAuthConsumerKey("Lp9JSZ2iKO4nEQF9t284Fz1oC")
+//			.setOAuthConsumerSecret("0CfTaBMxohfF9KdQ4zpjlvvXGtIroJ3QwoERLEfDJBVCn1AhHE")
+//			.setOAuthAccessToken("3213949031-gZLGrDhPkuVBwI9Xf2BkPClCaftkybmoK1QyXMD")
+//			.setOAuthAccessTokenSecret("5KyGIkgC9ob6QN6YtmQoy2sPYFRKwpzgx8EpdBdxtyWN0");
+		
+		// Configuration builder akun kelima
+//		ConfigurationBuilder conf = new ConfigurationBuilder();
+//		conf.setDebugEnabled(true)
+//			.setOAuthConsumerKey("yCyhqwiEhmrsG2p0qLfnPQvfS")
+//			.setOAuthConsumerSecret("70sv4km1rSYylhxJVPHmN3441bqzuYfvKjEu51qDfMHmKAgIMF")
+//			.setOAuthAccessToken("3213949031-XAqO8eejHRWqOThOaTYefQAqGOgghK1y6ZffSne")
+//			.setOAuthAccessTokenSecret("DXJjegslveM9rrbwDu5aL3HYqpX85K9Z0ix58WRCDzRYF");
+		
 		
 		TwitterFactory tf = new TwitterFactory(conf.build());
 		Twitter twitter = tf.getInstance();
@@ -53,7 +88,7 @@ public class MyRepair {
 			 * LIMIT NYA TWITTER 180 JANGAN LUPA 
 			 * 
 			 * */
-			preparedstatement = connection.prepareStatement("select twitter_tweet_id from mytomcatapp.raw_tweet limit 180");
+			preparedstatement = connection.prepareStatement("select twitter_tweet_id from mytomcatapp.raw_tweet_final limit 60,180");
 
 			resultset = preparedstatement.executeQuery();
 			while(resultset.next()){
@@ -68,7 +103,7 @@ public class MyRepair {
 	
 	public void updateText(Status status){
 		try{
-			preparedstatement = connection.prepareStatement("UPDATE raw_tweet SET tweet = ? WHERE twitter_tweet_id = ?");
+			preparedstatement = connection.prepareStatement("UPDATE raw_tweet_final SET tweet = ? WHERE twitter_tweet_id = ?");
 			preparedstatement.setString(1, status.getText());
 			preparedstatement.setLong(2, status.getId());
 			preparedstatement.executeUpdate();

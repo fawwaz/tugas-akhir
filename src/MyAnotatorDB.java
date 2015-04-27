@@ -22,7 +22,7 @@ public class MyAnotatorDB {
 		Twokenize tokenizer = new Twokenize();
 		
 		try{
-			preparedstatement = connection.prepareStatement("SELECT twitter_tweet_id,tweet from filtered_tweet where label = 1 LIMIT 180");
+			preparedstatement = connection.prepareStatement("SELECT twitter_tweet_id,tweet from filtered_tweet_final where label = 1");
 			resultset = preparedstatement.executeQuery();
 			Integer a = 0;
 			while(resultset.next()){
@@ -111,7 +111,7 @@ public class MyAnotatorDB {
 	 * */
 	private void InsertTokenToAnotasiTweet(String token,Long twitter_tweet_id){
 		try{
-			preparedstatement = connection.prepareStatement("INSERT into anotasi_tweet (token,twitter_tweet_id) VALUES (?,?)");
+			preparedstatement = connection.prepareStatement("INSERT into anotasi_tweet_final (token,twitter_tweet_id) VALUES (?,?)");
 			preparedstatement.setString(1, token);
 			preparedstatement.setLong(2, twitter_tweet_id);
 			preparedstatement.executeUpdate();
@@ -122,7 +122,7 @@ public class MyAnotatorDB {
 	
 	private void InsertTokenToWrongAnotation(String token,Long twitter_tweet_id){
 		try{
-			preparedstatement = connection.prepareStatement("INSERT into wrong_tweet (token,twitter_tweet_id) VALUES (?,?)");
+			preparedstatement = connection.prepareStatement("INSERT into wrong_tweet_final (token,twitter_tweet_id) VALUES (?,?)");
 			preparedstatement.setString(1, token);
 			preparedstatement.setLong(2, twitter_tweet_id);
 			preparedstatement.executeUpdate();

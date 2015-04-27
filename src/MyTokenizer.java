@@ -37,57 +37,38 @@ public class MyTokenizer {
 
 	public static void main(String[] args) {
 		//MyTokenizer.readFile();
+		
+		// Perbaikan token FINAL dulu
 		/*
 		MyRepair mr = new MyRepair();
 		mr.startConnection();
 		mr.CrawlTweet();
 		mr.CloseConnection();
 		*/
+		
+		// MASUKAN TOKEN FINAL KE FILTERED FINAL
 		/*
 		MyFilter mf = new MyFilter();
 		mf.startConnection();
+		//mf.insertFilterTweet();
 		//mf.updateFilteredTweet();
+		//System.out.println("Evaluator di disabled");
+		System.out.println("Evaluating");
 		mf.evaluate();
 		mf.CloseConnection();
 		*/
 		
 		// ---
+		
+
+		// Insert For anotation 
 		/*
-		System.out.println("DO NOTHING");
-		
-		ArrayList<String> trainingdata = new ArrayList<>();
-		ArrayList<String> label	= new ArrayList<>();
-		
-		trainingdata.add("konser");
-		trainingdata.add("januari");
-		trainingdata.add("12");
-		trainingdata.add("/");
-		trainingdata.add("trainig5");
-		
-		label.add("label1");
-		label.add("label2");
-		label.add("label1");
-		label.add("label3");
-		label.add("label2");
-		// harus sequence
-		
-		ArrayList<Pipe> pipelist = new ArrayList<>();
-		pipelist.add(new CharSequence2TokenSequence());
-		pipelist.add(new RegexMatches("ISNUMBER", Pattern.compile("\\d+")));
-		pipelist.add(new RegexMatches("WORD", Pattern.compile("\\d+")));
-		pipelist.add(new RegexMatches("PUNCTUATION", Pattern.compile("[/-]")));
-		pipelist.add(new RegexMatches("ISMONTH", Pattern.compile("(?>march|mar|maret|januari|februari)")));
-		pipelist.add(new PrintInputAndTarget());
-		Pipe processpipe = new SerialPipes(pipelist);
-		
-		InstanceList instancelist = new InstanceList(processpipe);
-		instancelist.addThruPipe(new ArrayDataAndTargetIterator(trainingdata, label));
-		*/
-		// Insert to 
 		MyAnotatorDB madb = new MyAnotatorDB();
 		madb.startConnection();
 		madb.insertTokentoWrongTweet();
 		madb.CloseConnection();
+		*/
+		
 		// Test filter		
 		/*
 		MyFilter mf = new MyFilter();
@@ -96,9 +77,25 @@ public class MyTokenizer {
 		mf.CloseConnection();
 		*/
 		
-		// MEncoba tokenisasi
-		/*
+		// Melakukan tokenisasi
 		ArrayList<String> hasil = doTokenization();
+		//WriteFile(hasil, "dumptokenisasifinal");
+		//System.out.println("Done Writing tokenization result" + hasil.size());
+		
+		
+		// Melakukan anotasi ke database
+		MyAnotatorDB madb = new MyAnotatorDB();
+		madb.startConnection();
+		madb.insertTokentoAnotasiDB();
+		System.out.println("Inserted");
+		madb.CloseConnection();
+		
+		
+		// modifikasi simpletagger agar bisa melakukan anotasi di anotasi final (Set source as twitter_tweet_id, masukan ke database)
+		// Run simpletagger, 
+		// Perbaiki hasil anotasi dari simpletagger
+		// lakukan cross validation 10 times jika belum ada tulis kode secara manual
+		/*
 		hasil.add(Twokenize.embeddedApostrophe.toString());
 		hasil.add(Twokenize.EdgePunctLeft.toString());
 		hasil.add(Twokenize.EdgePunctRight.toString());
@@ -111,13 +108,7 @@ public class MyTokenizer {
 		WriteFile(ma.getExtractedFeature(), "hasil_tokenisasi_paling_akhir_anotasi");
 		*/
 		
-		// mencoba anotasi ke database
-		/*
-		MyAnotatorDB madb = new MyAnotatorDB();
-		madb.startConnection();
-		//madb.insertTokentoAnotasiDB();
-		madb.CloseConnection();
-		*/
+		
 		
 		
 		
@@ -201,10 +192,44 @@ public class MyTokenizer {
 		Twokenize tokenizer = new Twokenize();
 		for (int i = 0; i < tweets.size(); i++) {
 			tokenized.addAll(tokenizer.tokenizeRawTweetText(tweets.get(i)));
-			tokenized.add("\n---\n");
+			//tokenized.add("\n---\n");
 		}
 		
 		return tokenized;
+	}
+	
+	public void examplemallet(){
+		/*
+		System.out.println("DO NOTHING");
+		
+		ArrayList<String> trainingdata = new ArrayList<>();
+		ArrayList<String> label	= new ArrayList<>();
+		
+		trainingdata.add("konser");
+		trainingdata.add("januari");
+		trainingdata.add("12");
+		trainingdata.add("/");
+		trainingdata.add("trainig5");
+		
+		label.add("label1");
+		label.add("label2");
+		label.add("label1");
+		label.add("label3");
+		label.add("label2");
+		// harus sequence
+		
+		ArrayList<Pipe> pipelist = new ArrayList<>();
+		pipelist.add(new CharSequence2TokenSequence());
+		pipelist.add(new RegexMatches("ISNUMBER", Pattern.compile("\\d+")));
+		pipelist.add(new RegexMatches("WORD", Pattern.compile("\\d+")));
+		pipelist.add(new RegexMatches("PUNCTUATION", Pattern.compile("[/-]")));
+		pipelist.add(new RegexMatches("ISMONTH", Pattern.compile("(?>march|mar|maret|januari|februari)")));
+		pipelist.add(new PrintInputAndTarget());
+		Pipe processpipe = new SerialPipes(pipelist);
+		
+		InstanceList instancelist = new InstanceList(processpipe);
+		instancelist.addThruPipe(new ArrayDataAndTargetIterator(trainingdata, label));
+		*/
 	}
 
 }

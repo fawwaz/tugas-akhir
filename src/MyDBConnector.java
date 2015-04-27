@@ -17,7 +17,7 @@ public class MyDBConnector {
 	public ArrayList<String> getTweetFromLocalDB(){
 		ArrayList<String> retval = new ArrayList<>();
 		try{
-			preparedstatement = connection.prepareStatement("SELECT tweet from raw_tweet LIMIT 180");
+			preparedstatement = connection.prepareStatement("SELECT tweet from raw_tweet_final LIMIT 180");
 			resultset = preparedstatement.executeQuery();
 			while(resultset.next()){
 				retval.add(resultset.getString("tweet"));
@@ -31,7 +31,7 @@ public class MyDBConnector {
 	public ArrayList<String> getTweetFromLocalDBWhereGuessedTrue(){
 		ArrayList<String> retval = new ArrayList<>();
 		try{
-			preparedstatement = connection.prepareStatement("SELECT tweet from filtered_tweet WHERE guessed=1 LIMIT 180");
+			preparedstatement = connection.prepareStatement("SELECT tweet from filtered_tweet_final WHERE `guessed-rule1`=1 LIMIT 180");
 			resultset = preparedstatement.executeQuery();
 			while(resultset.next()){
 				retval.add(resultset.getString("tweet"));
@@ -45,7 +45,7 @@ public class MyDBConnector {
 	public ArrayList<String> getTweetFromLocalDBWhereLabelTrue(){
 		ArrayList<String> retval = new ArrayList<>();
 		try{
-			preparedstatement = connection.prepareStatement("SELECT tweet from filtered_tweet WHERE label=1 LIMIT 180");
+			preparedstatement = connection.prepareStatement("SELECT tweet from filtered_tweet_final WHERE label=1 ");
 			resultset = preparedstatement.executeQuery();
 			while(resultset.next()){
 				retval.add(resultset.getString("tweet"));
@@ -102,7 +102,7 @@ public class MyDBConnector {
 	
 	public void InsertTokenToAnotasiTweet(String token,Long twitter_tweet_id){
 		try{
-			preparedstatement = connection.prepareStatement("INSERT into anotasi_tweet (token,twitter_tweet_id) VALUES (?,?)");
+			preparedstatement = connection.prepareStatement("INSERT into anotasi_tweet_final (token,twitter_tweet_id) VALUES (?,?)");
 			preparedstatement.setString(1, token);
 			preparedstatement.setLong(1, twitter_tweet_id);
 			preparedstatement.executeUpdate();
