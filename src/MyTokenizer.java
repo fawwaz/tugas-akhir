@@ -78,7 +78,7 @@ public class MyTokenizer {
 		*/
 		
 		// Melakukan tokenisasi
-		ArrayList<String> hasil = doTokenization();
+		//ArrayList<String> hasil = doTokenization();
 		//WriteFile(hasil, "dumptokenisasifinal");
 		//System.out.println("Done Writing tokenization result" + hasil.size());
 		
@@ -87,7 +87,7 @@ public class MyTokenizer {
 		MyAnotatorDB madb = new MyAnotatorDB();
 		madb.startConnection();
 		madb.insertTokentoAnotasiDB();
-		System.out.println("Inserted");
+		//System.out.println("Inserted");
 		madb.CloseConnection();
 		
 		
