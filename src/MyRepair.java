@@ -5,6 +5,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
 
 import twitter4j.Status;
 import twitter4j.Twitter;
@@ -21,7 +25,7 @@ public class MyRepair {
 	private ResultSet resultset = null;
 
 	
-	public void CrawlTweet(){
+	public void CrawlTweet(boolean savetofirebase){
 		System.out.println("[INFO] Connecting to twitter");
 		
 		// Configuration builder akun pertama :
@@ -41,12 +45,12 @@ public class MyRepair {
 //			.setOAuthAccessTokenSecret("ql9zWICi0MvbJBBI7EqSN41jwqwcaXjiLJjWP1uCr5eWE");
 		
 		// Configuartion builder akun ketiga
-		ConfigurationBuilder conf = new ConfigurationBuilder();
-		conf.setDebugEnabled(true)
-			.setOAuthConsumerKey("SNLe1piD2RCHTd9JZJO9WNQNy")
-			.setOAuthConsumerSecret("tIYB9BkPfYxjEOrideAv21TcOd08apo8YAnweZoKb2CvadTLxt")
-			.setOAuthAccessToken("3213949031-RWUhQyr39e4JXS5FLmbcE74XrmFnI1EN6MXTJXs")
-			.setOAuthAccessTokenSecret("dDfW347PjYW6uHx263Ifg4t1ljylcz4YVfyPeBy9O4LW4");
+//		ConfigurationBuilder conf = new ConfigurationBuilder();
+//		conf.setDebugEnabled(true)
+//			.setOAuthConsumerKey("SNLe1piD2RCHTd9JZJO9WNQNy")
+//			.setOAuthConsumerSecret("tIYB9BkPfYxjEOrideAv21TcOd08apo8YAnweZoKb2CvadTLxt")
+//			.setOAuthAccessToken("3213949031-RWUhQyr39e4JXS5FLmbcE74XrmFnI1EN6MXTJXs")
+//			.setOAuthAccessTokenSecret("dDfW347PjYW6uHx263Ifg4t1ljylcz4YVfyPeBy9O4LW4");
 		
 		// Configuration builder akun keempat
 //		ConfigurationBuilder conf = new ConfigurationBuilder();
@@ -57,12 +61,18 @@ public class MyRepair {
 //			.setOAuthAccessTokenSecret("5KyGIkgC9ob6QN6YtmQoy2sPYFRKwpzgx8EpdBdxtyWN0");
 		
 		// Configuration builder akun kelima
-//		ConfigurationBuilder conf = new ConfigurationBuilder();
-//		conf.setDebugEnabled(true)
-//			.setOAuthConsumerKey("yCyhqwiEhmrsG2p0qLfnPQvfS")
-//			.setOAuthConsumerSecret("70sv4km1rSYylhxJVPHmN3441bqzuYfvKjEu51qDfMHmKAgIMF")
-//			.setOAuthAccessToken("3213949031-XAqO8eejHRWqOThOaTYefQAqGOgghK1y6ZffSne")
-//			.setOAuthAccessTokenSecret("DXJjegslveM9rrbwDu5aL3HYqpX85K9Z0ix58WRCDzRYF");
+		ConfigurationBuilder conf = new ConfigurationBuilder();
+		conf.setDebugEnabled(true)
+			.setOAuthConsumerKey("yCyhqwiEhmrsG2p0qLfnPQvfS")
+			.setOAuthConsumerSecret("70sv4km1rSYylhxJVPHmN3441bqzuYfvKjEu51qDfMHmKAgIMF")
+			.setOAuthAccessToken("3213949031-XAqO8eejHRWqOThOaTYefQAqGOgghK1y6ZffSne")
+			.setOAuthAccessTokenSecret("DXJjegslveM9rrbwDu5aL3HYqpX85K9Z0ix58WRCDzRYF");
+		
+		
+		// Setting up firebase connection too
+		Firebase fb = new Firebase("https://twitterevents.firebaseio.com/");
+			
+		
 		
 		
 		TwitterFactory tf = new TwitterFactory(conf.build());
@@ -72,7 +82,29 @@ public class MyRepair {
 		for (int i = 0; i < tweettofind.size(); i++) {
 			System.out.println("[INFO] Getting information about id = " + tweettofind.get(i));
 			try {
-				updateText(twitter.showStatus(tweettofind.get(i)));
+				Status tweet = twitter.showStatus(tweettofind.get(i));
+				
+				if(savetofirebase){
+					final AtomicBoolean done = new AtomicBoolean(false);
+					fb.child("crawled_tweets").child(String.valueOf(tweet.getId())).setValue(tweet, new Firebase.CompletionListener() {
+						
+						@Override
+						public void onComplete(FirebaseError err, Firebase firebase) {
+							if(err!=null){
+								System.out.println("Not Saved To firbase");
+							}else{
+								System.out.println("saved to firebase");
+							}
+							done.set(true);
+						}
+					});
+					
+					while(!done.get());
+					
+				}else{
+					updateText(tweet);
+				}
+				
 			} catch (TwitterException e) {
 				// TODO Auto-generated catch block
 				System.out.println("[WARNING] Failed to update tweet with id = "+tweettofind.get(i));
@@ -88,7 +120,7 @@ public class MyRepair {
 			 * LIMIT NYA TWITTER 180 JANGAN LUPA 
 			 * 
 			 * */
-			preparedstatement = connection.prepareStatement("select twitter_tweet_id from mytomcatapp.raw_tweet_final limit 60,180");
+			preparedstatement = connection.prepareStatement("select twitter_tweet_id from mytomcatapp.raw_tweet_final where label <> 0 limit 0,180");
 
 			resultset = preparedstatement.executeQuery();
 			while(resultset.next()){

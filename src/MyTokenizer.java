@@ -83,12 +83,12 @@ public class MyTokenizer {
 		//System.out.println("Done Writing tokenization result" + hasil.size());
 		
 		
-		// Melakukan anotasi ke database
-		MyAnotatorDB madb = new MyAnotatorDB();
-		madb.startConnection();
-		madb.insertTokentoAnotasiDB();
+		// ---Melakukan anotasi ke database---
+		//MyAnotatorDB madb = new MyAnotatorDB();
+		//madb.startConnection();
+		//madb.insertTokentoAnotasiDB();
 		//System.out.println("Inserted");
-		madb.CloseConnection();
+		//madb.CloseConnection();
 		
 		
 		// modifikasi simpletagger agar bisa melakukan anotasi di anotasi final (Set source as twitter_tweet_id, masukan ke database)
@@ -108,8 +108,32 @@ public class MyTokenizer {
 		WriteFile(ma.getExtractedFeature(), "hasil_tokenisasi_paling_akhir_anotasi");
 		*/
 		
+		// Insert ke event table
+		// jangan lupa nyamain yang timenya masih besok jadi tanggal.
+		MyEndProcess mep = new MyEndProcess();
+		mep.startConnection();
+		mep.fillEventTable();
+		mep.CloseConnection();
 		
 		
+		
+		
+		//--- DISINI NYAMBUNG SAMA FIREBASE ---
+		
+		// Menyimpan ke firebase
+		//MyRepair mr = new MyRepair();
+		//mr.startConnection();
+		//mr.CrawlTweet(true); // if true save to firebase
+		//mr.CloseConnection();
+		
+		//MyFirebase mf = new MyFirebase();
+		//mf.explodeTweet(); // For saving to crawledtweet
+		//mf.startConnection();
+		//mf.MakeRelevangOrIrrelevantData();
+		//mf.CloseConnection();
+		//System.out.println("[SELESAI] sudah selesai opersainya");
+		
+		// Twokenize dari firebase
 		
 		
 		/*
