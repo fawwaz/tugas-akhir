@@ -110,10 +110,10 @@ public class MyTokenizer {
 		
 		// Insert ke event table
 		// jangan lupa nyamain yang timenya masih besok jadi tanggal.
-		MyEndProcess mep = new MyEndProcess();
-		mep.startConnection();
-		mep.fillEventTable();
-		mep.CloseConnection();
+		//MyEndProcess mep = new MyEndProcess();
+		//mep.startConnection();
+		//mep.fillEventTable();
+		//mep.CloseConnection();
 		
 		
 		

@@ -46,8 +46,8 @@ public class MyEndProcess {
 				
 				// cek dulu apakah sudah berubah last tweet dr yng sekarang ?
 				if(!last_tweet_id.equals(twitter_tweet_id)){
-					// insert dulu ke database, semuanya to String;
-					insertTupleToDB(twitter_tweet_id, name.toString(), place.toString(), time.toString(), info.toString());
+					// insert dulu ke database, semuanya to String;  perhatikan yang diinsert previous tweet id (last_twet_id) beda sama yang kalau udah akhir (kolom diabwah)
+					insertTupleToDB(last_tweet_id, name.toString(), place.toString(), time.toString(), info.toString());
 					/*
 					System.out.println("===Tuple Yg akan diinsert===");
 					System.out.println("Tuple ke : "+a);
@@ -83,6 +83,7 @@ public class MyEndProcess {
 				
 
 				if(resultset.isLast()){
+					// kalau ini yagn diinsert current_twitter_tweet_id beda
 					insertTupleToDB(twitter_tweet_id, name.toString(), place.toString(), time.toString(), info.toString());
 					/*
 					System.out.println("===Tuple Yg akan diinsert===");
