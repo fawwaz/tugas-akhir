@@ -114,7 +114,10 @@ public class MyTokenizer {
 		//mep.startConnection();
 		//mep.fillEventTable();
 		//mep.CloseConnection();
-		
+
+		// Insert gazeteer ke database
+		MyGazeteer mg = new MyGazeteer();
+		mg.readAndInsertGazeteer();
 		
 		
 		
