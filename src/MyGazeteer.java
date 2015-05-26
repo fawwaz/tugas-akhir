@@ -25,9 +25,8 @@ public class MyGazeteer {
 			br = new BufferedReader(new FileReader("gazeteer2"));
  
 			while ((sCurrentLine = br.readLine()) != null) {
-				System.out.println(sCurrentLine);
-				
-				
+				//System.out.println(sCurrentLine);
+				insertIntoDB(sCurrentLine);
 			}
 		}catch(Exception e){
 			e.printStackTrace();
@@ -41,8 +40,32 @@ public class MyGazeteer {
 		}
 	}
 	
+	public boolean isGazetteer(String gazetteer){
+		try{
+			preparedstatement = connection.prepareStatement("select location from gazetteer where location = ?");
+			preparedstatement.setString(1, gazetteer);
+			resultset = preparedstatement.executeQuery();
+			if(resultset.next()){
+				return true;
+			}else{
+				return false;
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
+	
 	public void insertIntoDB(String Gazeteer){
-		preparedstatement = connection.prepareStatement("Insert into gazetteer ")
+		try{
+			preparedstatement = connection.prepareStatement("Insert into gazetteer (location) values(?)");
+			preparedstatement.setString(1, Gazeteer);
+			preparedstatement.executeUpdate();
+			System.out.println("[Inserted] inserted to gazetteer"+Gazeteer);
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
 	}
 	
 	public void startConnection(){
