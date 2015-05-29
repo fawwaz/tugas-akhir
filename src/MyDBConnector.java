@@ -56,6 +56,20 @@ public class MyDBConnector {
 		return retval;
 	}
 	
+	public ArrayList<String> getTweetFromLocalDBWhereLabelFalse(){
+		ArrayList<String> retval = new ArrayList<>();
+		try{
+			preparedstatement = connection.prepareStatement("SELECT tweet from filtered_tweet_final WHERE label=2 ");
+			resultset = preparedstatement.executeQuery();
+			while(resultset.next()){
+				retval.add(resultset.getString("tweet"));
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		return retval;
+	}
+	
 	public void startConnection(){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");

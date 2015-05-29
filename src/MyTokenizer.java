@@ -116,8 +116,33 @@ public class MyTokenizer {
 		//mep.CloseConnection();
 
 		// Insert gazeteer ke database
-		MyGazeteer mg = new MyGazeteer();
-		mg.readAndInsertGazeteer();
+		//MyGazeteer mg = new MyGazeteer();
+		//mg.readAndInsertGazeteer();
+		
+		
+		// Insert into wrong_db_final
+		//MyAnotatorDB madb = new MyAnotatorDB();
+		//madb.startConnection();
+		//madb.insertTokentoWrongTweet();
+		//madb.CloseConnection();
+		
+		
+		
+		// show tf idf
+		MyTFIDF mti = new MyTFIDF();
+		mti.CountTFIDF();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -205,13 +230,20 @@ public class MyTokenizer {
 		}
 	}
 	
-	public static ArrayList<String> doTokenization(){
+	public static ArrayList<String> doTokenization(boolean isWrongTweet){
+		ArrayList<String> tweets;
 		MyDBConnector dbcon = new MyDBConnector();
 		dbcon.startConnection();
 		
 		// get arraylist
 		//ArrayList<String> tweets = dbcon.getTweetFromLocalDB();
-		ArrayList<String> tweets = dbcon.getTweetFromLocalDBWhereLabelTrue();
+		if(isWrongTweet){
+			System.out.println("Melakukan fetching false tweet");
+			tweets = dbcon.getTweetFromLocalDBWhereLabelFalse();
+		}else{
+			tweets = dbcon.getTweetFromLocalDBWhereLabelTrue();
+		}
+		
 		ArrayList<String> tokenized = new ArrayList<>();
 		dbcon.CloseConnection();
 		

@@ -44,7 +44,7 @@ public class MyAnotatorDB {
 		Twokenize tokenizer = new Twokenize();
 		
 		try{
-			preparedstatement = connection.prepareStatement("SELECT twitter_tweet_id,tweet from filtered_tweet where label = 2 LIMIT 180");
+			preparedstatement = connection.prepareStatement("SELECT twitter_tweet_id,tweet from filtered_tweet_final where label = 2");
 			resultset = preparedstatement.executeQuery();
 			Integer a = 0;
 			while(resultset.next()){
@@ -53,6 +53,7 @@ public class MyAnotatorDB {
 				System.out.println("Tweet :"+tweet);
 				List<String> tokenized = tokenizer.tokenizeRawTweetText(tweet);
 				for(String token : tokenized){
+					System.out.println(token);
 					InsertTokenToWrongAnotation(token, twitter_tweet_id);
 				}
 			}
