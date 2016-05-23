@@ -84,11 +84,12 @@ public class MyTokenizer {
 		
 		
 		// ---Melakukan anotasi ke database---
-		//MyAnotatorDB madb = new MyAnotatorDB();
-		//madb.startConnection();
+		MyAnotatorDB madb = new MyAnotatorDB();
+		madb.startConnection();
 		//madb.insertTokentoAnotasiDB();
-		//System.out.println("Inserted");
-		//madb.CloseConnection();
+                //madb.copylabel();
+		System.out.println("Inserted");
+		madb.CloseConnection();
 		
 		
 		// modifikasi simpletagger agar bisa melakukan anotasi di anotasi final (Set source as twitter_tweet_id, masukan ke database)
@@ -129,8 +130,10 @@ public class MyTokenizer {
 		
 		
 		// show tf idf
-		MyTFIDF mti = new MyTFIDF();
-		mti.CountTFIDF();
+                // Disabeld ulu fawwaz  27/02/16
+//		System.out.println("DONT FORGET TO COUNT TF IDF");
+//		MyTFIDF mti = new MyTFIDF();
+//		mti.CountTFIDF();
 		
 		
 		
@@ -169,7 +172,7 @@ public class MyTokenizer {
 		mm.domallet(doTokenization());
 		System.out.println("ingat ini masih lagi tahapan coba coba ");
 		*/
-		
+		System.out.println("DONT FORGET TO COUNT TF IDF current sttus is disabled");
 	}
 
 	public static void readFile(){

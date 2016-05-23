@@ -40,6 +40,25 @@ public class MyAnotatorDB {
 		}
 	}
 	
+        public void copylabel(){
+            PreparedStatement ps;
+            try{
+                preparedstatement = connection.prepareStatement("SELECT label,sequence_num from anotasi_tweet_final");
+                resultset = preparedstatement.executeQuery();
+                while(resultset.next()){
+                    String label = resultset.getString("label");
+                    Integer sequence = resultset.getInt("sequence_num");
+                    ps = connection.prepareStatement("UPDATE anotasi_tweet_final SET label2=? WHERE sequence_num=?");
+                    ps.setString(1, label);
+                    ps.setInt(2, sequence);
+                    ps.executeUpdate();
+                    System.out.println("Success updating sequence"+sequence);
+                }
+            }catch(SQLException e){
+                e.printStackTrace();
+            }
+        }
+        
 	public void insertTokentoWrongTweet(){
 		Twokenize tokenizer = new Twokenize();
 		

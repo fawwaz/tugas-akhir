@@ -1,0 +1,111 @@
+- [DONE] Tambahkan api key alternatif dari cron
+- [DONE] Set up port-forward di environment local
+- [DONE] Pastikan databasenya konek ke environment lokal selama DEVELOPMENT
+- [DONE] Tokenisasi
+- [TEST] Tampilkan hasil tokenisasi ke command line
+- [DONE] Bikin pipe khusus
+- [DONE] Bikin iterator khusus
+	- Pasang koneksi ke gazeteer, load dulu gazeteer check is contains or not
+	- Pasang koneksi ke tb_katadasr, load dulu is contains
+- [DONE] Bikin custom pipeline
+- [DONE] Lakukan predicting data
+- [DONE] Convert hasil predict data agar sesuai dengan insert di database
+- [DONE] Bikin iterator khusus untuk twitter / instance twitter (String maybe)
+- [DONE] Tiru code di simple tagger
+- [TEST] Lihat hasil pemisahan line
+- [DONE] Insert ke database + update jika belum ada
+- [DONE] Balikin konfigurasi databasenya ke konfigurasi server
+- [done] push data ke server
+
+
+
+
+
+
+TODO
+=====
+- PENTING Setiap start connection pastikan environmentnya benar, apakah development atau remote
+	lokasi start connection
+	- Mypipe
+	- 
+- Hilangkan limit pada query mysql di myiterator (180 by default sama dengan twitter limit)
+- [ADDITIONAL] Save data ke server firebase biar support encoding utf8mb4
+- Jangan lupa update isProcessed menjadi not null / 1 jika sudah diproese
+- balikin lagi api key nya jadi yang semula
+
+- Bikin slide
+
+
+
+
+
+
+
+
+
+TODO AFTER SIDANG
+=====
+Dari Berita Acara & Catatan saya:
+- Refer definisi event sesuaikan dengan 5W1H mengapa dalam tugas akhir ini hanya what where dan when. Apakah inti dari event dapat diacu dengan hanya what where when. Refer ke pariwisata di lokasi di Indonesia.
+- Karakteristik tweet indonesia perlu ditambahkan,  misal fenomena di indonesia adalah keberadaan kultweet dan penggunaan bahasa asing yang bercampur dengan bahasa indonesia. Jelaskan akibatnya terhadap pemilihan arsitektur (mengapa kultweet diabaikan ?) Tulis berapa persentase tweet tentang event yang berupa kultweet, buktikan bahwa meski ada fenomena kultweet, yang benar-benar masuk ke sistem tidak banyak (hitung berapa persen). Kaitkan efeknya terhadap bab 1
+- Rumusan masalah: Eksplisitkan bahwa konfigurasi yang ditentukan hanya konfigurasi algoritma CRF, bukan seluruh konfigurasi. Dalam laporan tertulis konfigurasi apa saja. Jika tertulis konfigurasi apa saja, maka seharusnya penelitian ini meneliti seluruh algoritma yang ada.
+- Typo isitlah bahasa inggris, confussion, precission
+- Perbaikan rumusan masalah , tujuan (hanya meneliti tentang algoritma CRF), batasan dan kesimpulan (eksplisitkan bahwa ini per token bukan overall instance) perbaiki struktur latar belakang.
+- Batasan masalah : "tweet berbahasa indonesia " vs "tweet di indonesia" (lokasi) --> seharusnya tweet di indonesia(lokasi) k
+- Eksplisitkan pertimbangan-pertimbangan yang digunakan dalam arsitektur sistem. Nyatakan bahwa pertimbangan tersebut didapatkan dari pengamatan selama 1 bulan pertama.
+- Hal 44 : Cek aturan relevan / tidak relevan, ada salah ketik disana
+- Hal 47 : Lampirkan list kata relevan / tidak relevan jika memungkinkan
+- Saran : Penelitian bsia dilanjutkan untuk diuji sebagai arsitektur language indepndent method -> tweet berbahasa inggris juga
+- Saran : Tambahkan fitur yang mungkin menjadi pembantu dalam penelitian selanjutnya agar meningkatkan akurasi sistem yaitu posisi kata terhadap tweet misal kata berada di seperempat bagian(25%) pertama dalam tweet atau justru di bagian belakang tweet
+- Lampirkan tools anotasi. Nyatakan bahwa tools yang digunakan untuk anotasi adalah buatan sendiri.
+- Perbaiki contoh seluruh event, cari screenshoot contoh tweet yang ada bahasa indonesia, bukan bahasa inggris
+
+Dari Draft yang dipegang pak windy
+- Perbaiki abstrak 
+- Di dalam latar belakang ada kata yang tidak sesuai dengan EYD "rapih" seharusnya "rapi"
+- Refer definisi event. Coba cari definisi event ke anak-anak pariwisata (hospitality)
+- Kalimat di batasan masalah diperbaiki poin ke 3 tertulis ".. hanya mencakup protes ekstraksi informasi. proses agregasi" seharusnya ".. hanya mencakup protes ekstraksi informasi, sementara proses agregasi"
+- Perbaiki penulisan kalimat di batasan masalah poin ke - 4. 
+- Jelaskan mengapa rule filter yang digunakan menggunakan jumlah karakter. Ekplisitkan dari pengamatan selama 1 bulan
+- Jelaskan apa itu kateglo dalam bab 3.3.3
+- Penulisan universitas CMU (carneige mellon) ada yang salah di halaman 48
+- Halaman 60 ada penulisan yang salah (tabel) -->ini salah cetak kemarin
+
+Dari draft yang dipegang bu ulfa.
+Seharusnya ditulis dalam laporan, "tweet noise adala htweet yang mengandung minimal satu informasi event selain informasi pelengkap event.""
+- Jelaskan aturan yang digunakan , apakah aturan menggunakan prioritas atau "and" --> prioritas kalau baca pseudocodenya implisit
+- Perbaiki bagian abstrak, ada tweet berbasa indonesia vs tweet di lokasi indonesia
+- Eksplisitkan bahwa akurasi yang dihitung dalam abstrak adalah akurasi per token.
+- Eksplisitkan bahwa konfigurasi yang diatur adalah konfigurasi CRF
+- Dalam arsitektur informasi event (studi pustaka) tertulis ada komponen yang wajib dimliki ada komponen yang sebaiknya dimiliki dan opsional. Eksplisitkan 
+- Jelaskan posisi tugas akhir dalam tabel ringksasn penelitian yang terkait di halaman 31
+--> Dulu kehapus paragrafnya, sekarang dimunculin lagi paragrafnya udah ada di halmana XXXX
+- Dalam diagram komponen ekstraksi informasi, kata template salah ketik, seharusnya "template filling" bukan "temlate filling"
+- Perbaiki penulisan rule yang digunakan ada yang kontradiktif. tertulis di dalam laporan bahwa tweet noise didefiniskan sebagai tweet yang mengandung minimal satu informasi event. Jika terdapat link, maka link dianggap sebagai inormasi event. Hal ini kontradiktif dengan aturan filter. Karena, dalam aturan filter yang digunakan, perhitungan karakter dilakukan setelah eliminasi mention, url dan hashtag. Dengan demikian, jika ada tweet hanya berisi link, maka tweet tersebut seharusnya diklasifikasikan sebagai tidak relevan (berdasarkan aturan filter) namun juga sekaligus diklasifikasikan sebagai tweet relevan karena menurut aturan ekstraksi informasi, tweet berisi url adalah tweet mengandung komponen penyusun informasi event yaitu i-info.
+- Berikan intro dalam label yang digunakan untuk anotasi pada tahapan NER di halaman 42
+- Perbaiki tulisan pada halaman 44 ada salah ketik di pseudocode point 4.a tertulis "di dalam bag-of-words tweet relevan" seharusnya "di dalam bag-of-words tweet TIDAK relevan"
+- Tabel di halaman 55 belum diacu dalam paragraf
+- Diperjelas bahwa akurasi per token
+- Ada salah ketik dalam daftar pustaka, terutlis "sakaki.T. okazaki, M. & Matsuo .... Earthquake shakes Twitter penggunas: real-time" seharusnya "sakaki.T. okazaki, M. & Matsuo .... Earthquake shakes Twitter users: real-time" Mungkin karena hasil replace user -> pengguna jadinya seperti ini
+
+Dari draft yang dipegang bu masayu.
+- Tertulis dalam rumusan masalah konfigurasi apa saja, seharusnya konfigurasi sistem ekstraksi informasi
+- ada typo di diagram arsitektur sistem (tertulis temlate seharusnya template)
+- Perbaiki aturan rule yang kontradiktif
+- Rule filter di dalam pseudocode ada yang salah ketik
+- Tulis jumlah bag of words yg digunakan dalam aturan filter
+- typo rapih -> rapi
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SELF
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Lengkapi lampiran tabel tokenisasi dan penjelasanya
+- Pastikan semua daftar pustaka benar dikutip
+- bahasa asing
+- salah ketik (huruf N dalam akhiran -nya harus ditulis dua buah, imbuhan "di" vs "di" untuk kata depan)
+
+
+
