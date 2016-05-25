@@ -102,6 +102,10 @@ public class MyCountProbablityOfToken {
         Calendar endcal = Calendar.getInstance();
         endcal.setTime(enddate);
         
+        /*
+        PASTIKAN FLEKSIBEL TEMPORARY TOKENYA BISA PER DATE ATAU PER MONTH / PER WEEK..
+        */
+        
         for(Date date = startcal.getTime(); startcal.before(endcal); startcal.add(Calendar.DATE, 1), date = startcal.getTime()){
             System.out.print("Tanggal :"+ date);
             System.out.println(" UTC format : "+date.getTime());
