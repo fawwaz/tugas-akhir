@@ -1,0 +1,379 @@
+w/	SYM (with)
+&	SYM
+1st	FW (first)
+okt	SYM
+11th	FW
+ots	SYM (on the sale)
+12k	CDP (Harga tiket)
+d-3	SYM (D minus )
+|	SYM
+pkl	SYM
+19.00	CDP
+Wib	SYM
+@	SYM (lokasi, at)
+(2015)	CDP
+25okt	CDP (kesalahan tokenisasi)
+jkt	SYM (jakarta)
+se-dki	JJ (Se dki)
+nov	SYM (november)
+pdaftaran	NN (unknown words ???, tapi singkatan dari pendafaran)
+jababeka	NNP
+rt	SYM
+ada	VBI
+kk	SYM (unknown words dari kakak, ekspresi qaqa)
+unt	RP (unknown words dari untuk..)
+tk	NN (Taman kanak kanan)
+n	SYM (n adalah unknown words dari &)
+southbox	NNP (nama tempat sepertinya)
+oct	FW (october, foreign word)
+cp	SYM (contact person)
+bb	SYM (black berry)
+2bcfddba	pin bb
+reg	SYM (registrasi)
+s/d	SYM (sampai dengan)
+beautifull	FW (mistype)
+idr	SYM (indonesian rupiah)
+50k	CDP (50000 uang)
+dinamka	NN (OOV )
+
+======================================================
+yg	RP
+imtli	NN (Multi mistyped/ singkatan dari ikatan mahasiswa teknik lingkungan indonesia)
+aud	NN (Singkatan)
+gd	SYM (singkatna gedung)
+am	SYM (ante meridiem)
+pm	SYM (post meridiem)
+ht	SYM (harga tiket)
+jl	SYM (jalan abreviation)
+coffee	FW  (nama tempat dalma foreign word itu nnp atau fw ?)
+rest	FW
+cafe	FW
+d462	SYM (ini apa gak ngerti )
+univ	SYM (singkatan dari universitas)
+
+@jxinternational	MENTION
+hall	FW
+c	SYM (ini hall C , C itu nama tempat)
+
+fest	NN(festival)
+doeloemu	NN (old adjective)
+htm	SYM (harga tiket masuk)
+
+gmn	WP (bagaimnaa what pronoun)
+bikin	VBT (membuat)
+aneka	CDI (irregular numeral)
+
+
+
+======================================================
+tonite	FW (tonight)
+let's	FW
+30th	FW
+feat	FW (featuring)
+ikutan	NN (maknanya ikuti) tapi di kbbi ada juga ikutan/ikut·an/ n 1 yang diikuti; yang dianut: segala perbuatan guru agama itu menjadi ~ pegawai lain; 2 yang mengikut; 3 Fis proses terseretnya zat alir yang terletak berdampingan dengan aliran;
+lashesta	NNP
+eyelashes	NNP
+regrann	NN / FW ?? (mitype dari regram)
+tangal	NN (mistype dari tanggal)
+lounching	NN (mistype dari launching)
+ukm	NN (usaha kecil dan menengah)
+untuk	RP (partikel?)
+gub	NN (gubernur sama seperti pak wali atau walkot)
+tingkat	NN / JJ ?? 
+se-sulawesi	JJ / NN ??
+tgl	NN (tanggal abreviation)
+jlr	NN  (mistype dari jalan..)
+ii	CDP (romawi dari 2 ... simbol)
+lt	SYM (abreviation of lantai)
+bi	NNP (bank indonesia)
+antar	JJ (antara SMA??)
+
+
+
+======================================================
+dj	NN (noun atau foreign word disk jockey)
+mc	FW (master of ceremony)
+k	FW
+ompetisi	NN (failed to chunk)
+gor	NN (singkatan gelanggang olah raga)
+fbs	NNP (ABREVIATION SOMETHING)
+buat	RP (maknanya untuk, tapi dalam bahasa formal artinya menciptakan)
+
+
+jobfair	NN (FW atau NN ??)
+bjm	NNP (abreviation dari banjarmasin)
+4?5	CDP (error karena chunking)
+
+digerai	VBT (mistype )
+
+dsl	NNP (seperti nama)
+fkg	SYM (singkatan fakultas gigi)
+ub	NNP (singkatan universitas brwaijaya)
+3g	SYM (singkatan khusus domain telekomunikasi 4g / 3rd generation)
+
+huburan	NN (mistype dari hiburan)
+kdi	NNP (kontes dangdung indonesia)
+etc	SYM ??? atau foreign word ??
+
+ces2015	NNP
+dll	SYM
+habis	VBI (setelah ini)
+dlm	PRL (abreviation dalam..)
+
+lomba	NN
+cerdas	JJ --> harusnya NN
+cermat	JJ --> harusnya NN gak sih ?
+
+ft	FW (featuring singkatn foreign word)
+
+sekolah/beasiswa selalu jadi maslaah kalau ada simbol garis  miring..
+
+yg	RP (singkatna yang..)
+
+ukm	NNP (unit kesenian mahasiswa)
+
+
+
+
+======================================================
+dengan	RP (partikel)
+
+lap	NN (lapangan vs bahasa inggris , misal sudah sekian lap (putaran))
+univ	SYM (singkatan universitas)
+wkshop	NN (singkatan workshop)
+bookbinding	FW (digabung bahasa inggris)
+jadi	VBI (verb intransitive)
+=>	SYM
+tentang	RP (bingung)
+dpatkn	NN
+
+hingga	RP
+400rb	CDP
+utk	RP
+
+nb	NN (notebook singkatn)
+acer	NNP (merk laptop)
+tipe2	NN
+
+cm	JJ (singkatan cuma)
+smpai	 RP (singkatan dan artinya hingga,)
+
+regrann	NN
+menjelang	 VBI
+
+rsvp	FW (singkatan tapi dianggap foreign word bukan symbol)
+
+talent	FW
+2015?	CDP
+untuk	RP
+
+dg	FW (dengan)
+
+ini JJ atau NN ??
+konser	NN
+kelas	JJ
+dunia	NN
+dg	RP
+tiket	NN
+kelas	JJ
+angkringan	NN
+
+cc	SYM (carbon copy)
+nobar	NN (nonton bareng)
+
+s1	NN (sarjana)
+
+
+
+
+
+ ====================================================== BATAS 6 ====================================================== 
+reg	SYM (registrasi)
+gak	NEG 
+mau	VBT ??? atau vbi ?
+repot	RB / JJ ???
+cari	VBT 
+kerja	NN Dalam kata bahasa indonesia kerja juga bisa berarti kata kerja, saya kerja di tempat beliau
+
+cuman?	UH
+
+jabar	NNP
+
+converence	FW (mistype admin, conference atau converence atau conperence ???)
+
+oleh	RP
+
+menpar	SYM ? atau NN?
+
+hasil tokenisasi jadi emoticon :/ padahal https:// harusnya ..
+https	SYM
+:/	
+?	. 
+
+gground	NN antara mistype atau emang nnp
+
+presscon	NN Press conference ...  foreign words
+
+ ====================================================== BATAS 7 ====================================================== 
+sampai	MD (modal ???)
+sebagai	RP (partikel)
+
+erk	NNP (singkatan efek rumah kaca, nama band)
+payung	NN (nama band)
+teduh	JJ
+
+dr	IN (dari)
+
+mana	WP
+nih	NNP
+yg	RP
+uns	NNP
+?	.
+
+gratisss	JJ (mistyped)
+
+heroweek	NNP
+i	CDO
+
+lantai	NN
+1	CDO (ini CDO atau CDP ?? gimana )
+
+lbh	NN (lebih)
+
+tntang	RP ?? partikel atau SC? 
+
+dteng	VBT (kata kerja)
+
+english	FW
+week	FW
+xx	CDO ?? ini cdo bukan ? atau CDP ?
+
+reg	FW
+
+simulasi	NN
+bursa	NN
+saham	NN
+xvii	CDO ?? ini cdo bukan atau CDP ?
+
+ ====================================================== BATAS 8 ====================================================== 
+gdg	NN (singkatan)
+xi	CDO (urutan ..)
+wa	NN (whatsapp singkatan)
+pk	SYM (pukul symbol)
+xxi	SYM (ex ex one itu nama bioskop)
+kajianilmuhukumkmmih	NNP (tanpa spasi untuk hemat )
+yk	NNP (yogyakarta)
+
+
+cek lagi itu beneran nn np 
+nov	SYM
+'	"
+15	CDP
+at	FW
+aud	NN
+prof	NN
+.	.
+ir	NN
+.	.
+suryono	NNP
+lt	NN
+.	.
+2	CDP
+gedung	NN
+dekanat	JJ
+ft-ub	NN
+
+
+ ====================================================== BATAS 9 ====================================================== 
+dirita?	NNG (sepertinya dirimu tapi dalam bahasa makassar)
+
+memedi	VBT (Sepertinya verb )
+ds	NN (desa abreviation)
+beruk	NN (ini apa ya ?? tapi kayaknya noun)
+gedung	NN
+heritage	NNP
+bi	NNP (bank indonesia)
+
+pjk	NNP (seperti nama tempat)
+usu	NNP
+
+antara	RP (partikel menurut kbbi web id)
+org	NN (singkatan dari orang)
+
+insta	NN (singkatan gaul dari instagram)
+
+gath	FW (singkatan dari gathering)
+its	NNP (Institut teknologi surabaya vs its bahasa inggris)
+
+
+
+'	"
+15	CDP
+at	FW
+aula	NN
+d4	SYM (ini d4 itu kaya d3 gitu ..)
+,	,
+lt	SYM
+.	.
+4	CDP
+fe	NNP
+,	,
+um	NNP
+|	SYM
+info	FW
+:	:
+@muslimstudi	MENTION
+ ====================================================== BATAS 10 ===================================================== 
+t&c	FW (term and condition)
+cd	FW (compact disk)
+aud	NN (auditorium)
+prof	NN (profesor)
+ir	NN (insinyur)
+msk	VBT (singkatan dari masuk)
+pilwalkot	NN (Singkatan dari pemilu wali kota)
+audit	NN (auditorium)
+sby	NNP (surabaya)
+ahad	NNP (ahad = hari minggu)
+ ====================================================== BATAS 11 ===================================================== 
+makassr	NNP (mistyped dari makassar)
+tim	FW (timur singkatan) 
+bdg	NNP (singkatan bandung)
+o/	NN (oleh..)
+nober	VBT (nonton bareng.. singkatn)
+ 
+ ====================================================== BATAS 12 ===================================================== 
+ ====================================================== BATAS 13 ===================================================== 
+ ====================================================== BATAS 14 ===================================================== 
+ ====================================================== BATAS 15 ===================================================== 
+ ====================================================== BATAS 16 ===================================================== 
+ ====================================================== BATAS 17 ===================================================== 
+ ====================================================== BATAS 18 ===================================================== 
+ ====================================================== BATAS 19 ===================================================== 
+ ====================================================== BATAS 20 ===================================================== 
+ ====================================================== BATAS 21 ===================================================== 
+ ====================================================== BATAS 22 ===================================================== 
+ ====================================================== BATAS 23 ===================================================== 
+ ====================================================== BATAS 24 ===================================================== 
+ ====================================================== BATAS 25 ===================================================== 
+ ====================================================== BATAS 26 ===================================================== 
+ ====================================================== BATAS 27 ===================================================== 
+ ====================================================== BATAS 28 ===================================================== 
+ ====================================================== BATAS 29 ===================================================== 
+ ====================================================== BATAS 30 ===================================================== 
+ ====================================================== BATAS 31 ===================================================== 
+ ====================================================== BATAS 32 ===================================================== 
+ ====================================================== BATAS 33 ===================================================== 
+ ====================================================== BATAS 34 ===================================================== 
+ ====================================================== BATAS 35 ===================================================== 
+ ====================================================== BATAS 36 ===================================================== 
+ ====================================================== BATAS 37 ===================================================== 
+ ====================================================== BATAS 38 ===================================================== 
+ ====================================================== BATAS 39 ===================================================== 
+ ====================================================== BATAS 40 ===================================================== 
+ ====================================================== BATAS 41 ===================================================== 
+ ====================================================== BATAS 42 ===================================================== 
+ ====================================================== BATAS 43 ===================================================== 
+ ====================================================== BATAS 44 ===================================================== 
+ 
+ 
+ 
