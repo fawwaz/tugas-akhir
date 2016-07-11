@@ -342,14 +342,363 @@ o/	NN (oleh..)
 nober	VBT (nonton bareng.. singkatn)
  
  ====================================================== BATAS 12 ===================================================== 
+:/	SYM (mitokenized dari https:// dan karena simbolnya berkurang 140 karakter)
+cv	FW (curiculum vitae)
+mu	PRP (singkatan dri kamu)
+UIN SUNAN AMPEL KALI...
+uin	NNP
+sa	FW 
+
+/w	NN (SALAH KETIK DARI W/)
+
+alm	NN (SINGKATAN DARI ALMARHUM)
+.	. 
+
+dlm	IN (DALAM = PREPOSISI ?)
  ====================================================== BATAS 13 ===================================================== 
+sampai	RB (MAKNANYA HINGGA..)
+buanyaaaak	JJ
+:/	SYM (MIS TOKENIZED)
+
+unair	NNP
+c	SYM (SIMBOL UNAIR C)
+
+buat	RP (PERISAPAN BUAT PESERTA...)
+sebagai	RP (SEBAGAI PIONIR)
+
+@	IN
+acc	NN ==> INI APA YA ??
+,	,
+kampus	NN
+c	SYM
+unair	NNP
+|	SYM
+
+
+#bioskopcarfreeday	HASHTAG
+dr	IN (SINGKATAN DARI "DARI")
+
+jaran	FW
+maskot	NN
+sampah	NN
+'	"
+|	SYM
+dsn	NNP (DUSUN KALI...)
+.	.
+gaten	NNP
+imogiri	NNP
  ====================================================== BATAS 14 ===================================================== 
+msh	RB	 ADVERB MENURUT KBBI
+blm	RB	 ADVERB MENURUT KBBI
+tau	VBT
+kalo	SC
+tiap	JJ
+minggu	NN
+jm	NN	 SINGKATAN DARI JAM..
+7	CDP
+di	IN
+bale	NN
+balantik	NNP
+ada	VBT
+#locarvest	HASHTAG
+?	.
+yuk	UH
+belanja	VBT
+sayur	NN
+&	CC
+buah	NN
+disini	PRL
+!	.
+@locarvest	MENTION
+
+
+meet	FW
+n	SYM	 (MAKNANYA DAN..)
+greet	FW 
+
+26	CDP
+oktober	NNP
+hingga	RP (HINGGA = UNTILL)
+
+std	NN (STAND)
+
+kpta	NN (MISTYPE DARI KOTA)
+
+sayang	JJ (MENYESAL)
+
  ====================================================== BATAS 15 ===================================================== 
+rowndown	FW (MISTYPE DARI RUN DOWN)
+
+!	.
+muswil	NN	 (MUSYARWARH WILAYAH)
+i	CDO
+sumatera	NNP
+ismapeti	NNP
+viii	CDO
+@	IN
+fapertapet	NNP
+uin	NNP
+suska	NNP
+riau	NNP
+
+munas	NN
+v	CDO	(INI URUTAN)
+lemhi	NNP	 (NAMA ORGANISASI SEPERTINYA)
+:	:
+seminar	NN
+nasional	JJ
+"	"
+paradoks	NN
+uu	NN	 UNDANG UNDANG..
+desa	NN
+dalam	IN
+kaitannya	NNG
+dengan	RP
+kesejahteraan	NN
+bangsa	NN
+"	"
+30okt15	NN
+,	,
+ugm	NNP
+
+
+rindu	NN
+ka?bah	NNP
+umrah	NN
+hajj	NN	 (MISTYPE DARI HAJI)
+
+3	CDP
+perpustakaan	NN
+,	,
+kampus	NN
+c	SYM (INI KAMPUS C..)
+,	,
+unair	NNP 
+
+
+#jogja	HASHTAG
+@reizafd	MENTION
+:	:
+25	CDP
+/	GM
+10	CDP
+/	GM
+15	CDP
+19.00	CDP
+vocal	FW
+group	FW
+ukm	NNP	(UNIT KEGIATAN MAHASISWA)
+seni	NN
+upn	NNP	(UNIVERSITAS VETERAN)
+jogja	NNP
+,	,
+broadway	FW
+concert	FW
+di	IN
+societet	NN	(sEPERTI NAMA TEMPAT)
+tby	NN	(SEPERTI NAMA TEMPAT)
+|	SYM
+pre	FW (PRESALE)
+:	:
+10k	NN
+ots	FW	(ON THE SPOT)
+:	:
+12k	CDP
+
+biar	RP (SUPAYA, AGAR MAKNANY)
+
+soal	RP (TENTANG..)
+pls	NN (SINGKATAN DARI PLEASE)
+
+sultan	NN
+adam	FWP
+brsm	NNP	 (BERSAMA)
+ust	NN
+.	.
+riza	NNP
+rahman	NNP
+,	,
+lc	SYM	(GELAR LC)
+
+mau	VBT
+uji	NN
+nyalimu	NNG	 (GENITIVE)
+pas	NN
+makan	VBT
+?	.
+dateng	NN
+aja	RB
+ke	IN
+fjku	NNP	(FJKU SINGKATAN)
+2015	CDP
+
+n	CC
+m	FW	MEET AND GREET SINGKATAN
+&	CC
+g	FW
+
+
  ====================================================== BATAS 16 ===================================================== 
+kepada	RP (PARTKEL MENURUT KBBI)
+
+kalo	RP (JIKA MAU..)
+
+drmn	WP	 (DARI MANA MISTYPE)
+ya	UH
+yg	RP
+bagus	JJ
+
+benteke	FW (GAK NGERTI APA ARTINYA	)
+
+ok	SYM (OKTOBER..)
+
+n	FW
+m	FW
+&	CC
+g	FW
+
+nike	NNP
+
+htm	SYM
+yg	RP
+
  ====================================================== BATAS 17 ===================================================== 
+choreographers	FW
+'	"
+lab	FW
+i	CDP (URUTAN ROMAWI PERTAMA)
+
+tlp	NN (telpon)
+bintaro	NNP
+x	SYM (MISTYPE JUGA ATAU EMANG STYLING)
+change	FW
+
+vol	SYM (VOLUME SINGKATAN)
+
+bsk	NN (BESOK)
+
+tlp	NN (TELPON)
+
+adv	FW (ADVERTISEMENT KALI SINGKATNA..)
+
+op	SYM (SYMBOL..)
+yk	NNP YOGYAKARTA
+
+berseri	JJ (BUKAN ARTINYA SENYUM / SINAR TAPI MAKNANYA BERSERIAL .. / BBERAPA EDISI)
+
+dsl	NNP	ENTAH APA ARTINYSA INGKATAN AAJ
+food	FW
+carnival	FW
+2015	CDP
+by	FW
+fkg	NNP	FAKULTAS KEDOKTERAN GIGI.
+ub	NNP
+"	"
+|	SYM
+14	CDP
+november	NNP
+2015	CDP
+|	SYM
+lap	NN
+.	.
+polinema	NNP	KAYAKNYA NAMA TEMPAT
+sebrang	NN
+gazebo	NN
+fk	NNP	 SINGKATAN FAKULTAS KEDOKTERAN
+:	:
+087806602227	CDP
+
+pengantar	NN
+minum	NN	MAKNA INDIVIDU VERBAL TAPI KALAU KESELURUHAN NOUN..
+racun	NN
+
+tahun	NN
+baru	JJ
+islam	NNP
+1437	CDP
+h	SYM	 HIJRIYAH MAKSUDNYA
+
  ====================================================== BATAS 18 ===================================================== 
- ====================================================== BATAS 19 ===================================================== 
+solo	NNP 	(BAHASA INGGRIS JUGA ADA ARTINYA SOLO)
+
+batu	NN
+tulis	NNP	MAKNANYA NNP BUKAN TULIS AS IN VERB
+raya	NNP
+
+buat	VBT BUAT GAME INI MAKNANYA VERBAL
+
+audit	NN 	INI NAMA TEMPAT AUDITORIUM
+IFI-FLIP	
+
+regrann	NN (REGRAM... SNGKATAN)
+vol	NN (VOLUMEN SINGKATAN..)
+
+fest	NN	(FESTIVAL)
+
+sd	SYM (SAMPAI DENGAN .. SINGKATN)
+
+k	FW (KENAPA SELALU KEPOTONG SATU HURUF K DOANG YA ??)
+earifanlokal	NN
+
+ngakunya	NN (MENGAKU.. BAHASA GAUL)
+
+bakal?	MD (AKAN DIADAKAN..)
+
+mng	FW (MEET AND GREET BAHASA SNGKATAN ASING)
+
+di	IN
+m	NN (MALL SINGKATAN)
+tos	NNP
+
+orkes	NN
+moral	NN
+pengantar	NN
+minum	NN	MAKNANYA NOUN BUKAN VERBAL
+racun	NN
+ ====================================================== BATAS 19 =====================================================
+jl	NN
+.	.
+sam	NNP
+ratulangi	NNP	(NAMA TEMPAT)
+
+eine	FW
+liebe	FW
+in	FW
+deutschland	FW
+
+tek	NN (TEKNIK GEODESI)
+.	.
+geodesi	NNP
+ 
+ig	NNP (INSTAGRAM = IG)
+
+fit	NNP
+tel-u	NNP (TELKOM UNIVERSITY)
+se-ind	NN (SINGKATAN SE INDONESIA)
  ====================================================== BATAS 20 ===================================================== 
+ukm	NNP 
+
+swiss	NNP	(INI KAYA NAMA TEMPAT)
+belinn	NN
+,	,
+manyar	NNP
+
+1437h	CDP 	NI HIJRIYAH
+
+fbs	NNP 	INI KAYA NAMA TEMPAT
+unesa	NNP
+
+indi(e)sche	FW
+party's	FW
+presale	FW
+
+menj	VBT (MENJADI)
+
+ketintang	NNP	(SEPERTI NAMA TEMPAT)
+
+15	CDP
+pensi	NN
+fis	NNP
  ====================================================== BATAS 21 ===================================================== 
  ====================================================== BATAS 22 ===================================================== 
  ====================================================== BATAS 23 ===================================================== 
