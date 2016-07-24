@@ -86,7 +86,7 @@ public class MyTokenizer {
 		// ---Melakukan anotasi ke database---
 		MyAnotatorDB madb = new MyAnotatorDB();
 		madb.startConnection();
-		//madb.insertTokentoAnotasiDB();
+		madb.insertTokentoAnotasiDB();
                 //madb.copylabel();
 		System.out.println("Inserted");
 		madb.CloseConnection();

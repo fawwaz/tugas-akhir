@@ -22,16 +22,18 @@ public class MyAnotatorDB {
 		Twokenize tokenizer = new Twokenize();
 		
 		try{
-			preparedstatement = connection.prepareStatement("SELECT twitter_tweet_id,tweet from filtered_tweet_final where label = 1");
+			//preparedstatement = connection.prepareStatement("SELECT twitter_tweet_id,tweet from filtered_tweet_final where label = 1");
+                        //preparedstatement = connection.prepareStatement("SELECT text,id from tweet_baru where id > 668236463058759680");
+                        preparedstatement = connection.prepareStatement("SELECT text,id from tweet_baru_sanitized");
 			resultset = preparedstatement.executeQuery();
 			Integer a = 0;
 			while(resultset.next()){
-				String tweet 			= resultset.getString("tweet").toLowerCase();
-				Long twitter_tweet_id 	= resultset.getLong("twitter_tweet_id"); 
+				String tweet 			= resultset.getString("text").toLowerCase();
+				Long twitter_tweet_id 	= resultset.getLong("id"); 
 				System.out.println("Tweet :"+tweet);
 				List<String> tokenized = tokenizer.tokenizeRawTweetText(tweet);
 				for(String token : tokenized){
-					InsertTokenToAnotasiTweet(token, twitter_tweet_id);
+					InsertTokenToAnotasiTweet2(token, twitter_tweet_id);
 				}
 			}
 			System.out.println("[INFO] Successful inserted");
@@ -132,6 +134,18 @@ public class MyAnotatorDB {
 	private void InsertTokenToAnotasiTweet(String token,Long twitter_tweet_id){
 		try{
 			preparedstatement = connection.prepareStatement("INSERT into anotasi_tweet_final (token,twitter_tweet_id) VALUES (?,?)");
+			preparedstatement.setString(1, token);
+			preparedstatement.setLong(2, twitter_tweet_id);
+			preparedstatement.executeUpdate();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+	}
+        
+        private void InsertTokenToAnotasiTweet2(String token,Long twitter_tweet_id){
+		try{
+			//preparedstatement = connection.prepareStatement("INSERT into tweet_baru_tokenized (token,twitter_tweet_id) VALUES (?,?)");
+                    preparedstatement = connection.prepareStatement("INSERT into tweet_baru_sanitized_tokenized_no_url (token,twitter_tweet_id) VALUES (?,?)");
 			preparedstatement.setString(1, token);
 			preparedstatement.setLong(2, twitter_tweet_id);
 			preparedstatement.executeUpdate();
