@@ -1,0 +1,5 @@
+Nomor_file	Line	Deskripsi
+1	19-31	Ada kata will be, sebenarnya be itu apa ? modal ?
+1	21	Perform itu VBI / VBT
+1	22	Tonight itu apa ? NN / RB ?
+1	27	3 nya apakah CDP ? mleambangkan urutan ? atau jumlah ?

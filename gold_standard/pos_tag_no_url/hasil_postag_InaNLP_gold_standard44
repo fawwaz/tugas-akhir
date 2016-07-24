@@ -1,0 +1,211 @@
+[	OP
+D-3	CDP
+TO	FW
+THE	FW
+LAUNCHING	FW
+OF	FW
+ISAFIS	NN
+JOURNAL	NN
+]	CP
+|	NN
+24	CDP
+Okt	NN
+’15	CDP
+At	NN
+Aula	NNP
+Juwono	NNP
+Sudarsono	NNP
+,	,
+FISIP	NN
+UI	NN
+Depok	NN
+|	NN
+@ISAFIS_official	MENTION
+
+---
+RT	NN
+@solopolah	MENTION
+:	:
+INDONESIA	NN
+CREATIVE	NN
+CITIES	NN
+CONVERENCE	NN
+|	NN
+22	CDP
+-	-
+25	CDP
+Oktober	NNP
+2015	CDP
+|	NN
+Bank	NN
+Indonesia	NNP
+lt.	NN
+5	CDP
+#ICCC2015	HASHTAG
+
+---
+RT	NN
+@solopolah	MENTION
+:	:
+Indonesia	NNP
+Creative	NNP
+Cities	NNP
+Converence	NNP
+dan	CC
+ICCN	NNP
+Expo	NNP
+telah	MD
+resmi	JJ
+dibuka	VBT
+oleh	IN
+Bapak	NN
+@ir_ariefyahya	MENTION
+#ICCC2015	HASHTAG
+#KotaSolo	HASHTAG
+
+---
+Dapatkan	NN
+pekerjaan	NN
+impianmu	NN
+!	.
+Job	NNP
+fair	NN
+@TitianKarirITB	MENTION
+23	CDP
+-	-
+25	CDP
+Okt	NN
+di	IN
+Sabuga	NNP
+.	.
+Info	FW
+
+---
+@KamtisGemolong_	MENTION
+Anniversary	NNP
+11th	CDP
+|	NN
+29	CDP
+November	NN
+2015	CDP
+|	NN
+at	IN
+Gd	NN
+Serbaguna	NN
+Pendem	NN
+|	NN
+Presale	NN
+:	:
+12k	CDP
+,	,
+Ots	NN
+:	:
+15k	CDP
+
+---
+SoloPolah	NNP
+Creative	NNP
+Movement	NNP
+|	IN
+Conference	NN
+|	NN
+Expo	NN
+|	NN
+Performance	NN
+|	NN
+22	CDP
+-	-
+25	CDP
+Oktober	NNP
+2015	JJ
+di	IN
+#KotaSolo	HASHTAG
+|	NN
+Info	NN
+@SoloPolah	MENTION
+
+---
+D'OFFICE	NNP
+with	FW
+Jova	NNP
+Alexa	NNP
+&	,
+inya	NNP
+Malonda	NNP
+
+---
+Halloween	NN
+Bash	NN
+
+---
+Seminar	NN
+of	FW
+Education	FW
+@BEMFSasUG	MENTION
+|	NN
+21	CDP
+Nov	FW
+'15	CDP
+At	NN
+Kampus	NN
+D462	NNP
+,	,
+Univ.	NN
+Gunadarma	NNP
+,	,
+Depok	NN
+|	NN
+CP	NN
+:	:
+0896	CDP
+9138	CDP
+8753	CDP
+
+---
+PROMO	NN
+Sumpah	NNP
+Pemuda	NNP
+(	OP
+24	CDP
+-	-
+28	RB
+Okt	FW
+'15	CDP
+)	CP
+&	IN
+Halloween	NNP
+(	OP
+30	CDP
+-	-
+31	CDP
+Okt	FW
+'15	CDP
+)	CP
+hanya	RB
+di	IN
+Procut	NNP
+Salon	FW
+and	FW
+Barbershop	NN
+|	,
+082244146116	CDP
+
+---
+GOERS	NN
+Folk	NNP
+Talk	NNP
+(	OP
+2015	CDP
+)	CP
+|	IN
+22	CDP
+Okt	FW
+'15	CDP
+At	NN
+Southbox	NNP
+Jaksel	NNP
+|	NN
+Info	NN
+:	:
+
+---

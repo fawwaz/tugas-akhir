@@ -1,0 +1,541 @@
+#ralat	HASHTAG
+Datang	VBI
+dan	CC
+Saksikan	NN
+Malam	NN
+Bakat	NN
+Finalis	NN
+Nanang	NN
+Galuh	NN
+Kalsel	NN
+2015	CDP
+pukul	NN
+20.00	CDP
+WITA	NN
+di	IN
+Hotel	NN
+Roditha	NN
+Banjarmasin	NN
+GRATISSS	NN
+@inagakalsel	MENTION
+
+---
+#jogja	HASHTAG
+@Ellyasa_13	MENTION
+25	CDP
+/	GM
+10	CDP
+/	GM
+15	CDP
+10.00	CDP
+-	-
+20.00	CDP
+Gothic	NNP
+Black	NNP
+Corpse	NNP
+di	IN
+Palagan	NNP
+Mosheng	NN
+AUB	NN
+#solo	HASHTAG
+Jateng	NNP
+
+---
+#TODAY	HASHTAG
+Seminar	NN
+Nasioanal	NN
+@HIMPIS	MENTION
+|	NN
+Sabtu	NN
+,	,
+7	CDP
+November	NN
+2015	CDP
+pkl	NN
+08.00	CDP
+WIB	NN
+|	NN
+Auditorium	NNP
+UNS	NNP
+.	.
+Gratis	NNP
+
+---
+HIMA	NN
+@HMIKUI	MENTION
+Present	NN
+:	:
+@ComminAct2015	MENTION
+|	NN
+8	CDP
+Nov	NN
+At	NNP
+Aud.	NNP
+Juwono	NN
+Sudarsono	NN
+FISIP	NN
+UI	NN
+|	NN
+Info	NN
+:	:
+0812	CDP
+1348	CDP
+9679	CDP
+
+---
+#TODAY	HASHTAG
+Afternoon	NNP
+Fashion	NNP
+Talk	FW
+With	FW
+@Claradevi	MENTION
+|	NN
+8	CDP
+Nov	NN
+15	CDP
+|	NN
+Text	NN
+Us	NN
+For	NN
+More	NN
+Info	NN
+|	NN
+@HelloMarketSolo	MENTION
+
+---
+CALLLNG	NN
+ALL	NN
+TENANTS	NN
+!	.
+
+---
+Ikuti	NN
+&	NN
+Semarakkan	NN
+Perayaan	NN
+Hari	NN
+Pahlawan	NNP
+di	IN
+KA	NN
+Kalijaga	NN
+Solo	NNP
+-	-
+Semarang	NN
+|	NN
+Selasa	NN
+,	,
+10	CDP
+Nopember	NN
+pkl	NN
+05.00	CDP
+WIB	NNP
+
+---
+TODAY	NN
+!	.
+#the90sfestival	HASHTAG
+,	,
+Istora	JJ
+Senayan	NN
+w/	NN
+@KLAProject	MENTION
+@javajiveband1	MENTION
+Frente	NNP
+etc	NN
+Info	NN
+@the90sfestival	MENTION
+
+---
+GIV	NN
+Journey	FW
+of	FW
+Beauty	NNP
+2015	CDP
+|	NN
+4	CDP
+-	-
+8	CDP
+November	NN
+2015	JJ
+Di	IN
+Atrium	NN
+@TUNJUNGANPLAZA	MENTION
+3	CDP
+|	.
+
+---
+Pelatihan	NN
+Kewirausahaan	NN
+2015	CDP
+
+---
+#LOMBA	HASHTAG
+LINE	NN
+FOLLOWER	NN
+TINGKAT	NN
+SMA	NN
+/	GM
+SMK	NNP
+/	GM
+MA	NN
+NASIONAL	JJ
+2015	NN
+Tanggal	NN
+:	:
+-	-
+Pendaftaran	NN
+:	:
+sampai	VBI
+
+---
+Bursa	NN
+Akik	NN
+Nasional	JJ
+
+---
+Are	NNP
+you	NNP
+ready	NN
+for	NN
+@Borobudur10K_15	MENTION
+?	.
+15	CDP
+Nov	NN
+2015	JJ
+at	IN
+Borobudur	NNP
+Temple	NN
+Magelang	NN
+Register	NN
+here	JJ
+:	:
+
+---
+Pusaka	NN
+koleksi	NN
+Museum	NNP
+Radya	NNP
+Pustaka	NNP
+ditampilkan	VBT
+dlm	NN
+#KirabAgungPusaka	HASHTAG
+Museum	NNP
+Radya	NN
+Pustaka	NN
+2015	CDP
+.	.
+#KotaSolo	HASHTAG
+
+---
+Diskusi	NN
+Sastra	FW
+"	"
+Agama	NN
+Apa	WP
+yang	SC
+Pantas	NN
+Bagi	IN
+pohon	NN
+-	-
+pohon	NN
+?	.
+"	"
+~	NN
+BESOK	NN
+!	.
+Selasa	NN
+,	,
+27	CDP
+Okt	NN
+19.30	CDP
+WIB	NN
+Di	IN
+Ruang	NN
+Gong	NNP
+@PKKH_UGM	MENTION
+
+---
+Get	NN
+ready	NN
+to	FW
+jump	NN
+on	FW
+31	CDP
+October	FW
+with	FW
+@djpatrix	MENTION
+from	NN
+Netherlands	FW
+at	IN
+#Xsomnia2015	HASHTAG
+!	.
+At	FW
+Eco	FW
+Park	NNP
+
+---
+Yuk	NNP
+datang	VBI
+ke	IN
+#TotoFilmFestival	HASHTAG
+&	SC
+lihat	VBT
+hasil	NN
+karya	NN
+#TotoFilmClass	HASHTAG
+!	.
+HARI	NN
+INI	DT
+26	CDP
+-	-
+27	CDP
+Okt	NN
+@CGVblitz	MENTION
+@GrandIndo	MENTION
+GRATIS	NN
+
+---
+FMX	NN
+#Coffeetime	HASHTAG
+:	:
+Economic	NNP
+Essentials	CDP
+"	"
+Fueling	FW
+The	FW
+Futures	FW
+"	"
+|	NN
+30	CDP
+Okt	FW
+'15	CDP
+At	NN
+Kabinet	NN
+Coffee	NN
+Co	NN
+|	NN
+CP	NN
+:	:
+0812	CDP
+3088	CDP
+8891	CDP
+
+---
+#jogja	HASHTAG
+@iam_dias	MENTION
+:	:
+25	CDP
+/	GM
+10	CDP
+/	GM
+15	CDP
+Talkshow	NN
+BBM	NN
+w/	NN
+RiaRicis	FW
+,	,
+AzharNurnala	NNP
+di	IN
+aula	NN
+pascasarjana	JJ
+UNS	NN
+#solo	HASHTAG
+|	,
+089679520820	CDP
+
+---
+CALLING	NN
+TENANTS	NN
+!	.
+United	NN
+Market	NNP
+Bazaar	NN
+
+---
+Sarjo	NN
+
+---
+Nominasi	NNP
+Frame	NNP
+of	FW
+Solo	NNP
+2015	CDP
+,	,
+Kategori	NN
+:	:
+Arsitektural	NNP
+.	.
+Info	NN
+:	:
+@frameofsolo	MENTION
+#FrameOfSolo	HASHTAG
+#FOS2015	HASHTAG
+#EventSolo	HASHTAG
+
+---
+#jogja	HASHTAG
+@DonnyKekayon	MENTION
+:	:
+8	CDP
+/	GM
+11	CDP
+/	GM
+15	CDP
+14.30	CDP
+Panjidor	NN
+kulonprogo	NN
+&	NN
+Jathilan	NN
+Gunungkidul	NN
+di	IN
+Pakualaman	NNP
+
+---
+RT	NN
+@garudaorganizer	MENTION
+:	:
+Bingug	FW
+cr	FW
+kerja	NN
+?	.
+dtg	NN
+aja	NN
+ke	IN
+bursa	NN
+#kerja	HASHTAG
+#jogja	HASHTAG
+di	IN
+Universitas	NN
+Ahmad	NNP
+Dahlan	NNP
+Yogyakarta	NNP
+tgl	NN
+10	CDP
+Nov	NN
+15	CDP
+@InfoJadwalEvent	MENTION
+
+---
+#jogja	HASHTAG
+@arlistyadesy	MENTION
+7	CDP
+/	GM
+11	CDP
+/	GM
+15	CDP
+19.00	CDP
+konser	NN
+Klasik	NNP
+Asik	NNP
+di	IN
+Gd	NN
+societet	NN
+TBY	NNP
+
+---
+Micro	NN
+Gigs	NN
+#2	HASHTAG
+:	:
+@Ripstore	MENTION
+Live	NN
+|	NN
+1	CDP
+Nov	NN
+,	,
+133CGNDWH	CDP
+Public	FW
+Space	NNP
+,	,
+Bandung	NNP
+w/	NN
+@MemoriaPhobia	MENTION
+@para_hyena	MENTION
+@tamkotmusic	MENTION
+
+---
+RT	NN
+@sijadaeng	MENTION
+:	:
+Nostalgia	FW
+Nobar	FW
+PSM	NN
+vs	NN
+PKT	NN
+28	CDP
+okt	NN
+2015	CDP
+jam	NN
+19.00	CDP
+wita	FW
+.	.
+@Daeng_Info	MENTION
+@MksEvent	MENTION
+@Bolang_Mks	MENTION
+@StandUpIndoMKSR	MENTION
+
+---
+#jogja	HASHTAG
+@bmkgjogja	MENTION
+:	:
+Gempa	NN
+Mag	NN
+:	:
+5.2	CDP
+SR	NN
+,	,
+29	CDP
+-	-
+Oct	NNP
+-	-
+15	CDP
+17	CDP
+:	:
+20	CDP
+:	:
+25	CDP
+WIB	NN
+,	,
+Lok	NNP
+:	:
+8.74	CDP
+LS	NN
+,	,
+109.79	NN
+BT	NNP
+(	OP
+112	CDP
+km	NN
+BaratDaya	NN
+BANTUL	NNP
+-	-
+DIY	NNP
+)	CP
+,	,
+Kedlmn	NN
+:	:
+11	CDP
+Km	NN
+::	:
+BMKG	NNP
+
+---
+Lomba	NN
+Desain	NN
+WPAP	NN
+2015	CDP
+
+---
+HEADQUARTERS	NN
+__DOUBLE_SLASH__	NN
+2016	CDP
+vol.	NN
+1	CDP
+"	"
+Sunset	NNP
+Boulevard	NNP
+"	"
+|	NN
+15	CDP
+
+---

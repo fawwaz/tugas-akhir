@@ -1,0 +1,577 @@
+SOLO	NN
+KREATIF	NN
+|	NN
+Titik	JJ
+pesta	NN
+rakyat	NN
+#Solopolah	HASHTAG
+tersebar	VBI
+di	IN
+65	CDP
+point	NN
+mulai	VBI
+dr	NN
+Gendengan-Gladag	NN
+
+---
+RT	NN
+@Klaudia_Thya	MENTION
+:	:
+@boda_event	MENTION
+@eventjogja	MENTION
+
+---
+BESOK	NNP
+!!	.
+NOBAR	NNP
+@AirMataSurgaOfc	MENTION
+di	IN
+Ciledug	NN
+XXI	NNP
+&	,
+Bintaro	NNP
+XXI	NNP
+w/	NN
+@therichardkevin	MENTION
+@dewisandra	MENTION
+
+---
+#TODAY	HASHTAG
+#NONBAR	HASHTAG
+@whufc_official	MENTION
+vs	NN
+@Everton	MENTION
+7	CDP
+-	-
+11	CDP
+-	-
+2015	CDP
+jam	NN
+21.30	CDP
+@omahsepaksolo	MENTION
+,	,
+@TheToffees_Solo	MENTION
+#COYI	HASHTAG
+@HammersSolo	MENTION
+
+---
+TONIGHT	NN
+!	.
+Magnificent	NNP
+Anniversary	NNP
+7	CDP
+Indomanutd	NNP
+Presents	NN
+NoBAR	NNP
+Manutd	NNP
+vs	NNP
+Westbrom	NNP
+Start	NNP
+7	CDP
+pm	NN
+
+---
+[	OP
+JAPANESE	NN
+EVENT	NN
+]	CP
+ORENJI	NNP
+2015	CDP
+,	,
+BESOK	NNP
+!	.
+di	IN
+Fakultas	NNP
+Ilmu	NN
+Budaya	NN
+Universitas	NN
+Diponegoro	NN
+Semarang	NN
+.	.
+Info	NN
+:	:
+@Orenji_kun	MENTION
+.	.
+
+---
+UBAYA	NN
+Informatic	NN
+Logical	NNP
+Programming	NNP
+Competition	NNP
+(	OP
+ILPC	NNP
+)	CP
+2016	CDP
+|	NN
+Reg	NN
+s/d	d
+31	CDP
+Des	FW
+'15	CDP
+|	NN
+Info	NN
+:	:
+
+---
+TODAY	NN
+!	.
+Closing	NN
+@serojacup13	MENTION
+@	IN
+SMAN	NN
+13	CDP
+Jkt	NN
+w/	NN
+@TwitChangcuters	MENTION
+@gac_music	MENTION
+@angrykids	MENTION
+@VellaroseID	MENTION
+@DhyoHaw	MENTION
+
+---
+Seminar	NN
+Gizi	NN
+Nasional	JJ
+@HMJIKM_UM	MENTION
+|	NN
+8	CDP
+Nov	FW
+'15	CDP
+@	IN
+Aula	NNP
+E1	NNP
+,	,
+FIP	NNP
+,	,
+UM	NN
+|	NN
+07.00	CDP
+|	NN
+Info	NN
+:	:
+0857	CDP
+9057	CDP
+3338	CDP
+
+---
+HARI	NN
+INI	DT
+!	.
+Walk	FW
+in	FW
+interview	NN
+@MNCPlayMedia	MENTION
+,	,
+Senin	NN
+2	CDP
+November	NN
+2015	CDP
+,	,
+pkl	NN
+09.30	CDP
+-	-
+12.30	CDP
+di	IN
+Surabaya	NNP
+
+---
+kost	NNP
+,	,
+kontrakan	NN
+,	,
+tanah	NN
+,	,
+rumah	NN
+,	,
+ruko	NN
+simak	NN
+di	IN
+@JogjaProperties	MENTION
+cari	NN
+&	NN
+sharing	SC
+mention	VBT
+ke	IN
+@JogjaUPDATE	MENTION
+beri	VBT
+hashtag	NN
+#property	HASHTAG
+dan	CC
+data	NN
+lengkap	JJ
+
+---
+RT	NN
+@HMadjedie_BJM	MENTION
+:	:
+#Live	HASHTAG
+Kajian	NN
+Qur'an	NNP
+&	IN
+Sunnah	NNP
+bersama	IN
+ust.	NN
+Zulfakar	NNP
+Ali	NNP
+,	,
+Lc	NN
+@bjmUpdate	MENTION
+@kabar_banjar	MENTION
+@BuhanBanjar	MENTION
+@zonabjm	MENTION
+
+---
+Folkrest	FW
+the	FW
+Crime	FW
+of	FW
+the	FW
+Century	NN
+
+---
+Food	NN
+Truck	NN
+@	IN
+Mall	NNP
+|	VBT
+26	CDP
+Okt	NNP
+-	-
+1	CDP
+Nov	FW
+'15	CDP
+Di	IN
+Halaman	NN
+Parkir	NNP
+CITO	NNP
+,	,
+Surabaya	NNP
+|	VBT
+0812	CDP
+3158	NN
+9216	CDP
+/	GM
+
+---
+Let's	NN
+fun	NN
+,	,
+play	NN
+entertaint	FW
+with	FW
+us	NN
+.	.
+Will	FW
+u	IN
+take	NEG
+me	VBT
+to	FW
+media	NN
+partner	NN
+?	.
+just	NNP
+call	NN
++6289624111195	CDP
+.	.
+
+---
+RT	NN
+@HMadjedie_BJM	MENTION
+:	:
+Sedang	RB
+berlangsung	VBI
+:	:
+Kajian	NN
+Qur'an	NNP
+&	,
+Sunnah	NNP
+Masjid	NNP
+Ar-Rahim	NNP
+,	,
+Sultan	NNP
+adam	NNG
+brsm	NN
+ust.	NN
+Riza	NNP
+Rahman	NNP
+,	,
+Lc	NN
+@bjmUpdate	MENTION
+
+---
+Yuk	NNP
+kunjungi	NN
+@NestFamily	MENTION
+Solo	NNP
+di	IN
+Jl.	NN
+Perintis	NN
+Kemerdekaan	NN
+35	CDP
+,	,
+Purwosari	NN
+untuk	IN
+mendapat	VBT
+layanan	NN
+&	NN
+diskon	NN
+khusus	JJ
+
+---
+MALAM	NN
+INI	DT
+!	.
+Nobar	NNP
+DERBY	NNP
+MANCHESTER	NNP
+bersama	IN
+@UtdIndonesia	MENTION
+@UtdIndonesiaJKT	MENTION
+di	IN
+GBK	NNP
+,	,
+Jakarta	NNP
+
+---
+PROMO	NN
+Sumpah	NNP
+Pemuda	NNP
+(	OP
+24	CDP
+-	-
+28	RB
+Okt	FW
+'15	CDP
+)	CP
+&	IN
+Halloween	NNP
+(	OP
+30	CDP
+-	-
+31	CDP
+Okt	FW
+'15	CDP
+)	CP
+hanya	RB
+di	IN
+Procut	NNP
+Salon	FW
+and	FW
+Barbershop	NN
+|	NN
+CP	NN
+:	:
+082244146116	CDP
+
+---
+Cepet	NN
+daftar	NN
+Glow	NNP
+Fun	NNP
+Run	NN
+#AmandaFestival	HASHTAG
+!	.
+Doorprize	NN
+motor	NN
+,	,
+gopro	NN
+,	,
+android	NN
+|	NN
+Info	NN
+081221935217	CDP
+@amandabrownies	MENTION
+
+---
+Tonight	NNP
+||	IN
+#Nobar	HASHTAG
+@BpnRedArmy	MENTION
+||	NN
+#BPL	HASHTAG
+#Pekan10	HASHTAG
+||	NN
+Man	NNP
+United	NN
+vs	NN
+Man	NNP
+City	NN
+||	NN
+jam	NN
+21.00	CDP
+wita	FW
+||	NN
+at	IN
+@cafe_tiga	MENTION
+||	.
+
+---
+TONIGHT	NNP
+!!	.
+The	FW
+Pride	NNP
+6	CDP
+Anniversary	NNP
+w/	NN
+@RANforyourlife	MENTION
+at	IN
+@EntranceClub	MENTION
+Medan	NNP
+|	.
+
+---
+ENGLISH	NNP
+WEEK	NNP
+XX	NNP
+kompetisi	NN
+Bahasa	NN
+Inggris	NNP
+tingkat	NN
+SMA	NN
+se-Jawa	NN
+Timur	NN
+|	NN
+Reg	NN
+s/d	d
+23	CDP
+Okt	FW
+'15	CDP
+|	.
+
+---
+RT	NN
+@mks_sombere	MENTION
+:	:
+Hari	NN
+minggu	NN
+ini	DT
+Di	IN
+Pantai	NN
+Losari	NNP
+ada	VBI
+Festival	NN
+Perahu	NN
+Tradisional	JJ
+,	,
+saksikan	JJ
+tarian	NN
+tradisional	JJ
+dari	IN
+atas	IN
+perahu2	NN
+.	.
+
+---
+Malang	NNP
+Fashion	NNP
+Traffic	NNP
+(	OP
+2015	CDP
+)	CP
+"	"
+Dont	NN
+stop	NN
+your	FW
+fashion	NN
+style	NN
+"	"
+|	NN
+11	CDP
+-	-
+12	CDP
+November	NN
+2015	CDP
+@	IN
+MX	NNP
+Mall	NNP
+|	VBT
+0898	CDP
+6382	CDP
+385	CDP
+
+---
+Simak	NNP
+@efekrumahkaca	MENTION
+BESOK	NN
+!	.
+Jumat	NN
+6	CDP
+Nov	NN
+di	IN
+@GrandCitySBY	MENTION
+Surabaya	NNP
+jam	NN
+19.30	CDP
+"	"
+Pameran	NNP
+Otomotif	NNP
+Surabaya	NNP
+"	"
+
+---
+Tunggu	NNP
+apa	WP
+lagi	RB
+!	.
+Ayo	NNP
+Wargi	NNP
+Bandung	NNP
+merapat	VBT
+ke	IN
+Bale	NNP
+Balantik	NNP
+Cisangkuy	NNP
+.	.
+#Locarvest	HASHTAG
+sudah	MD
+open	NN
+loh	NN
+!	.
+@Locarvest	MENTION
+
+---
+HOOFDAWSM	FW
+on	FW
+#ICC	HASHTAG
+Booth	NNP
+no	NN
+37	CDP
+&	NN
+38	CDP
+.	.
+Disc	NN
+Upto	NN
+40%	CDP
+.	.
+Tukarkan	NNP
+voucher	NN
+kalian	NN
+@HOOFDawesome	MENTION
+
+---
+TODAY	NN
+!	.
+Pameran	NNP
+#HirukPikukKotaLama	HASHTAG
+|	NN
+31	CDP
+/	GM
+10	CDP
+Cikapundung	NN
+Riverspot	NNP
+@gaungbandung	MENTION
+
+---
+Metallurgy	FW
+and	FW
+Materials	NN
+Week	NN
+2015	JJ
+:	:
+NATIONAL	NNP
+SEMINAR	NN
+|	NN
+10	CDP
+
+---

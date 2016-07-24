@@ -1,0 +1,515 @@
+BESOK	NN
+ALPUS	NN
+INCREDIBLES	NN
+5	CDP
+"	"
+Industrial	FW
+Time	NN
+Lapse	NN
+"	"
+Plaza	NN
+Timur	NN
+Senayan	NN
+w/	NN
+@isyanasarasvati	MENTION
+@TezaSumendra	MENTION
+@danillajpr	MENTION
+
+---
+Mau	NNP
+ikutan	NN
+Gymkhana	NN
+War	NN
+di	IN
+pameran	NN
+otomotif	JJ
+surabaya	NN
+,	,
+daftarkan	NN
+Cuma	NN
+200ribu	NN
+saja	RB
+CP	NN
+:	:
+081314580819	CDP
+-	-
+Geosilano	NN
+
+---
+Sinau	NNP
+WPAP	NN
+Bareng	NN
+Ngalam	NN
+Uncurve	NN
+|	NN
+8	CDP
+Nov	FW
+'15	CDP
+At	NN
+Ex.	NNP
+Cafe	NNP
+,	,
+lt.	NN
+2	CDP
+,	,
+Toko	NNP
+Buku	NN
+Diskon	NN
+Togamas	NNP
+|	.
+
+---
+HARI	NN
+INI	DT
+!	.
+Peringati	NN
+#SumpahPemuda	HASHTAG
+w/	NN
+@marzukialie_MA	MENTION
+,	,
+@KRMTRoySuryo	MENTION
+dll	NN
+di	IN
+AULA	NN
+FIT	NN
+Tel-U	NN
+Info	NN
+:	:
+08979834058	CDP
+@BEM_FIT	MENTION
+
+---
+Kelamaan	NN
+nunggu	NN
+pameran	NN
+komputer	NN
+di	IN
+Solo	NNP
+?	.
+Kenapa	WP
+nggak	NN
+ke	IN
+#APKOMCES	HASHTAG
+aja	NN
+,	,
+31	CDP
+Okt	NNP
+-	-
+4	CDP
+Nov	NN
+2015	JJ
+di	IN
+JEC	NN
+.	.
+@apkomindodiy	MENTION
+
+---
+Tabligh	NN
+Akbar	NN
+Semarak	NN
+Muharam	NNP
+1437H	CDP
+|	NN
+31	CDP
+Okt	FW
+'15	CDP
+Di	IN
+Masjid	NN
+Al	NNP
+Ikhlas	NNP
+,	,
+Jl.	NN
+Wonosari	NNP
+Wetan	NNP
+Baru	NNP
+|	NN
+Info	NN
+:	:
+0857	CDP
+4975	CDP
+7325	CDP
+
+---
+Indonesian	NNP
+Society	NNP
+in	FW
+Perspective	NN
+Seminar	NN
+
+---
+#EventBatamLiveOnPF2015	HASHTAG
+Parade	NN
+UKM	NN
+&	NN
+Himpunan	NN
+Se-Polibatam	NN
+NOW	NNP
+!	.
+
+---
+Ikuti	NN
+meet	NN
+&	NN
+greet	NN
+bareng	NN
+@gitagut	MENTION
+,	,
+HARI	NN
+INI	DT
+di	IN
+@canting_jogja	MENTION
+pk	NN
+16.00	CDP
+.	.
+Beli	NNP
+CD	NN
+#TheNextChapter	HASHTAG
+,	,
+info	NN
+:	:
+@Swaragamafm	MENTION
+
+---
+>>	NN
+#acara	HASHTAG
+@management_audi	MENTION
+Beachwalk	NNP
+Goes	NNP
+Creepy	NNP
+30	CDP
+Okt	NNP
+-	-
+6	CDP
+nov	NN
+cp	NNP
+Brian	NNP
+082348383675	CDP
+cilla	NN
+081337222296	CDP
+
+---
+Promosikan	NNP
+event	NN
+/	GM
+pensi	NN
+/	GM
+produk	NN
+anda	NN
+di	IN
+akun	NN
+socmed	NN
+&	NN
+Web	NN
+SeputarEvent	NN
+"	"
+Your	FW
+Event	NN
+Partner	NNP
+"	"
+
+---
+Dpatkn	NNP
+Cashback	NNP
+hingga	CC
+400Rb	CDP
+utk	NN
+pembelian	NN
+NB	NN
+ACER	NN
+tipe2	NN
+tertentu	JJ
+di	IN
+@GadgetmartBJM	MENTION
+cm	NNP
+smpai	NN
+31	CDP
+Okt	NN
+#GadgetMartPromo	HASHTAG
+
+---
+TONIGHT	FW
+!!	.
+@SOBBERSCLUB	MENTION
+International	FW
+Series	FW
+with	FW
+@sebjak	MENTION
+
+---
+#SKRIPSI15NOV15	HASHTAG
+at	IN
+aula	NN
+fak.	NN
+teknik	NN
+unipa	NN
+|	NN
+8	CDP
+komika	NN
+@SUC_CampusSBY	MENTION
+&	NN
+spesial	JJ
+perfom	NN
+@Pul_lung	MENTION
+&	NN
+@yudhit_c	MENTION
+
+---
+Halloween	NN
+Bash	NN
+
+---
+[	OP
+Job	NNP
+Fair	NNP
+]	CP
+Career	NNP
+&	IN
+Higher	NN
+Education	NNP
+Fair	NNP
+
+---
+>>	NN
+#acara	HASHTAG
+Kelas	NN
+Bahasa	NN
+ISyarat	NN
+w/	NN
+@balideafcomm	MENTION
+8	CDP
+Nov	NN
+15	CDP
+at	IN
+Lap	NN
+Puputan	NN
+Badung	NN
+@DenpasarKota	MENTION
+
+---
+Tentukan	NN
+gaya	NN
+sesukamu	NN
+di	IN
+dpan	NN
+kamera	NN
+!!	.
+,	,
+ikuti	NN
+photo	NN
+booth	NN
+competition	FW
+dan	CC
+kamu	PRP
+bisa	MD
+dapat	MD
+hadiah	NN
+juta-an	CDP
+rupiah	NN
+!!	.
+
+---
+Pagelaran	NN
+Seni	NN
+yang	SC
+bertajuk	VBT
+"	"
+ARENA	NN
+KEHIDUPAN	NN
+"	"
+|	RB
+4	CDP
+Des	FW
+'15	CDP
+At	NN
+Ciputra	NNP
+Hall	NNP
+,	,
+Citraland	NN
+|	NN
+Info	NN
+:	:
+0812	CDP
+3459	CDP
+0849	CDP
+
+---
+Jangan	NEG
+lupa	NN
+ikut	VBI
+Kompetisi	NNP
+Poster	NNP
+Sekolah	CC
+Hijau	NNP
+,	,
+Deadline	JJ
+:	:
+20	CDP
+Nov	NN
+2015	CDP
+.	.
+Jadilah	NN
+kebanggaan	NN
+sekolahmu	NN
+@PEMKOT_SOLO	MENTION
+
+---
+English	NNP
+Festival	NNP
+2015	CDP
+@ED_UNJ	MENTION
+|	NN
+14	CDP
+
+---
+Training	NN
+Projective	NNP
+Test	NN
+|	NN
+22	CDP
+November	NN
+2015	CDP
+At	NN
+Kantor	NN
+@animamalang	MENTION
+|	NN
+09.00	CDP
+
+---
+#TODAY	HASHTAG
+Tingalan	JJ
+Wiyosan	NNP
+KGPAA	NNP
+Mangkunegoro	NNP
+IX	NNP
+"	"
+Setuponan	NN
+"	"
+|	NN
+31	CDP
+Okt	NN
+15	CDP
+pkl	NN
+19.00	CDP
+|	NN
+Pendapa	NNP
+Prangwedan	NNP
+,	,
+Manguknegaran	NNP
+
+---
+RT	NN
+@twit_aisha	MENTION
+:	:
+@eventjogja	MENTION
+07	CDP
+/	GM
+11	CDP
+pkl.	NN
+10.00	CDP
+Workshop	NNP
+#Quilting	HASHTAG
+|	IN
+Jl.	NN
+Palagan	NNP
+Tentara	NN
+Pelajar	NN
+76C	CDP
+|	NN
+80k	CDP
+|	,
+087839197955	CDP
+
+---
+@KMFFIBUNS	MENTION
+malam	NN
+ini	DT
+gratis	NN
+
+---
+MALAM	NN
+INI	DT
+!!	.
+@obsat	MENTION
+#171	HASHTAG
+pk	NN
+6	CDP
+-	-
+9	CDP
+"	"
+
+---
+Besok	NNP
+malam	NN
+di	IN
+Ngarsopuro	NNP
+,	,
+Solo	NNP
+.	.
+Free	NNP
+!!	.
+
+---
+HARI	NN
+INI	DT
+!	.
+Senin	NN
+26	CDP
+Okt	NN
+NObar	NN
+n	NN
+M	NN
+&	NN
+G	NN
+@AirMataSurgaOfc	MENTION
+w/	NN
+@aputchan	MENTION
+&	NN
+Roweina	NNP
+di	IN
+@csbmall	MENTION
+
+---
+Minggu	NN
+ini	DT
+bingung	JJ
+mau	CC
+kemana	WP
+?	.
+Yuk	NNP
+ke	IN
+#Locarvest	HASHTAG
+!	.
+Ada	VBI
+sayur	NN
+&	NN
+buah	NN
+kualitas	NN
+premium	NN
+dijual	VBT
+disini	NN
+!	.
+@Locarvest	MENTION
+
+---
+Music	FW
+Fashion	NNP
+Night	NNP
+2015	CDP
+"	"
+Jazz	NN
+Up	NN
+!	.
+"	"
+:	:
+Lomba	NN
+Fashion	NNP
+Designer	NN
+|	NN
+Periode	NN
+s/d	d
+28	NN
+Oktober	NNP
+2015	CDP
+|	.
+
+---

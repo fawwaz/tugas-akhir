@@ -1,0 +1,606 @@
+Jalanjalanid	NN
+@popmarketid	MENTION
+|	NN
+23	CDP
+-	-
+29	RB
+Nov	FW
+'15	CDP
+Di	IN
+Main	NN
+&	NN
+side	NN
+Atrium	NN
+@PejatenVillage	MENTION
+|	NN
+CP	NN
+:	:
+0818	CDP
+0894	CDP
+3636	CDP
+
+---
+Ikuti	NN
+Lomba	NN
+Tari	NNP
+Merak	NNP
+di	IN
+#FestivalTariMerak50	HASHTAG
+!	.
+Ada	VBI
+tingkat	NN
+SD	NNP
+,	,
+SMP	NNP
+,	,
+SMA	NN
+&	NN
+umum	JJ
+21	CDP
+-	-
+22	CDP
+Nov	NN
+|	NN
+Info	NN
+081220555610	CDP
+
+---
+Ready	FW
+to	FW
+shout	NN
+with	FW
+@mccherryl	MENTION
+at	IN
+@X_somnia	MENTION
+#ElectronicMusicParade	HASHTAG
+@ecopark_ancol	MENTION
+31	CDP
+Oct	FW
+2015	CDP
+
+---
+Seminar	NN
+Kesehatan	NN
+Nasional	JJ
+@PHExpo8	MENTION
+|	NN
+7	CDP
+Nov	FW
+'15	CDP
+@	IN
+Balai	NNP
+Sidang	NN
+,	,
+UI	NN
+,	,
+Depok	NN
+|	NN
+/	GM
+0895	CDP
+21651832	CDP
+
+---
+Msh	NN
+blm	NNP
+tau	VBT
+kalo	NN
+tiap	NN
+Minggu	NN
+jm	NN
+7	CDP
+di	IN
+Bale	NNP
+Balantik	NNP
+ada	VBI
+#Locarvest	HASHTAG
+?	.
+Yuk	NNP
+belanja	NN
+Sayur	NN
+&	NN
+Buah	SC
+disini	VBT
+!	.
+@Locarvest	MENTION
+
+---
+AKSI	NN
+#DaruratAsap	HASHTAG
+|	NN
+Bundaran	NN
+Patung	NN
+Kuda	NN
+Silang	NNP
+Monas	NNP
+|	IN
+HARI	NN
+INI	DT
+!	.
+Senin	NN
+,	,
+26	CDP
+Oktober	NNP
+2015	CDP
+Pukul	NN
+10.00	CDP
+WIB	NN
+.	.
+
+---
+BESOK	NNP
+!!	.
+#MandiriKarnaval2015	HASHTAG
+di	IN
+Parkir	NN
+Timur	NN
+,	,
+Senayan	NN
+.	.
+w/	NN
+@NTRL_official	MENTION
+@SlankDotCom	MENTION
+@MaliqMusic	MENTION
+@NOAH_ID	MENTION
+
+---
+Ayo	NNP
+Datang	VBI
+&	IN
+Berpartisipasi	NN
+dlm	NN
+Solopolah	NNP
+Rakyat	NN
+Bungah	NN
+Pesta	NN
+Rakyat	NN
+Kreatif	NN
+.	.
+25	CDP
+Okt	NN
+2015	JJ
+di	IN
+CFD	NN
+#KotaSolo	HASHTAG
+#ICCC2015	HASHTAG
+
+---
+#jogja	HASHTAG
+@agustinus_yusak	MENTION
+:	:
+23	CDP
+/	GM
+10	CDP
+/	GM
+15	CDP
+17.45	CDP
+Worship	NNP
+Revolution	NN
+Night	NNP
+di	IN
+GSG	NN
+Building	NN
+Seturan	NN
+|	NN
+FREE	NN
+|	,
+087788228271	CDP
+
+---
+.	.
+@ugk_fubation	MENTION
+24	CDP
+Okt	NN
+di	IN
+Lap.	NNP
+Parkir	NNP
+Univ.	NNP
+Gunadarma	NN
+w/	NN
+@pipigo	MENTION
+@abdurarsyad	MENTION
+@pnprivatenumber	MENTION
+@beatnite	MENTION
+
+---
+RT	NN
+@SupirPete2	MENTION
+:	:
+.	.
+@mks_sombere	MENTION
+menggelar	VBT
+Pasar	NN
+Seni	NN
+#stARTup	HASHTAG
+tgl	NN
+24	CDP
+oktober	NN
+2015	JJ
+di	IN
+anjungan	NN
+losari	NN
+.	.
+#MakassarKeren	HASHTAG
+
+---
+DMR	NNP
+-	-
+LOOP	NNP
+"	"
+Bursa	NN
+Permata	NN
+&	NN
+Gemstone	NN
+|	NN
+30	CDP
+Okt	NNP
+-	-
+8	CDP
+Nov	FW
+'15	CDP
+Di	IN
+Loop	NNP
+,	,
+Graha	NNP
+Family	NNP
+|	NN
+CP	NN
+:	:
+081230900031	CDP
+/	GM
+Pin	NNP
+BB	NN
+:	:
+2BCFDDBA	.
+
+---
+Workshop	NNP
+SEO	NNP
+SNIERGIA	NN
+Internet	NN
+Training	NN
+|	NN
+24	CDP
+Okt	FW
+'15	CDP
+At	NN
+Hotel	NN
+Best	NNP
+Zodiak	NNP
+,	,
+Kedungsari	NN
+|	NN
+Info	NN
+:	:
+0856	CDP
+2925	CDP
+689	CDP
+
+---
+RT	NN
+@solopolah	MENTION
+:	:
+Sambutan	NN
+Bapak	NN
+Menteri	NN
+Pariwisata	NN
+@ir_ariefyahya	MENTION
+#ICCC2015	HASHTAG
+#KotaKreatif	HASHTAG
+
+---
+#NOW	HASHTAG
+ARABIC	NN
+FAIR	NN
+UNS	NN
+2015	CDP
+|	NN
+Bedah	NNP
+Buku	NN
+"	"
+Cinta	NNP
+1001	CDP
+Rindu	FW
+"	"
+w	NN
+CANDRA	NN
+MALIK	NN
+|	NN
+pkl	NN
+13.00	CDP
+FIB	NN
+UNS	NN
+#arabicfair	HASHTAG
+@afuns2015	MENTION
+
+---
+RT	NN
+@Naufalazhar189	MENTION
+:	:
+Besok	NNP
+giliran	NN
+BALIKPAPAN	NN
+!	.
+Nobar	FW
+&	NN
+Meet	NNP
+n	NN
+Greet	FW
+#AyahMenyayangiTanpaAkhir	HASHTAG
+di	IN
+Balikpapan	NNP
+Show	NNP
+2	CDP
+&	NN
+3	CDP
+Sampe	NN
+ketemu	SC
+disana	VBT
+
+---
+Coaching	NN
+for	NN
+Helping	NN
+People	NN
+Growing	FW
+|	NN
+19	CDP
+Des	FW
+'15	CDP
+At	NN
+Swiss	NNP
+-	-
+Belinn	NNP
+Hotel	NN
+,	,
+Surabaya	NNP
+|	NN
+Info	NN
+:	:
+0856	CDP
+5520	CDP
+0025	CDP
+
+---
+HIMA	NN
+@HMIKUI	MENTION
+Present	NN
+:	:
+@ComminAct2015	MENTION
+|	NN
+8	CDP
+Nov	FW
+'15	CDP
+At	NN
+Aud.	NNP
+Juwono	NN
+Sudarsono	NN
+FISIP	NN
+UI	NN
+|	NN
+CP	NN
+:	:
+0812	CDP
+1348	CDP
+9679	CDP
+
+---
+Open	NN
+House	NN
+#CikalSurabaya	HASHTAG
+7	CDP
+Nov	NNP
+2015	CDP
+on	FW
+09.00	CDP
+-	-
+12.00	CDP
+WIB	NN
+at	IN
+Jl.	NN
+Raya	NNP
+Lontar	NNP
+103	CDP
+|	NN
+Info	NN
+:	:
+0317527900	CDP
+
+---
+Turnamen	NNP
+Catur	NNP
+Raja	NN
+Brawijaya	NN
+III	NN
+2015	NN
+Nasional	JJ
+|	IN
+8	CDP
+
+---
+#jogjafood	HASHTAG
+@silveriusguntur	MENTION
+:	:
+Bakmi	FW
+Jombor	NNP
+
+---
+#jogja	HASHTAG
+@EventKeiko	MENTION
+1	CDP
+/	GM
+11	CDP
+/	GM
+15	CDP
+Kopi	NN
+merapi	VBT
+sejarah	NN
+&	NN
+masa	NN
+dpn	NN
+istimewa	NN
+w/	NN
+Caknun	NNP
+di	IN
+Ds	NN
+Wisata	NNP
+Petung	NNP
+Cangkringan	NNP
+
+---
+Kontest	NN
+Fashion	NNP
+Show	NNP
+Kids	NN
+"	"
+Batikku	NN
+Budayaku	NN
+"	"
+|	NN
+5	CDP
+Nov	NN
+2015	CDP
+|	NN
+Kampus	NN
+II	CDO
+ISI	NNP
+Solo	NNP
+,	,
+Mojosongo	NNP
+
+---
+Hi	NN
+!	.
+@YOTSurabaya	MENTION
+ajakin	NN
+kamu	PRP
+nih	JJ
+dtg	NN
+ke	IN
+pameran	NN
+edukasi	NN
+soal	NN
+kusta	NN
+w/	NN
+@LCCUI	MENTION
+|	NN
+7	CDP
+-	-
+8	CDP
+Nov	FW
+'15	CDP
+At	NN
+kebun	NN
+bibit	NN
+bratang	NN
+
+---
+RT	NN
+@KMFFIBUNS	MENTION
+:	:
+malam	NN
+ini	DT
+gratis	NN
+@EventSoloRaya	MENTION
+@SoloThok	MENTION
+@AgendaSOLO	MENTION
+
+---
+RT	NN
+@salmaridha	MENTION
+:	:
+@eventjogja	MENTION
+Hari	NN
+Kesehatan	NN
+Nasional	JJ
+14	CDP
+Nov	FW
+'15	CDP
+Masjid	NN
+Agung	JJ
+Bantul	NNP
+-	-
+Lapangan	NN
+Paseban	NNP
+.	.
+More	NNP
+info	NN
+@poltekkesevent	MENTION
+
+---
+SMAN	NN
+8	CDP
+Bekasi	NNP
+Presents	NN
+@8world2015	MENTION
+1	CDP
+Nov	FW
+'15	CDP
+Rooftop	NN
+Bekasi	NNP
+Square	NN
+w/	NN
+@Naifband	MENTION
+@DEADSQUAD_Band	MENTION
+@Gangstarasta	MENTION
+&	,
+more	NN
+
+---
+Rangkaian	NN
+acara	NN
+soul	NN
+of	FW
+smesa	NN
+part	NN
+3	CDP
+Sedang	RB
+Berlangsung	VBI
+nih	JJ
+Hari	NN
+ini	DT
+lomba	NN
+paduan	NN
+suara	NN
+antar	NN
+SMA	NNP
+
+---
+#TODAY	HASHTAG
+Panggung	NN
+Rakyat	NN
+SOLOPOLAH	NN
+@balawanguitar	MENTION
+@JHFcrew	MENTION
+@downforlifesolo	MENTION
+Free	NNP
+,	,
+Rowndown	NNP
+~>	.
+
+---
+RT	NN
+@garudaorganizer	MENTION
+:	:
+Ayo	NN
+cari	NN
+kerja	NN
+di	IN
+bursa	NN
+#kerja	HASHTAG
+#medan	HASHTAG
+w/	NN
+PJK	NN
+USU	NN
+28	CDP
+-	-
+29	CDP
+Okt	NN
+15	CDP
+di	IN
+Pendopo	NN
+USU	NN
+Info	NN
+27c024ea	NN
+@InfoJadwalEvent	MENTION
+
+---

@@ -1,0 +1,581 @@
+RAISE	NNP
+(	OP
+Run	NN
+Accounting	NN
+&	NN
+Investment	NNP
+)	CP
+|	VBT
+Lomba	NN
+akuntansi	NN
+antar	NN
+SMA	NN
+|	NN
+Reg	NN
+s/d	d
+31	CDP
+Okt	FW
+'15	CDP
+|	.
+
+---
+#jogja	HASHTAG
+@acoymubyarto	MENTION
+22	CDP
+/	GM
+10	CDP
+/	GM
+15	CDP
+19.30	CDP
+Pengajian	NN
+Akbar	NN
+10	CDP
+Muharam	NNP
+1437	CDP
+H	NN
+Jamaah	NN
+Padang	NN
+Jagad	NN
+w/	NN
+Gus	NNP
+Kendar	NNP
+di	IN
+Ponpes	NNP
+Al	NNP
+Munawwir	NNP
+Krapyak	NNP
+Yk	NNP
+
+---
+TONIGHT	FW
+!!	.
+@SuperMusic_ID	MENTION
+present	NN
+@helloweenorg	MENTION
+Live	FW
+in	FW
+Concert	NNP
+at	IN
+Basket	NN
+Hall	NN
+Senayan	NN
+by	NN
+@lianmipromusic	MENTION
+
+---
+PASKIBRA	NN
+SMAN	NN
+13	CDP
+JKT	NN
+PRESENT	NN
+GAFLATE	NN
+10TH	CDP
+SE-DKI	NN
+,	,
+JABAR	NN
+,	,
+BANTEN	NN
+||	NN
+14	CDP
+-	-
+15	CDP
+Nov	FW
+'15	CDP
+||	NN
+Pdaftaran	NN
+s/d	d
+27	CDP
+OKT	NN
+Info	NN
+@gaflate	MENTION
+"	"
+
+---
+Ingin	VBT
+Karir	NN
+Lebih	RB
+Baik	JJ
+,	,
+Level	NN
+SPV	NNP
+-	-
+Manager	NN
+?	.
+#CareerExpo	HASHTAG
+#ExperiencedCandidates	HASHTAG
+#SBY	HASHTAG
+24	CDP
+Okt	FW
+'15	CDP
+di	IN
+Dyandra	NN
+CC	NNP
+
+---
+The	FW
+Beautifull	NNP
+Eyes	NN
+for	NN
+Your	NNP
+Natural	NNP
+Beauty	NNP
+Lashesta	NNP
+Eyelashes	NNP
+(	OP
+Part	NNP
+2	CDP
+)	CP
+|	IN
+22	CDP
+Nov	NN
+@alicetearoommlg	MENTION
+|	,
+081931876688	CDP
+
+---
+Hai	NNP
+Arek	NNP
+Suroboyo	NNP
+!	.
+Ikuti	NN
+:	:
+Meet	FW
+and	FW
+Greet	FW
+Bersama	IN
+Michelle	NN
+Ziudith	NNP
+|	VBT
+24	CDP
+Januari	NN
+2016	CDP
+|	NN
+Info	NN
+:	:
+
+---
+Coming	NNP
+Soon	NNP
+!!	.
+"	"
+Food	FW
+Carnival	NNP
+DSL	NN
+FKG	NN
+UB	NN
+2015	CDP
+"	"
+,	,
+The	FW
+best	JJ
+tenants	IN
+from	NN
+the	FW
+best	JJ
+cafe	NN
+around	NN
+Malang	NNP
+will	FW
+be	NN
+there	FW
+!	.
+
+---
+Johnnie	NNP
+Walker	NNP
+Proudly	NNP
+Present	NN
+:	:
+DJ	NN
+@Lola_alicia	MENTION
+|	IN
+Oct	NN
+24th	CDP
+,	,
+2015	CDP
+@SmoothCafeMlg	MENTION
+|	NN
+Info	NN
+&	NN
+Rsvp	NN
+:	:
+0812	CDP
+3579	CDP
+0046	CDP
+
+---
+Ingin	VBT
+jadi	JJ
+Peserta	NN
+Pesta	NN
+Rakyat	NN
+Kreatif	NN
+#Solopolah	HASHTAG
+Rakyat	NN
+Bungah	NN
+?	.
+Daftarnya	NNG
+disini	VBT
+=>	.
+
+---
+Ajak	FW
+Si	RP
+Kecil	JJ
+bermain	JJ
+di	IN
+#HappyDatewithLEGENDADDY	HASHTAG
+!	.
+Info	FW
+dan	CC
+tiket	NN
+,	,
+kunjungi	NN
+@NutrisiNestle	MENTION
+
+---
+[	OP
+D-2	CDP
+TO	FW
+THE	FW
+LAUNCHING	FW
+OF	FW
+ISAFIS	NN
+JOURNAL	NN
+]	CP
+|	NN
+24	CDP
+Okt	NN
+’15	CDP
+At	NN
+Aula	NNP
+Juwono	NNP
+Sudarsono	NNP
+,	,
+FISIP	NN
+UI	NN
+Depok	NN
+|	NN
+@ISAFIS_official	MENTION
+
+---
+Seminar	NN
+of	FW
+Education	FW
+@BEMFSasUG	MENTION
+|	NN
+21	CDP
+Nov	FW
+'15	CDP
+At	NN
+Kampus	NN
+D462	NNP
+,	,
+Univ.	NN
+Gunadarma	NNP
+,	,
+Depok	NN
+|	NN
+Info	NN
+:	:
+0896	CDP
+9138	CDP
+8753	CDP
+
+---
+Audisi	NNP
+#DutaBatikJatim	HASHTAG
+24	CDP
+Okt	NN
+@	IN
+Dekranasda	NN
+#SBY	HASHTAG
+|	VBT
+7AM	CDP
+|	NN
+50rb	CDP
+|	NN
+|	NN
+@dutabatik_jatim	MENTION
+
+---
+UWIKA	NN
+Semangat	NN
+Perjuangan	NN
+|	NN
+Singing	NNP
+&	IN
+Story	NN
+Telling	NN
+Competition	NN
+|	NN
+7	CDP
+
+---
+Radio	NN
+Kampus	NN
+PL	NN
+FM	NN
+POLINEMA	NN
+Present	NN
+:	:
+Glow	NNP
+Party	NN
+@Openair_2015	MENTION
+|	NN
+5	CDP
+Des	FW
+'15	CDP
+At	NN
+Taman	NN
+Krida	NN
+|	NN
+CP	NN
+:	:
+0819	CDP
+4491	CDP
+7796	CDP
+
+---
+HEBRON	NN
+Youth	NNP
+Proudly	NNP
+Present	NN
+:	:
+Praise	NNP
+The	FW
+King	NN
+with	FW
+Your	FW
+Talent	FW
+|	NN
+29	NN
+Okt	FW
+'15	CDP
+Di	IN
+GPDI	NN
+Hebron	NNP
+,	,
+Malang	NNP
+|	VBT
+0341	CDP
+568679	CDP
+
+---
+RT	NN
+@solopolah	MENTION
+:	:
+SCCN	FW
+Award	FW
+-	-
+Penghargaan	NN
+Insan	NN
+Kreatif	NN
+&	NN
+Inspiration	NN
+|	NN
+24	CDP
+okt	NN
+2015	CDP
+|	NN
+Halaman	NN
+gd.	NN
+HERITAGE	NNP
+BI	NNP
+#ICCC2015	HASHTAG
+#solopolah	HASHTAG
+
+---
+Pemilihan	NN
+@dutabatik_jatim	MENTION
+2015	CDP
+|	NN
+Reg	NN
+s/d	d
+24	CDP
+Oktober	NNP
+2015	CDP
+,	,
+Grand	NNP
+Final	NN
+:	:
+31	CDP
+Oktober	NNP
+2015	CDP
+|	NN
+Info	NN
+:	:
+0812	CDP
+3065	CDP
+4500	CDP
+
+---
+ARE	NN
+YOU	NNP
+READY	NNP
+?	.
+Golden	NNP
+Size	NNP
+Sneaker	NNP
+Movement	NN
+w/	NN
+@neo_rap	MENTION
+@yacko	MENTION
+etc	FW
+this	FW
+Sunday	NNP
+October	NNP
+25th	CDP
+at	NN
+@Foundry8	MENTION
+
+---
+TONIGHT	NN
+!	.
+#anNAIFersary20th	HASHTAG
+Let's	NNP
+dance	CC
+&	NN
+sing	NN
+w/	NN
+@NAIFband	MENTION
+at	IN
+@LucyintheSkyJKT	MENTION
+,	,
+info	NN
+:	:
+@emvriopro	MENTION
+
+---
+
+---
+TOMORROW	FW
+!!	.
+@JazzyNiteCitos	MENTION
+at	IN
+@citosjakarta	MENTION
+w/	NN
+@Homogenicworld	MENTION
+,	,
+Fariz	NNP
+RM	NN
+&	NN
+@dianppoetra	MENTION
+
+---
+Swara	NNP
+Deling	NNP
+,	,
+Festival	NNP
+Musik	NNP
+Bambu	NN
+|	NN
+22	CDP
+-	-
+24	CDP
+Oktober	NNP
+2015	CDP
+pkl	NN
+19.00	CDP
+WIB	NN
+|	NN
+Benteng	NN
+Vastenburg	NN
+#kotaSolo	HASHTAG
+.	.
+Gratis	NNP
+
+---
+Ingin	VBT
+jadi	JJ
+Peserta	NN
+Indonesia	NNP
+Creative	NNP
+Cities	NNP
+Conference	NNP
+2015	CDP
+(	OP
+ICCC	NNP
+)	CP
+?	.
+Daftar	NNP
+disini	VBT
+=>	NN
+#KotaSolo	HASHTAG
+
+---
+RT	NN
+@FrameOfSolo	MENTION
+:	:
+FOS	FW
+Rally	FW
+Photo	NNP
+@SoloUpdate	MENTION
+@AgendaSOLO	MENTION
+@kotasolo_fp	MENTION
+@pesonaSOLO	MENTION
+@tentangSolo	MENTION
+@komunitasolo	MENTION
+@EventSoloRaya	MENTION
+@SoloThok	MENTION
+
+---
+RT	NN
+@kotasolo_fp	MENTION
+:	:
+MenPar	NN
+@ir_ariefyahya	MENTION
+buka	NN
+#ICCC2015	HASHTAG
+&	NN
+#swaradelingfest	HASHTAG
+22	CDP
+-	-
+25	CDP
+Okt	NN
+di	IN
+Benteng	NN
+Vastenburg	NN
+@solopolah	MENTION
+@swaradelingfest	MENTION
+
+---
+RT	NN
+@solopolah	MENTION
+:	:
+Benteng	NN
+Vastenburg	NNP
+bersolek	VBI
+sambut	VBT
+#ICCC2015	HASHTAG
+22	CDP
+-	-
+25	CDP
+Okt	NN
+#kotasolo	HASHTAG
+#solopolah	HASHTAG
+
+---
+RECAP	NN
+:	:
+@EconomicsJazz	MENTION
+Live	NNP
+XXI	NNP
+Konser	NN
+Kelas	NN
+Dunia	NN
+dg	NN
+Tiket	JJ
+Kelas	NN
+Angkringan	NN
+@IndraLesmana	MENTION
+
+---
+Mandiri	NNP
+Karnaval	NN
+2015	NN
+Tanggal	NN
+:	:
+24	CDP
+
+---

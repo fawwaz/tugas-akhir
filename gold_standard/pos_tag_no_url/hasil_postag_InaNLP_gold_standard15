@@ -1,0 +1,533 @@
+Live	NN
+dari	IN
+Titik	JJ
+Nol	NN
+kota	NN
+Solo	NNP
+@	IN
+Tugu	NNP
+Pemandengan	NNP
+...	.
+Deklarasi	NN
+kpta	NN
+Kreatif	NN
+|	NN
+#Solopolah	HASHTAG
+
+---
+Calling	NNP
+For	NN
+Tenant	NN
+UBS	NN
+DetEksi	NN
+Convention	NN
+2k15	NN
+(	OP
+SSCC	NNP
+Supermal	NNP
+,	,
+13	CDP
+
+---
+25	CDP
+Okt	NN
+2015	CDP
+|	NN
+#RembugSosmed10	HASHTAG
+Pilwalkot	NNP
+Punya	VBT
+Siapa	WP
+?	.
+@HOTELGRASIA	MENTION
+#Semarang	HASHTAG
+FREE	NN
+#eventSMG	HASHTAG
+
+---
+#latepost	HASHTAG
+Buat	NNP
+yg	NNP
+masih	RB
+nyari	JJ
+kerja	NN
+yuk	NNP
+datang	VBI
+ke	IN
+jobfair	NN
+tanggal	NN
+20	CDP
+-	-
+22	CDP
+Okt	NN
+di	IN
+Duta	NN
+Mall	NNP
+BJM	NNP
+.	.
+
+---
+GOERS	NN
+Folk	NNP
+Talk	NNP
+(	OP
+2015	CDP
+)	CP
+|	IN
+22	CDP
+Okt	FW
+'15	CDP
+@	IN
+Southbox	NNP
+Jaksel	NNP
+|	NN
+Info	NN
+:	:
+
+---
+#jogja	HASHTAG
+@sukdan	MENTION
+:	:
+8	CDP
+/	GM
+11	CDP
+/	GM
+15	CDP
+15.30	CDP
+Final	NN
+U18	NN
+Kompetisi	NN
+PSSI	NN
+Pengcab	NN
+Bantul	NN
+2015	CDP
+|	NN
+Baturetno	NN
+vs	NN
+persopi	NN
+di	IN
+Stadion	NNP
+Sultan	NNP
+Agung	JJ
+bantul	NN
+
+---
+TODAY	NN
+!	.
+7	CDP
+-	-
+8	CDP
+Nov	NN
+Padjadjaran	NNP
+Education	NNP
+Festival	NNP
+2015	CDP
+|	NN
+@NAIFband	MENTION
+,	,
+Mini	NNP
+Talk	NNP
+Show	NNP
+,	,
+Try	NN
+Out	NN
+&	NN
+UKM	NN
+Perform	NN
+|	NN
+@PEF_UNPAD	MENTION
+
+---
+Ikuti	NN
+Orasi	NN
+Budaya	NN
+Anti	JJ
+Maladministrasi	NNP
+bersama	IN
+ORI	NN
+DIY	NN
+&	NN
+@wayang_kampung	MENTION
+7	CDP
+Nov	NN
+di	IN
+@PKKH_UGM	MENTION
+info	NN
+:	:
+@eo_gmpro	MENTION
+
+---
+TOMORROW	NN
+!	.
+@JavabassCrew	MENTION
+15th	NN
+Anniversary	NNP
+:	:
+RELOAD	NNP
+at	IN
+@majahouse	MENTION
+-	-
+7	CDP
+November	NN
+2015	CDP
+with	FW
+@Homogenicworld	MENTION
+!	.
+
+---
+The	FW
+Launch	FW
+New	FW
+Membercard	FW
+@AnangKaraoke	MENTION
+w/	NN
+@Unaputri_DJ	MENTION
+@ClaudiaJw	MENTION
+|	NN
+7	CDP
+Nov	NN
+Di	IN
+@AnangKaraoke	MENTION
+
+---
+BESOK	NN
+!	.
+Ikuti	NN
+Orasi	NN
+Budaya	NN
+Anti	JJ
+Maladministrasi	NNP
+bersama	IN
+ORI	NN
+DIY	NN
+&	NN
+@wayang_kampung	MENTION
+7	CDP
+Nov	NN
+di	IN
+@PKKH_UGM	MENTION
+info	NN
+:	:
+@eo_gmpro	MENTION
+
+---
+TODAY	NN
+!	.
+Boys	NNP
+Market	NNP
+No.	NNP
+02	CDP
+
+---
+TODAY	FW
+!!	.
+#UrbanGigs	HASHTAG
+Music	FW
+Gimmick	NN
+On	FW
+The	FW
+Street	NN
+w/	NN
+@SVSOULVIBE	MENTION
+@R_N_R_M	MENTION
+at	CC
+Taman	NNP
+Musik	NNP
+Bandung	NNP
+
+---
+TODAY	FW
+!!	.
+Almost	NNP
+Weekend	NN
+w/	NN
+@endahNrhesa	MENTION
+at	IN
+Foodpark	NN
+UGM	NN
+,	,
+FREE	NN
+!!	.
+
+---
+MALAM	NN
+INI	DT
+!	.
+@gkm_2015	MENTION
+w/	NN
+@sheilaon7	MENTION
+29	CDP
+Okt	NN
+15	CDP
+at	IN
+Graha	NNP
+Cakrawala	NNP
+Malang	NNP
+presented	NN
+by	NN
+@bemfeUM	MENTION
+
+---
+CAKRA	NNP
+(	OP
+Competition	NNP
+,	,
+Action	FW
+and	FW
+Skill	FW
+of	FW
+Paskibra	NNP
+)	CP
+|	NN
+1	CDP
+Nov	FW
+'15	CDP
+At	NN
+SMAN	NN
+1	CDP
+Krian	NN
+|	NN
+@pabrasma_01	MENTION
+/	GM
+085732441244	CDP
+
+---
+Psikologi	NN
+UI	NN
+@natsunohi2015	MENTION
+|	NN
+8	CDP
+Nov	FW
+'15	CDP
+@	IN
+Fak.	NNP
+Psikologi	NNP
+,	,
+UI	NN
+,	,
+Depok	NN
+|	NN
+0857	CDP
+1855	NN
+8595	NN
+/	GM
+
+---
+BESOK	NN
+!	.
+AUST	NN
+#EducationExpo	HASHTAG
+|	NN
+Hotel	NN
+Holiday	NN
+Inn	NN
+Dago	NN
+2	CDP
+-	-
+6	CDP
+PM	NN
+FREE	NN
+!	.
+@IDP_Bandung	MENTION
+|	.
+
+---
+Charity	NNP
+Concert	NN
+Be	NN
+Brave	NN
+Be	NN
+Confident	NN
+by	NN
+Solo	NNP
+Motion	NNP
+Project	NNP
+@SoloMotion15	MENTION
+|	VBT
+12	CDP
+Desember	NN
+2015	CDP
+|	NN
+Taman	NNP
+Balekambang	NNP
+
+---
+TONIGHT	NN
+!	.
+@jamie_aditya	MENTION
+is	FW
+back	FW
+with	FW
+a	FW
+new	NN
+album	NN
+!	.
+at	CC
+@Atamerica	MENTION
+#JazzIsBlues	HASHTAG
+
+---
+Music	FW
+Fashion	NNP
+Night	NNP
+2015	CDP
+"	"
+Jazz	NN
+Up	NN
+!	.
+"	"
+:	:
+Lomba	NN
+Fashion	NNP
+Designer	NN
+|	NN
+Periode	NN
+s/d	d
+28	NN
+Okt	FW
+'15	CDP
+|	.
+
+---
+FT	NNP
+UNLAM	NN
+Banjarbaru	NN
+proudly	NN
+present	NN
+"	"
+BMF	NN
+FUTSAL	NN
+COMPETITION	NN
+2015	CDP
+"	"
+@GorFajarBintang	MENTION
+Banjarbaru	NNP
+,	,
+
+---
+Hunting	NNP
+Photography	NNP
+
+---
+RESONANSI	NNP
+(	OP
+Resolusi	NN
+Passion	NNP
+dengan	IN
+Aksi	NN
+Menginspirasi	VBT
+)	CP
+|	NN
+11	CDP
+Nov	FW
+'15	CDP
+@	IN
+Aula	NNP
+Garuda	NNP
+Mukti	NNP
+,	,
+Unair	NN
+C	NN
+|	NN
+0822	CDP
+3429	CDP
+5960	CDP
+
+---
+RT	NN
+@amirahisnainhy	MENTION
+:	:
+Kejuaraan	NN
+bulutangkis	NN
+mahasiswa	NN
+tingkat	NN
+universitas	NN
+se-sulawesi	NN
+@UKMBunhas	MENTION
+@anak_unhas	MENTION
+@Kalaha12i	MENTION
+@SupirPete2	MENTION
+
+---
+Enviro	NN
+Seminar	NN
+IMTLI	NN
+Regional	NN
+4	CDP
+Sanitasi	NN
+100	CDP
+-	-
+0	CDP
+-	-
+100	CDP
+|	NN
+7	CDP
+Nov	FW
+'15	CDP
+At	NN
+Aud.	NNP
+UINSA	NN
+|	NN
+0813	CDP
+18870377	CDP
+
+---
+CALLLNG	NN
+ALL	NN
+TENANTS	NN
+!	.
+
+---
+Jangan	NEG
+lewatkan	JJ
+,	,
+ada	VBI
+2	CDP
+kirab	NN
+hari	NN
+ini	DT
+:	:
+Kirab	NN
+Apem	NN
+Sewu	NN
+yg	NNP
+membawa	VBT
+gunungan	SC
+dg	NN
+ribuan	CDC
+apem	NN
+&	NN
+Kirab	NN
+Lembu	NNP
+Suro	NNP
+
+---
+MALAM	NN
+INI	DT
+!!	.
+parteeh	DT
+di	IN
+@borneobeerhouse	MENTION
+feat	NN
+@DreadsConsp	MENTION
+@GETAH_army	MENTION
+@ZIFACTOR	MENTION
+KYN	NN
+&	NN
+@DaddysDayOut	MENTION
+!!	.
+
+---
+TONIGHT	NN
+!	.
+@JavabassCrew	MENTION
+15th	NN
+Anniversary	NNP
+:	:
+RELOAD	NNP
+at	IN
+@majahouse	MENTION
+W/	NNP
+@Homogenicworld	MENTION
+!	.
+
+---
