@@ -29,6 +29,8 @@ public class MergePOSAndLabel {
     private FileWriter filewriter;
     private PrintWriter writer;
     
+    public int total_folds = 2;
+    
     public void doReadFile1(){
         String filename = "tested/CMUTools/NER_gold_standard";
         try(BufferedReader br = new BufferedReader(new FileReader(filename))){
@@ -132,7 +134,7 @@ public class MergePOSAndLabel {
                 String _token = token.get(i).get(j);
                 String _postag = postag.get(i).get(j);
                 String _label = label.get(i).get(j);
-                writer.write(_token+"\t"+_postag+"\t"+_label+"\n");
+                writer.write(_token+"\t"+_postag+"\t"+_label+"\n"); // gak sesuai format mallet, harus dipisah spasi
             }
             writer.write("\n");
         }
@@ -141,13 +143,13 @@ public class MergePOSAndLabel {
     
     public void doWritingTraining() throws IOException{
         // aasumsi jml data ada 17 folds = 3 base = 5 start 1 0 end 1 5
-        int total_folds = 3;
+        
         int base = label.size() / total_folds;
         for (int i = 0; i < total_folds; i++) {
             int start_index = i*base;
             int end_index = (i+1) * base-1; // karena angka selalu dimulai dari 0
             
-            startWriter("tested/CMUTools/training_merged_"+i);
+            startWriter("tested/CMUTools/training_merged_"+i+".training");
             for (int k = 0; k < label.size(); k++) {
                 
                 // kalau k diluar itu semua baru ditulis sebagai training data..
@@ -157,7 +159,7 @@ public class MergePOSAndLabel {
                         String _token = token.get(k).get(j);
                         String _postag = postag.get(k).get(j);
                         String _label = label.get(k).get(j);
-                        writer.write(_token + "\t" + _postag + "\t" + _label + "\n");
+                        writer.write(_token + " " + _postag + " " + _label + "\n");
                     }
                     writer.write("\n");
                 
@@ -168,12 +170,73 @@ public class MergePOSAndLabel {
         }
     }
     
+    public void doWritingTesting() throws IOException{
+        // aasumsi jml data ada 17 folds = 3 base = 5 start 1 0 end 1 5
+
+        int base = label.size() / total_folds;
+        for (int i = 0; i < total_folds; i++) {
+            int start_index = i*base;
+            int end_index = (i+1) * base-1; // karena angka selalu dimulai dari 0
+            
+            startWriter("tested/CMUTools/testing_merged_"+i+".untagged");
+            for (int k = 0; k < label.size(); k++) {
+                
+                // kalau k didalam itu semua justru malah ditulis tapi tanpa label
+                if (start_index<k && k <= end_index){
+                    
+                    for (int j = 0; j < label.get(k).size(); j++) {
+                        String _token = token.get(k).get(j);
+                        String _postag = postag.get(k).get(j);
+                        String _label = label.get(k).get(j);
+                        writer.write(_token + " " + _postag + "\n");
+                    }
+                    writer.write("\n");
+                
+                }
+                
+            }
+            closeWriter();
+        }
+    }
+    
+    public void doWritingGoldStandard() throws IOException{
+        
+        int base = label.size() / total_folds;
+        for (int i = 0; i < total_folds; i++) {
+            int start_index = i*base;
+            int end_index = (i+1) * base-1; // karena angka selalu dimulai dari 0
+            
+            startWriter("tested/CMUTools/testing_merged_"+i+".gold_standard");
+            for (int k = 0; k < label.size(); k++) {
+                
+                // kalau k didalam itu semua justru malah ditulis tapi tanpa label
+                if (start_index<k && k <= end_index){
+                    
+                    for (int j = 0; j < label.get(k).size(); j++) {
+                        String _token = token.get(k).get(j);
+                        String _postag = postag.get(k).get(j);
+                        String _label = label.get(k).get(j);
+                        writer.write(_label + "\n");
+                    }
+                    writer.write("\n");
+                
+                }
+                
+            }
+            closeWriter();
+        }
+        
+    }
+    
     public static void main(String[] args){
         MergePOSAndLabel merger = new MergePOSAndLabel();
         merger.doReadFile1();
         merger.doReadFile2();
         try {
-            merger.doWriting();
+            //merger.doWriting();
+            merger.doWritingTraining();
+            merger.doWritingTesting();
+            merger.doWritingGoldStandard();
         } catch (IOException ex) {
             Logger.getLogger(MergePOSAndLabel.class.getName()).log(Level.SEVERE, null, ex);
         }
