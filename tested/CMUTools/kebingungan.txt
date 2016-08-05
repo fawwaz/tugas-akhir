@@ -1,0 +1,133 @@
+Line	Kebingungan
+385	apa postag untuk kata "untuk"
+416	RT bukan bermakna retweet tapi emang RT singkatan dari rumah tangga
+428	Tomorrow pos tagnya apa ?
+476	Discount up to ? ni postagnya apa ya ?
+487	"selamat malam" ? ini postagnya apa ya ?
+511	"Hanya"? apa itu postagnya ?
+519	Fakta menarik tentang tokenisasi cmu yang "gagal" menangani https:/... (ellipsis karena truncated)
+676	kata "sampai" dalam konteks kalimat pendaftaran tanggal xyz sampai xyz ? apa postag kata sampai ? V ? CC? bermakna kata hingga
+896	kata "ke" dalam konteks "ulang tahun ke 38", diberikan label sebagai G karena dianggap mistokenized
+1011	Sampai, konteks ini apa ?
+1412	Mistokenized yang cukup fatal,
+1500	previously labelled as interjection, however indonesian people write no. and tokenize recognize it as NO in interjection eg: "please no.. please""
+1599	Mistokenized so it become emoticon
+2263	Fun "pop up" market harusnya apa ya ?
+2291	Welcome dinner itu apa ya?
+2406	"Where's" itu postagnya apa ?
+2522	"Heroe's" city postagnya paa?
+2585	"Agama apa yang pantas bagi .." ini postagnya apa ya ?
+2701	"Your" masuk apa ? posesive ?
+2746	"Arsitektural" postgnya apa ? Adjective ?
+2906	"//" bisa jadi masalah dalam InaNlp
+3027	Mistokenized
+3325	"mu" bukan sebagai pronoun tapi singkatan dari manchester united
+3436	Intersport bingung ini apaan
+3353	Ada double shalsh bahaya bisa jadi masalah jika postagging dengan InaNlp
+3774	di realisasikan	mistokenized di menjadi IN padahal realisasi itu satu kata
+3945	"Kolam Renang" kalau hanya kolam dan hanya renang pasti noun dan verb tapi karena bigram jadi noun dan noun
+4088	"KK" singkatan dari Kakak ! (interjeksi mungkin ???)
+4127	"salah satu", bigram lagi, salah dan satu saja berdiri sendiri maknanya beda
+4153	Instead of using pipe symbol, they use capital I to separate words
+4245	"your" harusnya apa ? 
+4597	"Kali" dalam konteks ini berarti saat, tapi kadang juga bisa diberikan arti sungai
+4649	"Antar" dalam konteks ini berarti diantara, tapi juga bisa diberikan arti membawa
+
+5276	"Your" dan self kepisah.. postagnya apa ?
+5396	"SEpanjang" Postagnya apa ?
+5677	Masing-masing ?? postagnya apa?
+5791	"Seluruh" ?? postagnya pa ?
+5843	"Antara" postganya apa ?
+6536	"HIp hop" postagnya apa?
+6606	"Your"
+6790	"Min" maksudnya ap aya ? postagnya apa
+6810	"nya" terpisah dari yang lain, posesive ?
+7253	"Your" postagnya apa ?
+7941	"sampai ketemu disana", postag sampai apa ?
+8293	"Jangan" postagnya apa ya ?
+8351	"Try out", kalau hanya try berarti verb
+8735	"Where's" ini postagnya apa ya ?
+8753	"Jangan" postagnya apa ?
+8780	"Parteeh" sengaja variasi leksikal dari party
+9030	"Yor" variasi leksikal dari your
+9243	"Your" postagnya paa?
+9377	"Pre" singkatan dari presalse, ada juga ots, on the spot
+
+last 9537
+
+1153	"Yor" singkatan dari your
+11585	"Your" 
+12267	"Pramanapsikologiindonesia" mistokenized
+12304	Fatal example of mistokenized
+12717	"ur" hand
+12741	"Your"
+13518	"Your"
+13724	"Jangan" postagnya apa 
+13773	"Your"
+13872	"Mumpung" postagnya apa ?
+13977	"Pinggir" postangya apa ?
+14104	"t4" singkatan dari tempat
+14203	"Your"
+14504	"Jangan"
+14855	"Own"
+14910	"Asyik"
+15747	"ga" postagnya apa ?
+15835	"our" postagnya kenapa D?
+15865	"tidak" postangya apa ?
+15925	"IT"  (informasion technology) versus it (ini dalam bahasa inggris)
+
+16168	"sudah" apa postganya ?
+16167	"Nanti" (maknanya jika tidak)
+16168	"Kehabisan" verb ?
+16553	"Ala" apa postagya
+16614	"Tanpa" apa postagnya ?
+16694	"Your"
+17073	"dibidang" kata depan di yang digabung seolah imbuhan passive
+17208	"tidak" postangya apa ?
+17671	"good example of tokenization"
+17745	"BEdah network marketing "???
+18252	"Mulai dari" postagnya apa ?
+18732	"Your"
+18936	"nggak" ini apa ya ? T ??
+18978	"Indonesian" apa ya ?
+19007	"Se-batam
+19085	"Cuma"
+19287	"sesukamu"
+19230	"Jangan"
+19492	"Gak mau repot" ??
+19505	"Cuman" ??
+19638	"Fak" fakultas.. 
+19653	"more than" ??
+19766	"lebih dalam "??
+19870	"Jangan" ??
+19905	"More "??
+20261	"mudahnya" ??
+20285	"Your"
+20377	"tdk"??
+20554	"Here"
+20678	"resminya"
+20741	"partaaay" singkatan dari party" 
+21038	"Don't"
+21244	"Jangan"
+21487	"Sedunia"
+21626	"Everyone"
+21628	"Her"
+21713	"Your"
+21777	"More" ??
+21992	"Ngak"
+22003	Nggak
+2209	"Jangan"??
+2213	"You" mistype dari your
+22467	"Kmana" ??
+22645	"Jangan"
+22653	"Banyak"
+22950	OTS
+22987	Your
+23047	Let's
+23815	"GAk" ??
+24520	"seikhlasnya"
+24567	"It's"
+24920	"Your"
+25160	"Your" ??
+25248	"Let's"
+last 15738
