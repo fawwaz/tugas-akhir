@@ -1,0 +1,10 @@
+Experiment 1
+
+PraProcess : 
+- Tokenisasi	: CMUTools
+
+NER Fitur:
+- POS Tagging : Gold Standard
+
+
+=== Hasil ===
