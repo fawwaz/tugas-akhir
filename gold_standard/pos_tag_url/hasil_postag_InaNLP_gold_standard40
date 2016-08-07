@@ -1,0 +1,586 @@
+Jalan	NN
+Sehat	NN
+&	NN
+Senam	NN
+"	"
+Fun	NNP
+,	,
+Edu	NNP
+,	,
+And	FW
+Health	NN
+
+---
+Semnas	NN
+with	FW
+Tung	NNP
+Desem	NN
+Waringin	NN
+|	NN
+20	$
+Nov	NN
+2015	$
+|	NN
+at	IN
+Aula	NNP
+F	NNP
+FKIP	NN
+|	NN
+just	NNP
+45k	CDP
+utk	NN
+mhs100	$
+pembeli	NN
+prtma	NN
+@wid_aulia	MENTION
+https://t.co/j9mqG8JPc4	j9mqG8JPc4
+
+---
+Yang	SC
+mau	CC
+nonton	NN
+@captainjackband	@
+..	...
+besok	NNP
+sila	NNP
+merapat	VBT
+ke	IN
+Diamond	NN
+Solo	NNP
+.	.
+https://t.co/Xwtx8wNMQX	Xwtx8wNMQX
+
+---
+Saksikan	NNP
+Besok	NNP
+,	,
+Calon	NN
+Pemimpin	NN
+Kota	NN
+Banjarmasin	NN
+Adu	NN
+Debat	NN
+https://t.co/Co0nfWimbk	Co0nfWimbk
+#Banjarmasin	HASHTAG
+
+---
+TODAY	NN
+!	.
+European	NNP
+Higher	NNP
+Education	NNP
+Fair	NNP
+@EHEFindonesia	@
+#EHEF2015	$
+at	IN
+@UdayanaUniv	@
+BALI	NNP
+,	,
+12:00	$
+-	-
+16:00	$
+WITA	NN
+https://t.co/Z0ix1Djltc	Z0ix1Djltc
+
+---
+SOLO	NN
+PHOTO	NN
+FEST	NN
+:	:
+Pameran	NNP
+,	,
+Workshop	NNP
+,	,
+Lomba	NN
+,	,
+Bazar	NN
+dll	NN
+|	NN
+5	$
+-	-
+9	$
+Nov	NN
+2015	$
+|	NN
+Gd.	NN
+Galery	NN
+Kampus	NN
+2	$
+ISI	NN
+Surakarta	NNP
+https://t.co/EaEUa9Jvxg	EaEUa9Jvxg
+
+---
+BAFIA	NN
+Cup	NN
+201	$
+5	$
+|	NN
+9	$
+-	-
+13	$
+Nov	FW
+'15	$
+@	IN
+Lapangan	NN
+Badminton	NN
+UBSC	NN
+|	NN
+Reg	NN
+s/d	d
+6	$
+Nov	FW
+'15	$
+|	NN
+CP	NN
+:	:
+0857	$
+28630884	$
+https://t.co/U8OFMVMZvH	U8OFMVMZvH
+
+---
+#Now	HASHTAG
+Race	NN
+#2	$
+Inter	NN
+Sport	NNP
+Race	NNP
+Car	NNP
+Competition	NNP
+.	.
+Area	NN
+parkir	NN
+Stadion	NNP
+Manahan	NNP
+#KotaSolo	HASHTAG
+#EventSolo	HASHTAG
+https://t.co/ZEampiGhsm	ZEampiGhsm
+
+---
+Ikuti	NN
+berbagai	CDI
+workshop	NN
+menarik	JJ
+di	IN
+Hyperlink	NN
+Project	NNP
+|	VBT
+6	$
+-	-
+8	$
+Nov	FW
+'15	$
+At	NN
+SSCC	NNP
+Ballroom	NNP
+|	NN
+Info	NN
+:	:
+https://t.co/PPchNYVk1j	PPchNYVk1j
+https://t.co/3Ync6rbpLN	3Ync6rbpLN
+
+---
+The	FW
+ultimate	NN
+@DJ_Natagein	MENTION
+&	NN
+@RaAzhari	@
+by	NN
+@GGround_ID	MENTION
+at	IN
+@terracejogja	@
+TONIGHT	NNP
+!	.
+Come	FW
+and	FW
+join	NN
+the	FW
+excitement	NN
+!	.
+https://t.co/UkhylOiJvF	UkhylOiJvF
+
+---
+#jogja	HASHTAG
+@rryanov	@
+:	:
+25	$
+/	GM
+10	$
+/	GM
+15	$
+6.00	$
+Jogja	NNP
+Color	NNP
+Fun	NNP
+Run	NNP
+di	IN
+JEC	NN
+|	NN
+50k	CDP
+https://t.co/7FCB7pVX4H	7FCB7pVX4H
+
+---
+Now	NN
+perform	NN
+@downforlifesolo	@
+|	NN
+Panggung	NNP
+Solopolah	NNP
+@	IN
+benteng	NN
+Vastenburg	NN
+#kotaSolo	HASHTAG
+#Solopolah	HASHTAG
+https://t.co/HrNtaqDOF1	HrNtaqDOF1
+
+---
+Stand	NN
+ICCN	NN
+EXPO	NN
+2015	$
+:	:
+Kue	NN
+Kamir	NN
+Gurawan	NNP
+,	,
+Roti	NNP
+Ganep	NNP
+Tradisi	NNP
+Solo	NNP
+,	,
+Mochikuw	NNP
+.	.
+#ICCNExpo	HASHTAG
+#ICCC2015	$
+
+---
+Ikuti	NN
+!	.
+Miss	NNP
+Floral	NNP
+2015	$
+(	OP
+Babak	NN
+Penyisihan	NNP
+)	CP
+|	VBT
+Sabtu	NN
+,	,
+31	$
+Okt	FW
+'15	$
+Di	IN
+Hall	NN
+@LippoPlazaBatu	@
+|	NN
+https://t.co/udgLFxrACf	udgLFxrACf
+https://t.co/0npxRE3an9	0npxRE3an9
+
+---
+#KAMPUSKOMPASTV	HASHTAG
+UNS	NN
+sore	NN
+ini	DT
+..	.
+ada	VBI
+Stand	NN
+Up	NN
+.	.
+Habis	NNP
+ini	DT
+ada	VBI
+@RANforyourlife	@
+di	IN
+dlm	NN
+auditorium	NN
+UNS	NN
+https://t.co/FCaV8DZrFx	FCaV8DZrFx
+
+---
+The	FW
+1st	CDP
+English	NN
+Teacher	NN
+Conference	NN
+speakers	NN
+from	NN
+British	NNP
+Council	NNP
+,	,
+KIGI	NNP
+,	,
+UNESA	NN
+|	NN
+7	$
+Nov	FW
+'15	$
+At	NN
+PPG	NN
+Unesa	NN
+|	NN
+087856340967	$
+https://t.co/6S3QJu2h0i	6S3QJu2h0i
+
+---
+RT	NN
+@infoPKU	@
+:	:
+#eventPKU	HASHTAG
+Pekanbaru	NNP
+Job	NNP
+Fair	NNP
+2015	$
+https://t.co/4xEY1gGOZg	4xEY1gGOZg
+https://t.co/YUfYi4gmd4	YUfYi4gmd4
+
+---
+#MAGANG	HASHTAG
+Public	FW
+Relations	FW
+di	IN
+@OZRadioJakarta	@
+,	,
+info	NN
+lengkap	JJ
+cek	NN
+poster	NN
+https://t.co/bsAfAG98g3	bsAfAG98g3
+
+---
+HIMA	NN
+Manajemen	NNP
+Perhotelan	NN
+UNAIR	NN
+Present	NN
+:	:
+@hotfest2k15_official	MENTION
+|	NN
+22	$
+Nov	NN
+At	NN
+Danau	NN
+,	,
+Unair	NN
+C	NN
+|	NN
+https://t.co/36U9q3ImIB	36U9q3ImIB
+https://t.co/Dboeod4I0l	Dboeod4I0l
+
+---
+Jakarta	NNP
+Street	NNP
+Food	NNP
+Festival	NNP
+hadir	VBI
+di	IN
+@MKGLaPiazza	@
+Mulai	VBI
+HARI	NN
+INI	DT
+!!	.
+6	$
+Nov	NN
+s/d	d
+22	$
+Nov	NN
+2015	$
+.	.
+https://t.co/3tiCjvDzcx	3tiCjvDzcx
+
+---
+Are	NNP
+you	NNP
+ready	NN
+for	NN
+TSUNAMI	NN
+&	NN
+WILDFIRE	NN
+w/	NN
+@BorgeousMusic	@
+TOMORROW	NNP
+!	.
+@ColosseumJKT	@
+RSVP	NN
+0216909999	$
+082270001001	$
+https://t.co/9eblAaElTP	9eblAaElTP
+
+---
+Seminar	NN
+Bisnis	NN
+:	:
+Cara	NN
+Mudah	JJ
+Meraup	NNP
+Untung	NNP
+dari	IN
+Bisnis	NN
+Impor	NN
+Barang	NN
+Cina	NN
+|	NN
+7	$
+Nov	FW
+'15	$
+Di	IN
+Ibis	NN
+Hotel	NN
+|	NN
+081229646888	$
+https://t.co/hqJBJQRLsl	hqJBJQRLsl
+
+---
+#jogja	HASHTAG
+@pln_jogja	MENTION
+Pemeliharaan	NN
+|	NN
+5	$
+Nov	NN
+2015	$
+Jogjakota	NNP
+-	-
+kalasan	NN
+-	-
+sleman	NN
+-	-
+sedayu	RB
+&	VBT
+wates	NN
+|	NN
+Pkl	NN
+09.00	$
+-	-
+16.00	$
+WIB	NN
+https://t.co/eO8fSHtBHx	eO8fSHtBHx
+
+---
+CAREER	NN
+&	NN
+HIGHER	NNP
+EDUCATION	NNP
+FAIR	NNP
+2015	$
+
+---
+Ada	VBI
+byk	NN
+doorprize	NN
+di	IN
+#HijabFashionWeek2015	$
+!	.
+Dapatkan	NNP
+koleksi	NN
+terbaik	JJ
+&	IN
+hadiahnya	NN
+yuk	NNP
+!	.
+5	$
+-	-
+8	$
+Nov	NN
+,	,
+info	NN
+@LintasWarna	@
+https://t.co/hmGPIbtoGn	hmGPIbtoGn
+
+---
+Ayo	NNP
+berpartisipasi	VBT
+&	NN
+berdonasi	VBT
+pd	NN
+Outbound	NN
+&	NN
+Santunan	NNP
+Yatim	NNP
+Piatu	NNP
+.	.
+8	$
+/	GM
+11	$
+/	GM
+15	$
+di	IN
+kampus	NN
+Stikes	NN
+Bwi	NN
+.	.
+CP	NN
+:	:
+082231361865	$
+https://t.co/ehsF2bgCOx	ehsF2bgCOx
+
+---
+Tonight	NNP
+!	.
+Nonbar	NNP
+w/	NN
+@indomanutd_mlg	MENTION
+:	:
+Crystal	NNP
+Palace	NNP
+Vs	NNP
+Manchester	NNP
+United	NN
+At	NN
+617	$
+Cafe	NNP
+|	NN
+OG	NN
+:	:
+9	$
+pm	NN
+https://t.co/0Br0NaY0Dd	0Br0NaY0Dd
+
+---
+#TODAY	HASHTAG
+Ketoprak	NN
+Ngampung	NNP
+,	,
+Sosialisasi	NNP
+Pilkada	NNP
+Serentak	NNP
+2015	$
+|	NN
+Sabtu	NN
+,	,
+31	$
+Oktober	NNP
+2015	$
+pkl	NN
+19.30	$
+WIB	NN
+|	NN
+@	IN
+Plasa	NN
+Sriwedari	NN
+.	.
+Gratis	NNP
+
+---
+Rumble	NN
+Pro	JJ
+Championship	NNP
+
+---
+Open	NNP
+Call	NNP
+!!	.
+KIDSASTER	NN
+Movie	NN
+Teller	NN
+:	:
+Movie	NNP
+Workshop	NNP
+&	IN
+Competition	NN
+for	NN
+Disaster	NN
+Education	NN
+|	NN
+https://t.co/e2V7pVocsU	e2V7pVocsU
+https://t.co/2sEuP1fmhN	2sEuP1fmhN
+
+---
