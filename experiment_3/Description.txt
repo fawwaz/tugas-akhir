@@ -1,0 +1,11 @@
+Experiment 2
+
+PraProcess : 
+- Tokenisasi	: CMUTools
+- Case Folding (ToLowerCase)
+
+NER Fitur:
+- POS Tagging : Gold Standard
+- Capitalization : IS_CAPITAL (apakah seluruhnya huruf kapital ??)
+
+=== Hasil ===
