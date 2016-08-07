@@ -5,12 +5,22 @@
  */
 package utilitycode;
 
+import cmu.Twokenize;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -25,11 +35,16 @@ public class MergePOSAndLabel {
     ArrayList<ArrayList<String>> token    = new ArrayList<>();
     ArrayList<ArrayList<String>> label    = new ArrayList<>();
     ArrayList<ArrayList<String>> postag   = new ArrayList<>();
+    public HashMap<String, Integer> word_counter = new HashMap<>();
     
     private FileWriter filewriter;
     private PrintWriter writer;
     
-    public int total_folds = 2;
+    public int total_folds = 4;
+    
+    String  string_pat_capital = "[A-Z]+";
+    Pattern pattern_capital = Pattern.compile(string_pat_capital);
+    
     
     public void doReadFile1(){
         String filename = "tested/CMUTools/NER_gold_standard";
@@ -106,8 +121,17 @@ public class MergePOSAndLabel {
                     temp2 = new ArrayList<>();
                 }else{
                     System.out.println("["+i+"] "+line);
+                    
                     String[] splitted = line.split("\t");
                     temp2.add(splitted[1]);
+                    // Statisticnya didisabled dulu
+                    /*
+                    if(!(splitted[0].matches("[0-9]+")||splitted[0].matches(Twokenize.url)||splitted[0].matches("@[A-z0-9_.]+")||splitted[0].matches("#[A-z0-9_.]+"))){
+                        String candidate = splitted[0].toLowerCase().replaceAll("[AIUEOaiueo]", "");
+                        int count = word_counter.containsKey(candidate) ? word_counter.get(candidate) : 0;
+                        word_counter.put(candidate, count+1);
+                    }
+                    */
                 }
                 i++;
             }
@@ -159,7 +183,35 @@ public class MergePOSAndLabel {
                         String _token = token.get(k).get(j);
                         String _postag = postag.get(k).get(j);
                         String _label = label.get(k).get(j);
-                        writer.write(_token + " " + _postag + " " + _label + "\n");
+                        
+                        StringBuffer sb = new StringBuffer();
+                        // Fitur 1 : Leksikal
+                        //sb.append(_token.toLowerCase().replaceAll("[AIUEOaiueo]", ""));
+                        sb.append(_token);
+                        // Fitur 2 : POS_Tag
+                        sb.append(" "+_postag);
+                        // Fitur 3 : Kapitalisasi
+                        if(_token.matches(string_pat_capital)){
+                            sb.append(" IS_CAPITAL");
+                        }
+                        
+                        // Fitur 4 : Posisi 
+                        float position = (float) j / (float) label.get(k).size();
+                        if(position<0.25){
+                            sb.append(" FIRST_SEGMENT");
+                        }else if( (position>=0.25) && (position<0.5) ){
+                            sb.append(" SECOND_SEGMENT");
+                        }else if( (position>=0.5) && (position<0.75) ){
+                            sb.append(" THIRD_SEGMENT");
+                        }else if( (position>=0.75) && (position<=1.0) ){
+                            sb.append(" FOURTH_SEGMENT");
+                        }
+                        
+                        // Karena untuk training
+                        sb.append(" "+_label);
+                        sb.append("\n");
+                        writer.write(sb.toString());
+                        
                     }
                     writer.write("\n");
                 
@@ -188,7 +240,33 @@ public class MergePOSAndLabel {
                         String _token = token.get(k).get(j);
                         String _postag = postag.get(k).get(j);
                         String _label = label.get(k).get(j);
-                        writer.write(_token + " " + _postag + "\n");
+                        
+                        StringBuffer sb = new StringBuffer();
+                        // Fitur 1 : Leksikal
+                        //sb.append(_token.toLowerCase().replaceAll("[AIUEOaiueo]", ""));
+                        sb.append(_token);
+                        // Fitur 2 : POS_Tag
+                        sb.append(" "+_postag);
+                        // Fitur 3 : Kapitalisasi
+                        if(_token.matches(string_pat_capital)){
+                            sb.append(" IS_CAPITAL");
+                        }
+                        
+                        // Fitur 4 : Posisi Relatif
+                        float position = (float) j / (float) label.get(k).size();
+                        if(position<0.25){
+                            sb.append(" FIRST_SEGMENT");
+                        }else if( (position>=0.25) && (position<0.5) ){
+                            sb.append(" SECOND_SEGMENT");
+                        }else if( (position>=0.5) && (position<0.75) ){
+                            sb.append(" THIRD_SEGMENT");
+                        }else if( (position>=0.75) && (position<=1.0) ){
+                            sb.append(" FOURTH_SEGMENT");
+                        }
+                        
+                        // Tanpa label karena untuk testing..
+                        sb.append("\n");
+                        writer.write(sb.toString());
                     }
                     writer.write("\n");
                 
@@ -228,6 +306,34 @@ public class MergePOSAndLabel {
         
     }
     
+    
+    public void calculateStatistic() throws IOException{
+        FileWriter writer = new FileWriter(new File("Statistic"));
+        
+        List keys = new ArrayList(word_counter.keySet());
+        final Map count_to_compare = word_counter;
+        Collections.sort(keys,new Comparator(){
+            public int compare(Object left, Object right){
+                String LeftKey = (String) left;
+                String RightKey = (String) right;
+                Integer LeftValue = (Integer) count_to_compare.get(LeftKey);
+                Integer RightValue = (Integer) count_to_compare.get(RightKey);
+                if(LeftValue.compareTo(RightValue)==0){
+                    return LeftKey.compareTo(RightKey);
+                }else{
+                    return LeftValue.compareTo(RightValue);
+                }
+            }
+        });
+        for (Iterator iterator = keys.iterator(); iterator.hasNext();) {
+            Object next = iterator.next();
+            System.out.println(next + " "+word_counter.get(next));
+            writer.write(next + "\t" + word_counter.get(next) +"\n");
+        }
+        
+        writer.close();
+    }
+    
     public static void main(String[] args){
         MergePOSAndLabel merger = new MergePOSAndLabel();
         merger.doReadFile1();
@@ -240,5 +346,11 @@ public class MergePOSAndLabel {
         } catch (IOException ex) {
             Logger.getLogger(MergePOSAndLabel.class.getName()).log(Level.SEVERE, null, ex);
         }
+        try{
+            merger.calculateStatistic();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        System.out.println("Word Counter: "+merger.word_counter.size());
     }
 }

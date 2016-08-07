@@ -6,7 +6,9 @@
 package utilitycode;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -19,6 +21,8 @@ public class CalculateMatrix {
     ArrayList<String> label_standard;
     ArrayList<ArrayList<String>> tagged = new ArrayList<>();
     ArrayList<ArrayList<String>> gold_standard = new ArrayList<>();
+    public String foldername = "experiment_5";
+    public int total_folds = 4;
     
     public CalculateMatrix(){
         label_standard = new ArrayList<>();
@@ -33,7 +37,7 @@ public class CalculateMatrix {
     
     public void doReadFile_result(int urutan){
         System.out.println("Reading Tagged Result");
-        String filename = "experiment_sandbox/testing_merged_"+urutan+".result";
+        String filename = foldername+"/testing_merged_"+urutan+".result";
         try(BufferedReader br = new BufferedReader(new FileReader(filename))){
             String line;
             ArrayList<String> temp2 = new ArrayList<>();
@@ -55,7 +59,7 @@ public class CalculateMatrix {
     
     public void doReadFile_gold_standard(int urutan){
         System.out.println("Reading Tagged Gold Standard");
-        String filename = "experiment_sandbox/testing_merged_"+urutan+".gold_standard";
+        String filename = foldername+"/testing_merged_"+urutan+".gold_standard";
         try(BufferedReader br = new BufferedReader(new FileReader(filename))){
             String line;
             ArrayList<String> temp2 = new ArrayList<>();
@@ -161,7 +165,7 @@ public class CalculateMatrix {
         StringBuffer sb = new StringBuffer();
         
         // print header
-        sb.append("\t\t");
+        sb.append("\t\t\t");
         for (int i = 0; i < label_standard.size(); i++) {
             sb.append(label_standard.get(i)+"\t");
         }
@@ -169,16 +173,18 @@ public class CalculateMatrix {
         sb.append("\n");
         
         for (int i = 0; i < conf_matrix.length; i++) {
-            if(i<4||i>5){
-                sb.append(label_standard.get(i)+"\t\t"); // cuma biar enak dilihat mata doang
+            if(i==4||i==5){
+                sb.append(label_standard.get(i)+"\t"); // cuma biar enak dilihat mata doang
+            }else if(i==6){
+                sb.append(label_standard.get(i)+"\t\t\t"); 
             }else{
-                sb.append(label_standard.get(i)+"\t");
+                sb.append(label_standard.get(i)+"\t\t");
             }
             for (int j = 0; j < conf_matrix[i].length; j++) {
-                if(j<4||j>5){
-                    sb.append(conf_matrix[i][j]+"\t");
+                if(j==4||j==5){
+                    sb.append(conf_matrix[i][j]+"\t\t\t");
                 }else{
-                    sb.append(conf_matrix[i][j]+"\t\t");
+                   sb.append(conf_matrix[i][j]+"\t\t"); 
                 }
             }
             sb.append(false_negative[i]);
@@ -187,9 +193,9 @@ public class CalculateMatrix {
         
         
         // Print false negative 
-        sb.append("\t\t");
+        sb.append("\t\t\t");
         for (int i = 0; i < label_standard.size(); i++) {
-            if(i<4||i>5){
+            if(i==4||i==5||i==1){
                 sb.append(false_positive[i]+"\t");
             }else{
                 sb.append(false_positive[i]+"\t\t");
@@ -205,13 +211,15 @@ public class CalculateMatrix {
     
     public String getTidyMetric(float[] accuracy,float[] precission){
         StringBuffer sb = new StringBuffer();
-        sb.append("\t\t"+"Recall"+"\t\t"+"Precission"+"\t"+"F-Measure(F-1)\n");
+        sb.append("\t\t\t\t"+"Recall"+"\t\t"+"Precission"+"\t"+"F-Measure(F-1)\n");
         for (int i = 0; i < label_standard.size(); i++) {
             float fmeasure = 2*(accuracy[i]*precission[i]) / (accuracy[i]+precission[i]);
-            if(i<4||i>5){
+            if(i==4||i==5){
                 sb.append(label_standard.get(i) + "\t\t" + accuracy[i]+"\t"+precission[i]+"\t"+fmeasure+ "\n");
+            }else if(i==6){
+                sb.append(label_standard.get(i) + "\t\t\t\t" + accuracy[i]+"\t"+precission[i]+"\t"+fmeasure+ "\n");
             }else{
-                sb.append(label_standard.get(i) + "\t" + accuracy[i]+"\t"+precission[i]+"\t"+fmeasure+ "\n");
+                sb.append(label_standard.get(i) + "\t\t\t" + accuracy[i]+"\t"+precission[i]+"\t"+fmeasure+ "\n");
             }
         }
         return sb.toString();
@@ -219,13 +227,14 @@ public class CalculateMatrix {
     
     
     
-    public void doCalculateMatrix(){
-        int total_folds = 2;
+    public void doCalculateMatrix() throws IOException{
+        FileWriter writer = new FileWriter(new File(foldername+"/rekap_"+foldername));
+        FileWriter writer2 = new FileWriter(new File(foldername+"/rekap_failed_to_recognize_"+foldername));
         ArrayList<float[]> OverallAccuracy = new ArrayList<>();
         ArrayList<float[]> OverallPrecission = new ArrayList<>();
         
-        //for (int i = 0; i < total_folds; i++) {
-        int i =1;
+        for (int i = 0; i < total_folds; i++) {
+        //int i =1;
             tagged = new ArrayList<>();
             gold_standard = new ArrayList<>();
         
@@ -245,17 +254,47 @@ public class CalculateMatrix {
             System.out.println(getTidyMatrix(hasil,false_postive,false_negative));
             System.out.println(getTidyMetric(accuracy, precission));
             
+            writer.write("\n\n\n -------- Confusion matrix for fold : "+i+" --------");
+            writer.write("\n");
+            writer.write(getTidyMatrix(hasil,false_postive,false_negative));
+            writer.write("\n");
+            writer.write(getTidyMetric(accuracy, precission));
+            writer.write("\n");
+            
             System.out.println("Finding case .. ");
+            writer2.write("============= Iteration : "+i+ "=============\n");
+            for (int j = 0; j < label_standard.size(); j++) {
+                for (int k = 0; k < label_standard.size(); k++) {
+                    String Supposed_lbel = label_standard.get(j);
+                    String System_lbel = label_standard.get(k);
+                    ArrayList<Integer> cases = FindCase(Supposed_lbel, System_lbel);
+                    writer2.write("Supposed(Tagged As) : "+Supposed_lbel+"("+System_lbel+")\n\n");
+                    for (int l = 0; l < cases.size(); l++) {
+                        writer2.write(cases.get(l)+"\n");
+                    }
+                }
+            }
+            /*
             ArrayList<Integer> cases = FindCase("B-Name", "O");
             System.out.println("Finished finding ..case .. ");
             for (int j = 0; j < cases.size(); j++) {
                 System.out.println(cases.get(j));
             }
-        //}
+            /**/
+        }
         float[] summary_accuracy = calculateAverageOverallMetric(OverallAccuracy);
         float[] summary_precission = calculateAverageOverallMetric(OverallPrecission);
         System.out.println("==== Overall System Performance ====");
         System.out.println(getTidyMetric(summary_accuracy, summary_precission));
+        
+        writer.write("\n\n\n ====================================\n");
+        writer.write(" ==== Overall System Performance ====\n");
+        writer.write(" ====================================\n");
+        writer.write(getTidyMetric(summary_accuracy, summary_precission));
+        writer.write("\n");
+        
+        writer.close();
+        writer2.close();
     }
     
     public ArrayList<Integer> FindCase(String label_standard, String label_tagged){
@@ -276,7 +315,11 @@ public class CalculateMatrix {
     
     public static void main(String[] args){
         CalculateMatrix calculator = new CalculateMatrix();
-        calculator.doCalculateMatrix();
+        try{
+            calculator.doCalculateMatrix();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
         
         /*
         Process p;

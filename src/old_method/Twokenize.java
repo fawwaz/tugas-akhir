@@ -1,3 +1,5 @@
+package old_method;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -393,7 +395,8 @@ public class Twokenize {
     
     // ## FAWWAZ START
     private static String caseFolding(String input){
-    	return input.toLowerCase();
+        return input; // disabled first just to compare
+    	//return input.toLowerCase();
     }
     // ## FAWWAZ END
     
