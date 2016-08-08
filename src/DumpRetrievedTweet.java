@@ -84,7 +84,8 @@ public class DumpRetrievedTweet {
     
     public void selectTokenFromDB() {
         try {
-            preparedstatement = connection.prepareStatement("select t.id from (select * from tweet_baru_sanitized limit 5000,5000) as t where is_labelled_anotator1 = 1 && is_labelled_anotator3=0");
+            //preparedstatement = connection.prepareStatement("select t.id from (select * from tweet_baru_sanitized limit 5000,5000) as t where is_labelled_anotator1 = 1 && is_labelled_anotator3=0");
+            preparedstatement = connection.prepareStatement("select twitter_tweet_id as id from filtered_tweet_final where label = 1 and isRetrieved =0");
             resultset = preparedstatement.executeQuery();
             Integer a = 0;
             while (resultset.next()) {
@@ -98,7 +99,7 @@ public class DumpRetrievedTweet {
         }
     }
     public void doGetTweetData() throws IOException{
-        startWriter("DumpRetrievedTweet");
+        startWriter("Old_DumpRetrievedTweetWithId");
         try{
             GetTweetData();
         }catch(TwitterException twe){
@@ -115,20 +116,30 @@ public class DumpRetrievedTweet {
 //        String TWITTER_TOKEN = "753222147695259648-QnzInB98PtwpFb75dqlP1J7SSOQMcMX";
 //        String TWITTER_TOKEN_SECRET = "uxJHGE1e2kFBJYoNRRFfy5gBLXYaRrzCUycRncSkoLsle";
         
-        String CONSUMER_KEY = "nNV9KxWFVmdI0a2shhJImcEGk";
-        String CONSUMER_SECRET = "I4AvaGOZRFtLFTqAkpKrfFOnV13Ej2seiwnNQ47z0qE9ORoBhW";
-        String TWITTER_TOKEN = "753222147695259648-kY3Gq1O6FqHw6LQViuTQAhLbEQLZRZX";
-        String TWITTER_TOKEN_SECRET = "a6hsmYipeGvqJcrIUUZah4ZhH7B8wbY77hqNWwojQysiO";
+//        String CONSUMER_KEY = "nNV9KxWFVmdI0a2shhJImcEGk";
+//        String CONSUMER_SECRET = "I4AvaGOZRFtLFTqAkpKrfFOnV13Ej2seiwnNQ47z0qE9ORoBhW";
+//        String TWITTER_TOKEN = "753222147695259648-kY3Gq1O6FqHw6LQViuTQAhLbEQLZRZX";
+//        String TWITTER_TOKEN_SECRET = "a6hsmYipeGvqJcrIUUZah4ZhH7B8wbY77hqNWwojQysiO";
         
 //        String CONSUMER_KEY = "PBMKK9P2YD9MFgDfdANQt2Zzc";
 //        String CONSUMER_SECRET = "ldB0FybCQIjfYLzuYE4CeGtvcevaSkFxPENGbFd19Yn2crXa5R";
 //        String TWITTER_TOKEN = "753222147695259648-ZWqj3CvdQAXeVl9zfa71BCRcxeD2yAi";
 //        String TWITTER_TOKEN_SECRET = "1bypYSL1D1t1Gt6nQLwEbyRg5rniOUHfJhTYuVWYWvAvP";
         
+//        String CONSUMER_KEY = "tf0Cbp3ZQcJh9vwkQ9vInw6WS";
+//        String CONSUMER_SECRET = "gRmcjuqrSH40K47CkRFEO5OVthUtExEW7xrZU2oWiRcpPmzRz9";
+//        String TWITTER_TOKEN = "126239739-qaXgO4urp91PXLT2RgkxlyONwAQyXnq236dhqtTe";
+//        String TWITTER_TOKEN_SECRET = "AIykIeAKGFHRucTPgNYZd9bqdbZEJQhMsF5cGiyBLUII7";
+        
+        String CONSUMER_KEY = "EmmSsTEML5XrB3SYBUOOKxqn6";
+        String CONSUMER_SECRET = "J1TrjmcqhBd1cURBTjUCwNqcf5IxCfdInAs74TVT9axvSwLnlJ";
+        String TWITTER_TOKEN = "126239739-ktoaE8NhM4S9CjFhrktTdpuvY7fkbqj1nYxfaQsD";
+        String TWITTER_TOKEN_SECRET = "a5fFQbKO9meoqnY31wwlZF0nqDHtqfxlwUla1uaAT8Y0p";
+        
         twitter.setOAuthConsumer(CONSUMER_KEY, CONSUMER_SECRET);
         AccessToken accesstoken = new AccessToken(TWITTER_TOKEN, TWITTER_TOKEN_SECRET);
         twitter.setOAuthAccessToken(accesstoken);
-        
+        writer.write("\n");
         for (int i = 0; i < tweet_ids.size(); i++) {
             Long tweet_id = tweet_ids.get(i);
             System.out.println("["+i+"] Getting Tweet id "+tweet_id);
@@ -137,7 +148,7 @@ public class DumpRetrievedTweet {
                 System.out.println("[FAILED] Doesnot exist twitter with tweet id : " +tweet_id);
             } else {
                 System.out.println("status asli : " + status.getText());
-                writer.write(status.getText().replaceAll("\n", " "));
+                writer.write(tweet_id+"\t"+status.getText().replaceAll("\n", " "));
                 writer.write("\n");
                 updateIsLabelledAnotator3(tweet_id);
             }
@@ -146,7 +157,8 @@ public class DumpRetrievedTweet {
     
     private void updateIsLabelledAnotator3(Long id){
         try {
-            preparedstatement = connection.prepareStatement("update tweet_baru_sanitized set is_labelled_anotator3 = 1 where id = ?");
+            //preparedstatement = connection.prepareStatement("update tweet_baru_sanitized set is_labelled_anotator3 = 1 where id = ?");
+            preparedstatement = connection.prepareStatement("UPDATE `filtered_tweet_final` SET `isRetrieved`=1 WHERE `twitter_tweet_id`=?");
             preparedstatement.setLong(1, id);
             int result = preparedstatement.executeUpdate();
             if(result == 0){
