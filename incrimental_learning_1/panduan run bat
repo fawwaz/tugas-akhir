@@ -45,13 +45,13 @@ java -cp "class;lib/mallet-deps.jar" cc.mallet.fst.SimpleTagger --train true --t
 
 
 CLASSIFY DENGAN FITUR BARU
-java -cp "class;lib/mallet-deps.jar" cc.mallet.fst.SimpleTagger --model-file "incrimental_learning_1/incrimental_iteration_0/iteration_0_with_lookup_feature.model" "incrimental_learning_1/incrimental_iteration_0/testing_merged_sub_iteration_0.untagged" > "incrimental_learning_1/incrimental_iteration_0/testing_merged_sub_iteration_0.result"
+java -cp "class;lib/mallet-deps.jar" cc.mallet.fst.SimpleTagger --model-file "incrimental_learning_1/incrimental_iteration_0/iteration_0_with_lookup_feature.model" "incrimental_learning_1/incrimental_iteration_0/testing_merged_sub_iteration_2.untagged" > "incrimental_learning_1/incrimental_iteration_0/testing_merged_sub_iteration_2.result"
 
 
-java -cp "class;lib/mallet-deps.jar" cc.mallet.fst.SimpleTagger --model-file "incrimental_learning_1/incrimental_iteration_1/iteration_1_with_lookup_feature.model" "incrimental_learning_1/incrimental_iteration_1/testing_merged_sub_iteration_0.untagged" > "incrimental_learning_1/incrimental_iteration_1/testing_merged_sub_iteration_0.result"
+java -cp "class;lib/mallet-deps.jar" cc.mallet.fst.SimpleTagger --model-file "incrimental_learning_1/incrimental_iteration_1/iteration_1_with_lookup_feature.model" "incrimental_learning_1/incrimental_iteration_1/testing_merged_sub_iteration_2.untagged" > "incrimental_learning_1/incrimental_iteration_1/testing_merged_sub_iteration_2.result"
 
 
-java -cp "class;lib/mallet-deps.jar" cc.mallet.fst.SimpleTagger --model-file "incrimental_learning_1/incrimental_iteration_0z/iteration_2_with_lookup_feature.model" "incrimental_learning_1/incrimental_iteration_2/testing_merged_sub_iteration_0.untagged" > "incrimental_learning_1/incrimental_iteration_2/testing_merged_sub_iteration_0.result"
+java -cp "class;lib/mallet-deps.jar" cc.mallet.fst.SimpleTagger --model-file "incrimental_learning_1/incrimental_iteration_2/iteration_2_with_lookup_feature.model" "incrimental_learning_1/incrimental_iteration_2/testing_merged_sub_iteration_2.untagged" > "incrimental_learning_1/incrimental_iteration_2/testing_merged_sub_iteration_2.result"
 
 
-java -cp "class;lib/mallet-deps.jar" cc.mallet.fst.SimpleTagger --model-file "incrimental_learning_1/incrimental_iteration_0z/iteration_3_with_lookup_feature.model" "incrimental_learning_1/incrimental_iteration_3/testing_merged_sub_iteration_0.untagged" > "incrimental_learning_1/incrimental_iteration_3/testing_merged_sub_iteration_0.result"
+java -cp "class;lib/mallet-deps.jar" cc.mallet.fst.SimpleTagger --model-file "incrimental_learning_1/incrimental_iteration_3/iteration_3_with_lookup_feature.model" "incrimental_learning_1/incrimental_iteration_3/testing_merged_sub_iteration_2.untagged" > "incrimental_learning_1/incrimental_iteration_3/testing_merged_sub_iteration_2.result"
