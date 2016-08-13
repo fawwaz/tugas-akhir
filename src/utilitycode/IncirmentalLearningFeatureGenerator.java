@@ -36,7 +36,7 @@ public class IncirmentalLearningFeatureGenerator {
     private PrintWriter writer;
 
     public int total_folds = 4;
-    public int current_sub_iteration = 0;
+    public int current_sub_iteration = 2;
     public int base_training = 700;
     public int base_testing = 200;
 
@@ -72,7 +72,6 @@ public class IncirmentalLearningFeatureGenerator {
                         } else {
                             // ambil previous nya ...
                             String last_label = temp2.get(temp2.size() - 2); // selalu dimulai dari 0
-
                             if (last_label.equals(splitted[1])) {
                                 temp3.add("I-" + getBetterLabel(splitted[1]));
                             } else {
@@ -217,7 +216,7 @@ public class IncirmentalLearningFeatureGenerator {
             System.out.println("Start index \t: "+start_index);
             System.out.println("End index \t: "+end_index);
             writeTrainingData(start_index, end_index, i);
-            /*
+            
             System.out.println("---");
             System.out.println("Writing Testing data : "+"incrimental_learning_1/incrimental_iteration_" + i + "/testing_merged_sub_iteration_" + current_sub_iteration + ".untagged");
             writeTestingData(start_index, end_index, i);
@@ -225,16 +224,17 @@ public class IncirmentalLearningFeatureGenerator {
             System.out.println("incrimental_learning_1/incrimental_iteration_" + i + "/testing_merged_sub_iteration_" + current_sub_iteration + ".gold_standard");
             writeGoldStandard(start_index, end_index, i);
             System.out.println("===DONE==");
-            */
+            /**/
         }
     }
 
     private void writeTrainingData(int start_index, int end_index, int i) throws IOException {
-        startWriter("incrimental_learning_1/incrimental_iteration_" + i + "/training_merged_" + i + ".training");
+        //startWriter("incrimental_learning_1/incrimental_iteration_" + i + "/training_merged_" + i + ".training");
+        startWriter("incrimental_learning_1/incrimental_iteration_" + i + "/training_merged_sub_iteration_" + current_sub_iteration + ".training");
         for (int k = 0; k < label.size(); k++) {
 
             // kalau k diluar itu semua baru ditulis sebagai training data..
-            if (!(start_index < k && k <= end_index)) {
+            if ((start_index < k && k <= end_index)) {
 
                 for (int j = 0; j < label.get(k).size(); j++) {
                     String _token = token.get(k).get(j);
@@ -319,6 +319,7 @@ public class IncirmentalLearningFeatureGenerator {
             System.out.println("Writing gold standard file : incrimental_learning_1/incrimental_iteration_" + i + "/testing_merged_sub_iteration_" + current_sub_iteration + ".gold_standard");
             writeGoldStandard(start_index, end_index, i);
             System.out.println("===DONE==");
+            writeTrainingData(start_index, end_index, i);
         }
     }
 

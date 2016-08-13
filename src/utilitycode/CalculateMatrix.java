@@ -21,7 +21,13 @@ public class CalculateMatrix {
     ArrayList<String> label_standard;
     ArrayList<ArrayList<String>> tagged = new ArrayList<>();
     ArrayList<ArrayList<String>> gold_standard = new ArrayList<>();
-    public String foldername = "experiment_5";
+    ArrayList<Pair> original_pair = new ArrayList<>();
+    ArrayList<String> original_sentence = new ArrayList<>();
+    ArrayList<String> original_token = new ArrayList<>();
+    public String foldername = "experiment_1";
+    //public int sub_iteration = 2; // 0 1 2 saja .
+    //public int current_urutan = 3;
+    // public String foldername = "incrimental_learning_1/";
     public int total_folds = 4;
     
     public CalculateMatrix(){
@@ -38,6 +44,7 @@ public class CalculateMatrix {
     public void doReadFile_result(int urutan){
         System.out.println("Reading Tagged Result");
         String filename = foldername+"/testing_merged_"+urutan+".result";
+        //String filename = foldername+"incrimental_iteration_"+urutan+"/testing_merged_sub_iteration_"+sub_iteration+".result";
         try(BufferedReader br = new BufferedReader(new FileReader(filename))){
             String line;
             ArrayList<String> temp2 = new ArrayList<>();
@@ -57,9 +64,11 @@ public class CalculateMatrix {
         }
     }
     
+    
     public void doReadFile_gold_standard(int urutan){
         System.out.println("Reading Tagged Gold Standard");
         String filename = foldername+"/testing_merged_"+urutan+".gold_standard";
+        //String filename = foldername+"incrimental_iteration_"+urutan+"/testing_merged_sub_iteration_"+sub_iteration+".gold_standard";
         try(BufferedReader br = new BufferedReader(new FileReader(filename))){
             String line;
             ArrayList<String> temp2 = new ArrayList<>();
@@ -72,6 +81,37 @@ public class CalculateMatrix {
                     //System.out.println(line);
                     temp2.add(line);
                 }
+                i++;
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    
+    // Untuk bikin pair.. sekaligus original wordnya sih.. token apa gitu..
+    public void doReadFile_original(int urutan){
+        System.out.println("Reading Tagged Original file");
+        String filename = foldername+"/testing_merged_"+urutan+".untagged";
+        //String filename = foldername+"incrimental_iteration_"+urutan+"/testing_merged_sub_iteration_"+sub_iteration+".untagged";
+        Pair p = new Pair();
+        p.start_index = 0;
+        StringBuffer sb = new StringBuffer();
+        try(BufferedReader br = new BufferedReader(new FileReader(filename))){
+            String line;
+            int i =0;
+            while((line = br.readLine())!=null){
+                String[] splitted = line.split(" ");
+                if(line.equals("")){
+                    original_sentence.add(sb.toString());
+                    sb = new StringBuffer();
+                    original_pair.add(p);
+                    p = new Pair();
+                    p.start_index = i+1;
+                }else{
+                    p.end_index = i;
+                    sb.append(splitted[0]+" "); // 0 artinya token..
+                }
+                original_token.add(splitted[0]);
                 i++;
             }
         }catch(IOException e){
@@ -160,6 +200,19 @@ public class CalculateMatrix {
         return retval;
     }
     
+    private int findInBetween(int nomor_line){
+        for (int i = 0; i < original_pair.size(); i++) {
+            Pair p = original_pair.get(i);
+//            System.out.print("Nomor line is : "+nomor_line+"\t");
+//            System.out.print(p.start_index+"\t");
+//            System.out.println(p.end_index);
+            if((p.start_index<=nomor_line)&&(nomor_line<=p.end_index)){
+                return i;
+            }
+        }
+        return 0; // by default kalau gak ada sama sekali..
+    }
+    
     
     public String getTidyMatrix(int[][] conf_matrix, int[] false_positive, int[] false_negative){
         StringBuffer sb = new StringBuffer();
@@ -230,16 +283,25 @@ public class CalculateMatrix {
     public void doCalculateMatrix() throws IOException{
         FileWriter writer = new FileWriter(new File(foldername+"/rekap_"+foldername));
         FileWriter writer2 = new FileWriter(new File(foldername+"/rekap_failed_to_recognize_"+foldername));
+        // int i = current_urutan;
+        // int urutan = i;
+        // FileWriter writer = new FileWriter(new File(foldername+"incrimental_iteration_"+urutan+"/rekap_sub_iteration_"+sub_iteration));
+        // FileWriter writer2 = new FileWriter(new File(foldername+"incrimental_iteration_"+urutan+"/rekap_failed_to_recognize_sub_iteration_"+sub_iteration));
         ArrayList<float[]> OverallAccuracy = new ArrayList<>();
         ArrayList<float[]> OverallPrecission = new ArrayList<>();
         
         for (int i = 0; i < total_folds; i++) {
-        //int i =1;
+        //int i =1; // urutan
             tagged = new ArrayList<>();
             gold_standard = new ArrayList<>();
+            original_pair = new ArrayList<>();
+            original_token = new ArrayList<>();
+            original_sentence = new ArrayList<>();
         
             doReadFile_gold_standard(i);
             doReadFile_result(i);
+            doReadFile_original(i);
+            //PrintOriginalDatas();
         
             int[][] hasil = calculateMatrix(gold_standard, tagged);
             int[] false_postive = calculateFalsePositive(hasil);
@@ -269,9 +331,13 @@ public class CalculateMatrix {
                     String System_lbel = label_standard.get(k);
                     ArrayList<Integer> cases = FindCase(Supposed_lbel, System_lbel);
                     writer2.write("Supposed(Tagged As) : "+Supposed_lbel+"("+System_lbel+")\n\n");
+                    
+                    writeDataFailedToRekap(writer2, cases);
+                    /*
                     for (int l = 0; l < cases.size(); l++) {
                         writer2.write(cases.get(l)+"\n");
                     }
+                    */
                 }
             }
             /*
@@ -297,6 +363,33 @@ public class CalculateMatrix {
         writer2.close();
     }
     
+    public void PrintOriginalDatas(){
+        for(int i=0; i<original_pair.size(); i++){
+            System.out.println("["+i+"]"+original_pair.get(i).start_index+" "+original_pair.get(i).end_index+"\t"+original_sentence.get(i));
+        }
+    }
+    
+    private void writeDataFailedToRekap(FileWriter writer,ArrayList<Integer> cases) throws IOException{
+        writer.write("\n");
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < cases.size(); i++) {
+            int nomor_urut = findInBetween(cases.get(i));
+            String kata = original_token.get(cases.get(i)-1);
+            sb.append(kata);
+            
+            // panjang kata.. biar enak diprint aja..
+            int tab_repeat = 5 - (kata.length() / 4);
+            for (int j = 0; j < tab_repeat; j++) {
+                sb.append("\t");
+            }
+            sb.append("\t\t\t");
+            sb.append(original_sentence.get(nomor_urut)+"\n");
+            writer.write(sb.toString());
+            sb.delete(0,sb.length());
+        }
+        writer.write("\n\n");
+    }
+    
     public ArrayList<Integer> FindCase(String label_standard, String label_tagged){
         ArrayList<Integer> retval = new ArrayList<>();
         int line_counter = 0;
@@ -311,6 +404,11 @@ public class CalculateMatrix {
             }
         }
         return retval;
+    }
+    
+    private class Pair{
+        public int start_index;
+        public int end_index;
     }
     
     public static void main(String[] args){
@@ -339,3 +437,4 @@ public class CalculateMatrix {
     }
 
 }
+
