@@ -1,0 +1,16 @@
+Experiment 2
+
+OrderState = only in training data..
+Feature induction = true..
+
+PraProcess : 
+- Tokenisasi	: CMUTools
+
+NER Fitur:
+- POS Tagging : Gold Standard
+- Capitalization : IS_CAPITAL (apakah seluruhnya huruf kapital ??)
+- Relative POSITION
+- Next tag
+- Next of Next Tag
+- Word LIST
+=== Hasil ===
