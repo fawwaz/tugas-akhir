@@ -1,0 +1,10 @@
+Experiment 2
+
+PraProcess : 
+- Tokenisasi	: CMUTools
+
+NER Fitur: (old experiment)
+- POS Tagging : Kateglo lookup
+- Date Separator
+- REGEX.. detailed 
+=== Hasil ===
