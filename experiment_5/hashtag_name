@@ -1,0 +1,105 @@
+#1						 $ 2					 I-Name 2
+#15						 $ 1					 I-Name 1
+#16						 $ 1					 I-Name 1
+#171					 $ 1					 I-Name 1
+#3						 $ 4					 I-Name 4
+#4						 $ 1					 I-Name 1
+#5						 $ 1					 I-Name 1
+#Amanda Festival			 N 1 ^ 4				 I-Name 2 B-Name 3
+#Assylum 2015			 # 1 ^ 1				 B-Name 2
+#Ayah Menyayangi Tanpa Akhir # 2					 I-Name 1 O 1
+#Balairung UI			 # 1 ^ 2				 B-Location 3
+#Bandoeng Glasses Party	 # 1					 B-Name 1
+#Bandung				 ^ 1 N 1				 I-Name 1 O 1
+#Bandung Wedding Festival	 # 3					 B-Name 3
+#Biennale Jogja 13		 # 2 ^ 3				 O 1 I-Name 4
+#Bioskop Car Free Day		 # 1					 B-Name 1
+#CH Karaoke				 # 1					 B-Name 1
+#Career Expo				 # 1 ^ 1				 B-Name 2
+#Cikal Surabaya			 ^ 2					 I-Name 2
+#Darurat Asap			 ^ 2					 I-Name 2
+#Depok					 ^ 2					 I-Location 2
+#Desember				 ^ 3					 I-Name 1 I-Time 2
+#Duta Batik Jatim			 ^ 2					 I-Name 1 O 1
+#Education Expo			 # 1 ^ 1				 I-Name 2
+#Electronic Music Parade	 # 1					 I-Name 1
+#Electronic Music Parade 2015 ^ 2					 B-Name 2
+#Electronic duo			 # 1					 I-Name 1
+#Event Batam Live On PF 2015	 # 2					 B-Name 1 O 1
+#Family Gathering Day		 ^ 1					 B-Name 1
+#Festival Tari Merak 50	 ^ 1					 B-Name 1
+#Forum Jumat				 ^ 1					 B-Name 1
+#Gentlemen Rules			 # 1					 B-Name 1
+#Happy Date with LEGENDADDY ^ 1					 B-Name 1
+#Hijab Fashion Week 2015	 ^ 1					 B-Name 1
+#Hijab Weekday Market		 # 1					 B-Name 1
+#Hiruk Pikuk Kota Lama		 ^ 1					 I-Name 1
+#ITS expo 2015			 # 1					 B-Name 1
+#Ice Cool Bus				 # 1					 B-Name 1
+#Incredi 8 le				 ^ 1					 I-Name 1
+#Indonesia Career Expo	 # 1 ^ 2				 B-Name 3
+#Indonesia Diecast Expo	 # 1					 B-Name 1
+#Jobfair				 # 1					 B-Name 1
+#Kkum Audition			 ^ 1					 B-Name 1
+#Konser Tentang Rasa		 # 1					 B-Name 1
+#Lekasan Ngayogjazz		 # 1 % 1				 B-Name 2
+#Live					 V 1 ^ 1				 B-Name 2
+#Locarvest				 # 1 ^ 5				 B-Name 6
+#Magelang				 ^ 1					 I-Location 1
+#Mandiri Karnaval 2015	 ^ 1 # 2				 B-Name 3
+#Nikah Massal			 # 1					 B-Name 1
+#Nobar					 V 1					 B-Name 1
+#Nonbar					 V 1					 B-Name 1
+#Nonbar RCI 9				 ^ 1					 B-Name 1
+#November				 ^ 11					 B-Time 2 I-Time 9
+#Now					 R 1					 B-Time 1
+#Nusanta RAP				 ^ 1					 B-Name 1
+#Nusantarap				 # 1					 B-Name 1
+#Oktober				 ^ 10					 I-Time 10
+#PILA Radio On Stage		 # 1					 B-Name 1
+#PURWAKARTACLOTHFEST	 ^ 1					 B-Name 1
+#Passionville 15			 ^ 1					 I-Name 1
+#Pekalongan				 # 1					 I-Location 1
+#Quilting				 N 1					 I-Name 1
+#Raise					 # 1					 I-Name 1
+#Rembug Sosmed 10			 # 1					 B-Name 1
+#SVUGM Career Expo		 ^ 1					 B-Name 1
+#Sem Nas					 # 1					 B-Name 1
+#Semarak Muharam			 # 1					 I-Name 1
+#Semarang				 # 2 ^ 8				 B-Name 1 I-Name 1 O 3 I-Location 5
+#Seminar				 N 1					 B-Name 1
+#SoloPolah				 # 1 ^ 1				 B-Name 1 O 1
+#Sumpah Pemuda			 ^ 2					 I-Name 2
+#Surabaya				 ^ 2					 O 1 I-Name 1
+#The Rock Campus			 # 1					 B-Name 1
+#Urban Gigs				 ^ 1					 B-Name 1
+#Urban Gigs SMG			 # 1					 B-Name 1
+#Urbangigsshowcase		 # 1					 B-Name 1
+#W Espeak				 # 2					 B-Name 2
+#Wakamono No Matsuri 2015	 # 1					 B-Name 1
+#Workshop				 N 1					 I-Name 1
+#X_somnia2015			 ^ 1					 B-Name 1
+#Xsomnia2015			 # 1 ^ 2				 O 1 B-Name 2
+#Yogyakarta				 ^ 1					 I-Name 1
+
+#APKOMCES				 ^ 1					 B-Name 1
+#BERANISEDERHANA		 # 1					 B-Name 1
+#BESOK					 N 2					 B-Time 2
+#DHP2015				 ^ 1					 I-Name 1
+#EDMhalloween			 ^ 1 # 2				 B-Name 3
+#ESH6					 ^ 1					 B-Name 1
+#FIRSTDECADESALE		 ^ 1					 I-Name 1
+#HITZLIVESTAGE			 # 1					 B-Name 1
+#HRC2015				 # 1					 B-Name 1
+#ICC					 ^ 2					 B-Location 1 O 1
+#ICCSOLO				 ^ 1					 B-Name 1
+#JOGJA					 ^ 1					 I-Name 1
+#JVWF2015				 # 2					 B-Name 1 I-Name 1
+#KAMPUSKOMPASTV			 # 1					 B-Name 1
+#NONBAR					 V 1					 B-Name 1
+#NOW					 R 3					 O 1 B-Time 2
+#RADIOACTIVE2015		 # 1					 B-Name 1
+#SBY					 # 1 ^ 3				 I-Location 2 O 2
+#SKRIPSI15NOV15			 # 1					 B-Name 1
+#THEROCKCAMPUS			 # 2 ^ 2				 B-Name 2 O 2
+#TODAY					 # 1 N 11				 O 1 B-Time 11

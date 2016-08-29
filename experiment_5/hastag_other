@@ -1,0 +1,126 @@
+#acara					 N 3 # 8				 O 11
+#anNAIFersary20th		 # 1					 B-Name 1
+#arabicfair				 # 2					 O 2
+#bangunanmistis			 # 1					 O 1
+#culinaryescape			 # 1					 B-Name 1
+#diysub					 N 1					 I-Name 1
+#dj						 # 2					 O 2
+#eatrepublic2015		 # 2					 I-Name 1 O 1
+#edm					 # 2					 O 2
+#event					 # 1					 O 1
+#eventJATIM				 # 3					 O 3
+#eventPKU				 # 7					 O 7
+#eventSMG				 ^ 1 # 8				 O 9
+#eventsmg				 # 1					 O 1
+#explore				 # 1					 O 1
+#halloween				 # 1					 O 1
+#help					 # 1					 O 1
+#hijabfest				 ^ 1					 O 1
+#hijabweekdaymarket		 # 1					 O 1
+#hiphop					 # 1					 O 1
+#iAmGeeEight			 # 1					 O 1
+#indieclothingcarnival	 ^ 1					 B-Name 1
+#jakarta				 # 3					 O 3
+#jogja					 ^ 1 # 53				 O 54
+#jogjafood				 # 3					 O 3
+#jogjalowker			 # 1					 O 1
+#jogjapict				 # 3					 O 3
+#kerja					 N 4					 I-Name 4
+#kosangker				 # 1					 O 1
+#kotaSolo				 # 1 ^ 6				 I-Location 2 O 5
+#kotasolo				 ^ 1					 O 1
+#latepost				 # 1					 O 1
+#lomba					 N 1					 O 1
+#medan					 ^ 1					 I-Name 1
+#merahkandipta			 # 1					 O 1
+#music					 # 1					 O 1
+#nightlife				 # 1					 O 1
+#now					 R 1 N 1				 B-Time 1 O 1
+#property				 N 1					 O 1
+#rnb					 # 1					 O 1
+#rocktoberID			 # 1					 O 1
+#semarang				 ^ 3					 I-Location 3
+#solo					 # 1					 O 1
+#solopolah				 # 2					 O 2
+#stARTup				 # 1 ^ 1				 I-Name 2
+#swaradelingfest		 ^ 1					 O 1
+#vscocam				 # 1					 O 1
+#vscom					 # 1					 O 1
+#wardahpresents			 # 1					 O 1
+#wheredowegonow			 ^ 1					 I-Name 1
+#x						 # 1					 O 1
+#2						 $ 5					 O 1 I-Name 4
+#23						 $ 1					 O 1
+#5thErupsiMerapi		 # 1 ^ 1				 O 2
+#AverlandSolo			 # 1					 O 1
+#Banjarmasin			 # 2					 O 2
+#COYI					 # 2					 O 2
+#Coffeetime				 ^ 1					 O 1
+#DM Scream				 # 1					 O 1
+#Datang Bulan			 # 1					 O 1
+#Datangki Cess			 # 1					 O 1
+#Event Solo				 ^ 1 # 10				 O 11
+#Events Quotes			 # 1					 O 1
+#Experienced Candidates	 # 1 ^ 1				 O 2
+#Bekasi					 ^ 1					 O 1
+#FOS Rally Photo			 # 1					 O 1
+#Fade Away Tour			 # 1					 O 1
+#Fiorentina Roma			 # 1					 O 1
+#Gadget Mart Promo		 # 1					 O 1
+#HUT Balairung			 # 1					 O 1
+#ID Event				 # 1					 O 1
+#Info					 # 3					 O 3
+#Info Banjarmasin		 # 3					 O 3
+#Info Event				 # 1					 O 1
+#Info Loker				 # 1					 O 1
+#JKT 48 Halloween HSF		 # 1					 O 1
+#Jakarta				 # 1 ^ 1				 O 1 I-Name 1
+#Jazz					 # 1					 O 1
+#Jazz Is Blues			 # 1					 O 1
+#Jogja					 # 10					 O 10
+#Kota Kreatif			 # 3					 O 3
+#Kota Solo				 ^ 13 # 15				 B-Location 2 I-Location 5 O 21
+#Lets Check Lets Act		 # 1					 O 1
+#Live tweet SE			 # 1					 O 1
+#London Calling			 # 1					 O 1
+#MLDspotLiveOnStage		 # 1					 O 1
+#Makassar Keren			 # 1					 O 1
+#Malino Hitam Putih		 # 1					 O 1
+#Mellow Galau			 # 1 ^ 2				 O 3
+#Milan Sassuolo			 ^ 1					 O 1
+#Music					 # 1					 O 1
+#My place 6th Anniversary	 # 1					 O 1
+#Pasar Seni Mks			 # 1					 O 1
+#Pekan 10				 # 1					 O 1
+#Pengajian Akbar			 ^ 1					 O 1
+#Regram Time				 # 1					 O 1
+#Repost					 # 3					 O 3
+#Rise					 # 2					 O 2
+#Rock Melawan Asap		 # 1					 O 1
+#Selfie Bus				 ^ 1					 O 1
+#Sema					 G 1					 O 1
+#Seni Eduhai				 # 1					 O 1
+#Showbiz				 # 1					 O 1
+#Solo					 # 1					 O 1
+#Solo City Jazz			 # 1					 O 1
+#Solo polah				 # 3 ^ 7				 I-Location 1 I-Name 2 O 7
+#Sosmed Melali			 # 1					 O 1
+#Soul jahGig				 # 1					 O 1
+#Sragen					 ^ 1					 O 1
+#Stand for something		 # 1					 O 1
+#TSSweet Moments			 # 1					 O 1
+#TheNext Chapter			 ^ 2					 O 2
+#Wonderful Indonesia		 # 2					 O 2
+
+#AKW18					 # 3					 O 3
+#BPL					 # 2					 O 2
+#EHEF2015				 ^ 1					 O 1
+#FFS					 N 1					 O 1
+#ICCC2015				 ^ 3 # 15				 I-Location 1 B-Name 4 O 13
+#ICCNExpo				 # 1					 O 1
+#JAP2015				 ^ 1					 O 1
+#MAGANG					 N 1					 O 1
+#SCHOLARSHIPS			 # 1					 O 1
+#SCJ2015				 # 1					 O 1
+#SOUNDSET				 N 1					 O 1
+#URBANATION				 # 1					 O 1
