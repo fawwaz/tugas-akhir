@@ -1,0 +1,108 @@
+
+
+Variasi Pattern jarang ditemukan
+Pattern Tweetnya : Tanggal->Hashtag->Mention 2-3 kali (nama artist) akibatnya hashtag biasanya dianggap sebagai other padahal mungkin saja nama
+Jobfair : Jobfair -> nama dalam bentuk hashtag -> Nama tempat dalam bentuk hashtag
+NOBAR : Malam ini !! NOBAR.. xyz
+Kirab : Date --> Kirab xyz 
+
+OOV dalam training data 
+Contoh : 
+Multi, 
+ElectronicMusicParade2015,
+NIKE,
+#RiauExpo2015,
+NGOPI,
+#EventDeltaClub,
+INFLUX,
+INDIEGO,
+#the90sfestival,
+#ArthouseCinema,
+Wanderlust,
+@chemfair2015,
+JOBFAIR(berbeda dengan jobfair, ingat tanpa case folding),
+Miracle,
+AKW18,
+IntersPort,
+welcome,
+Perayaan,
+#TotoFilmFestival,
+Panjidor,
+Micro,
+Nostalgia,
+Danish,
+Cheese,
+#YogaInTheSkye,
+Pra,
+@MusikBerbagi,
+ComminAct,
+MarineFestival
+@54Festival,
+baking,
+#DWP_15,
+STGCE,
+STAGEEMPIRE,
+@NyanyianBangsa,
+@CakarDheer,
+valda,
+BUBU,
+AmandaFestival
+
+Kelas yang muncul di training data mayoritas Other..
+Contoh : Pameran (B-Name : 5 I-Name : 3 Other : 7) biasa digunakan justru sebagai kalimat, Workshop (B-Name : 1 O: 3)
+konser ( O: 1) -->konteksnya di training data memang other..
+Lomba (B-Name: 8 Other: 9)
+Bazar (B-Name: 2 Other : 3)
+#ICCNEXpo
+Contoh : STAGE, Selfie,
+
+
+Dipengaruhi konteks kata tetangga
+#KonserTentangRasa (konteks di sekitarnya bisa dianggap other..), MnG
+
+Gagal memberikan POStag yang tepat:
+Contoh Pelatihan, karena dalam kamus bahasa indonesia hanya ada kata "latih" bukan pelatihan, jadi postag yang diberikan untuk kata pelatihan = tanpa postag
+Trainining (B-Name: 6 I-Name : 5) 
+European (B-Name : 1)
+Sunday -- (B-Name : 1, B-Time : 2 O: 2)
+Swara : (B-Name: 2) ?? 
+Senanadung (mistype, jadi gagal postag)
+Launching (bahasa inggris B-Name: 2 I-Name : 1)
+Wanderlust
+IM3
+5thAnniversary
+Nobar
+NOBAR
+Nonbar
+conferance (salah ketik)
+Babak
+
+Sedikit event yang nama eventya berupa hashtag ()
+Contoh : #Locarvest, #Xsomnia2015, #BERANISEDERHANA
+
+Sedikit Verb yang berupa nama event :
+contoh : Ulang Tahun --> contoh kasus jarang karena kata "ulang tahun" adalah satu kesatuan
+
+Hashtag dengan kapitalisai yang berbeda : 
+Contoh : #HijabWeekdayMarket sebenarnya di alam data latih ada juga : #hijabweekdaymarket tapi huruf kecil..
+
+
+Banyak pattern 
+TODAY !!, TONIGHT !! --> selanjutnya langsung other..
+Gelar ?? 
+Pelatihan ??
+Semnas ?? --> muncul tunggal sebagai B-Name
+Pradiklat ?? --> muncul tunggal sebagai B-Name
+Photo--> Muncul tunggal sebagai B-Name ??
+#crafashtival --> hashtag ??
+talkshow --> muncul tunggal sebagai i-name
+ASTRO'15 --> Muncul 2 kali sebagai B-Name : Dugaan sementara karena ada bahasa asing di sekitar konteks
+@obsat --> muncul 1 kali sebagai B-Name : Dugaan sementara sedikit data latih B-Name yang berupa mention
+Konser --> (B-Name: 1 , I-Name: 2, O: 1) ???
+AKSI --> (B-Name: 2) --> dugaan, pattern today !! abc..
+Sunday --> (B-Name : 1, B-Time : 2 O: 2)
+@MAKSISTOURISM --> Seidkit nama event yang berupa mention
+Diskusi (B-Name : 3 O : 1)
+Pesta (B-Name : 9 O : 1)
+Open ( B-Name : 4 O : 2);
+25th Anniversary ??? 
