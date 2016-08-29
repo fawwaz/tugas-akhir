@@ -32,6 +32,7 @@ public class TestPosTagInaNlp {
     File file;
     FileWriter writer;
     public void doReadFile(){
+        // String filename = "gold_standard/Tokenized_gold_standard_repaired";
         String filename = "gold_standard/Tokenized_gold_standard_repaired";
         try(BufferedReader br = new BufferedReader(new FileReader(filename))){
             String line;
@@ -89,19 +90,40 @@ public class TestPosTagInaNlp {
     // 2. Plain
     // 3. Plain with dictionary
     public void doPosTagging() throws IOException{
-        IndonesianSentenceFormalization formalizer = new IndonesianSentenceFormalization();
+        // disabled dulu..
+        // IndonesianSentenceFormalization formalizer = new IndonesianSentenceFormalization();
+        
         int urutan = 0;
+        startwriter("tested/InaNlp/POSTagged_InaNlp");
         for (int i = 0; i < tokenized_tweets.size(); i++) {
+            /*
             if((i%30)==0){
                 urutan++;
                 startwriter("gold_standard/pos_tag_url/hasil_postag_InaNLP_gold_standard"+urutan);
             }
-            String sentence = tokenized_tweets.get(i).replaceAll("\\/\\/", "__DOUBLE_SLASH__");
+            */
+            String sentence = tokenized_tweets.get(i).replaceAll(" \\/\\/ ", " __DOUBLE_SLASH__ ").replaceAll("’","").replaceAll("“","\"");
             //sentence = formalizer.formalizeSentence(sentence);
             
 //            System.out.println("Tweet ke : "+i + " "+sentence);
-            ArrayList<String[]> postagged = postagger.doPOSTag(sentence);
+            ArrayList<String[]> postagged;
+            if((i<258)&&(i>256)){
+                System.out.println("sentence "+ sentence);
+                postagged = postagger.doPOSTag(sentence);
+            }else{
+                postagged = postagger.doPOSTag(sentence);
+            }
             
+            if(i%10==0){
+                System.out.println("Current i : "+i);
+            }
+            
+            if(postagged.size()==0){
+                System.out.println("Sentence is : "+sentence);
+                System.out.println("Sentence - 1 is : "+tokenized_tweets.get(i-1));
+                System.out.println("Sentence + 1 is : "+tokenized_tweets.get(i+1));
+                System.out.println("i:"+i + " Jumlah Postagged : "+postagged.size());
+            }
             for (int j = 0; j < postagged.size(); j++) {
 //                System.out.ppos_tagrintln("["+j+"] "+postagged.get(j)[0] + "\t" + postagged.get(j)[1]+"\n");
 //                System.out.println(postagged.get(j)[0] + "\t\t\t" + postagged.get(j)[1]);
@@ -118,15 +140,21 @@ public class TestPosTagInaNlp {
                     writer.write(postagged.get(j)[0] + "\t" + postagged.get(j)[1]+"\n");
                 }
             }
-            writer.write("\n---\n");
+            writer.write("\n");
+            // writer.write("\n---\n");
             
+            /*
             if(((i+1)%30)==0){
                 closeWriter();
             }
+            */
+            /*****
             if(i==tokenized_tweets.size()-1){
                 closeWriter();
             }
+            * */
         }
+        closeWriter();
     }
     
     public static void main(String[] args) throws Exception {

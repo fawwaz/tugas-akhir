@@ -45,6 +45,14 @@ public class MergePOSAndLabel {
     String  string_pat_capital = "[A-Z]+";
     Pattern pattern_capital = Pattern.compile(string_pat_capital);
     
+    ArrayList<String> gazetteer_nama = new ArrayList<>();
+    ArrayList<String> gazetteer_prev_nama = new ArrayList<>();
+    ArrayList<String> gazetteer_loc = new ArrayList<>();
+    
+    // Old features .. 
+    HashMap<String,String> kateglo_postag = new HashMap<>();
+    ArrayList<String> old_gazzetteer_loc = new ArrayList<>();
+    
     
     public void doReadFile1(){
         String filename = "tested/CMUTools/NER_gold_standard";
@@ -64,7 +72,7 @@ public class MergePOSAndLabel {
                     temp2 = new ArrayList<>();
                     temp3 = new ArrayList<>();
                 }else{
-                    System.out.println("["+i+"] "+line);
+                    //System.out.println("["+i+"] "+line);
                     String[] splitted = line.split("\t");
                     temp1.add(splitted[0]);
                     temp2.add(splitted[1]);
@@ -120,7 +128,7 @@ public class MergePOSAndLabel {
                     
                     temp2 = new ArrayList<>();
                 }else{
-                    System.out.println("["+i+"] "+line);
+                    //System.out.println("["+i+"] "+line);
                     
                     String[] splitted = line.split("\t");
                     temp2.add(splitted[1]);
@@ -134,6 +142,126 @@ public class MergePOSAndLabel {
                     */
                 }
                 i++;
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void doReadFileGazetteer(int iteration){
+        gazetteer_nama = new ArrayList<>();
+        gazetteer_loc = new ArrayList<>();
+        
+        System.out.println("Reading Gazetteer data for iteration "+iteration);
+        
+        // READ NAMA DULU
+        String filename = "tested/CMUTools/gazetteer_name_"+iteration;
+        try(BufferedReader br = new BufferedReader(new FileReader(filename))){
+            String line;
+            while((line = br.readLine())!=null){
+                if(line.equals("")){
+                    
+                }else{
+                    String[] splitted = line.split("\t");
+                    String token = splitted[0].trim();
+                    gazetteer_nama.add(token);
+                }
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        
+        // READ Previous name gazetteer
+        filename = "tested/CMUTools/gazetteer_prev_name_"+iteration;
+        try(BufferedReader br = new BufferedReader(new FileReader(filename))){
+            String line;
+            while((line = br.readLine())!=null){
+                if(line.equals("")){
+                    
+                }else{
+                    String[] splitted = line.split("\t");
+                    String token = splitted[0].trim();
+                    gazetteer_prev_nama.add(token);
+                }
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        
+        filename = "tested/CMUTools/gazetteer_location_"+iteration;
+        try(BufferedReader br = new BufferedReader(new FileReader(filename))){
+            String line;
+            while((line = br.readLine())!=null){
+                if(line.equals("")){
+                    
+                }else{
+                    String[] splitted = line.split("\t");
+                    String token = splitted[0].trim();
+                    gazetteer_loc.add(token);
+                }
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void doReadOldPOSTAG(){
+        String filename = "tested/CMUTools/kateglo_postag";
+        try(BufferedReader br = new BufferedReader(new FileReader(filename))){
+            String line;
+            while((line = br.readLine())!=null){
+                if(line.equals("")){
+                    
+                }else{
+                    String[] splitted = line.split("\t");
+                    String token = splitted[0].trim();
+                    String tag = splitted[1].trim();
+                    
+                    // Pisahin dulu.. sesuai dengan tagnya...
+                    String real_tag = "";
+                    if(tag.equals("Nomina")){
+                        real_tag = "N";
+                    }else if(tag.equals("Verba")){
+                        real_tag = "V";
+                    }else if(tag.equals("Adjektiva")){
+                        real_tag = "A";
+                    }else if(tag.equals("Adverbia")){
+                        real_tag = "R";
+                    }else if(tag.equals("Preposisi")){
+                        real_tag = "P";
+                    }else if(tag.equals("Interjeksi")){
+                        real_tag = "!";
+                    }else if(tag.equals("Konjungsi")){
+                        real_tag = "P"; // kebanyakan kongjungsi adalah Sub coor conjunction
+                    }else if(tag.equals("Pronomina")){
+                        real_tag = "O";
+                    }else if(tag.equals("Lain-lain")){
+                        //real_tag = "A";
+                    }else if(tag.equals("Numeralia")){
+                        real_tag = "$";
+                    }
+                    
+                    if(!real_tag.equals("")){
+                        kateglo_postag.put(token,real_tag);
+                    }
+                }
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void doReadOldGazetteer(){
+        String filename = "tested/CMUTools/kateglo_postag";
+        try(BufferedReader br = new BufferedReader(new FileReader(filename))){
+            String line;
+            while((line = br.readLine())!=null){
+                if(line.equals("")){
+                    
+                }else{
+                    String location = line.trim();
+                    old_gazzetteer_loc.add(location);
+                }
             }
         }catch(IOException e){
             e.printStackTrace();
@@ -173,23 +301,101 @@ public class MergePOSAndLabel {
             int start_index = i*base;
             int end_index = (i+1) * base-1; // karena angka selalu dimulai dari 0
             
+            System.out.println("Writing: "+"tested/CMUTools/training_merged_"+i+".training");
+            System.out.println("Start_index = "+start_index);
+            System.out.println("End_index = "+end_index);
+            int counter = 0;
+            
+            // disable dulu untuk old experiment
+            doReadFileGazetteer(i);
+            
             startWriter("tested/CMUTools/training_merged_"+i+".training");
             for (int k = 0; k < label.size(); k++) {
                 
                 // kalau k diluar itu semua baru ditulis sebagai training data..
                 if (!(start_index<k && k <= end_index)){
-                    
+                    counter++;
                     for (int j = 0; j < label.get(k).size(); j++) {
                         String _token = token.get(k).get(j);
                         String _postag = postag.get(k).get(j);
+                        
                         String _label = label.get(k).get(j);
                         
                         StringBuffer sb = new StringBuffer();
                         // Fitur 1 : Leksikal
                         //sb.append(_token.toLowerCase().replaceAll("[AIUEOaiueo]", ""));
                         sb.append(_token);
+                        
+                        
+                        // Fitur 1.1 : Leksikal sebelum 
+                        if(j>0){
+                            String _prev_token = token.get(k).get(j-1);
+                            sb.append(" "+_prev_token);
+                        }else{
+                            sb.append(" <STARTTAG>");
+                        }
+                        /*
+                        // Fitur 1.2 : Leksikal double sebelum 
+                        if(j>1){
+                            String _prev_token = token.get(k).get(j-2);
+                            sb.append(" "+_prev_token);
+                        }else{
+                            sb.append(" <STARTTAG>");
+                        }
+                        /**/
+                        /*
+                        // Fitur 1.3 : Leksikal after
+                        if(j<label.get(k).size()-1){
+                            String _next_token = token.get(k).get(j+1);
+                            sb.append(" "+_next_token);
+                        }else{
+                            sb.append(" <ENDTAG>");
+                        }
+                        // Fitur 1.4 : Leksikal double after
+                        if(j<label.get(k).size()-2){
+                            String _next_token = token.get(k).get(j+2);
+                            sb.append(" "+_next_token);
+                        }else{
+                            sb.append(" <ENDTAG2>");
+                        }
+                        /**/
                         // Fitur 2 : POS_Tag
                         sb.append(" "+_postag);
+                        /*
+                        //Fitur 2.1 : POS_Tag Previous
+                        if(j>0){
+                            String _prev_tag = postag.get(k).get(j-1);
+                            sb.append(" Prev"+_prev_tag);
+                        }else{
+                            sb.append(" <STARTTAG>");
+                        }
+                        
+                        // Fitur 2.2: Post_Tag double previouse
+                        if(j>1){
+                            String _prev_tag = postag.get(k).get(j-2);
+                            sb.append(" Prev2"+_prev_tag);
+                        }else{
+                            sb.append(" <STARTTAG2>");
+                        }
+                        /**/
+                        /*
+                        // Fitur 2.3 : Pos tag after
+                        if(j<label.get(k).size()-1){
+                            String _next_tag = postag.get(k).get(j+1);
+                            sb.append(" Next"+_next_tag);
+                        }else{
+                            sb.append(" <ENDTAG>");
+                        }
+                        
+                        // Fitur 2.4 : Pos tag double after
+                        if(j<label.get(k).size()-2){
+                            String _next_tag = postag.get(k).get(j+2);
+                            sb.append(" Next2"+_next_tag);
+                        }else{
+                            sb.append(" <ENDTAG2>");
+                        }
+                        /**/
+                        //sb.append(_postag);
                         // Fitur 3 : Kapitalisasi
                         if(_token.matches(string_pat_capital)){
                             sb.append(" IS_CAPITAL");
@@ -207,6 +413,79 @@ public class MergePOSAndLabel {
                             sb.append(" FOURTH_SEGMENT");
                         }
                         
+                        // Fitur 5 : List Name
+                        if(gazetteer_nama.contains(_token)){
+                            sb.append(" NAMA_EVENT");
+                        }
+                        
+                        // Fitur 5.1 : Previous Nama Event
+                        if(gazetteer_prev_nama.contains(_token)){
+                            sb.append(" PREV_NAMA_EVENT");
+                        }
+                        
+                        if(gazetteer_loc.contains(_token)){
+                            sb.append(" LOKASI_EVENT");
+                        }
+                        /**/
+                        
+                        // ----------------------------------------------
+                        // OLD EXPERIMENT... 
+                        
+                        
+                        /*
+                        // Fitur 1 Old : Lookup PosTag..
+                        if(kateglo_postag.containsKey(_token.toLowerCase())){
+                            sb.append(" "+kateglo_postag.get(_token.toLowerCase()));
+                        }
+                        
+                        // Fitur 2 : regex Pattern
+                        if(_token.matches("\\d+")){
+                            sb.append(" ISNUMBER");
+                        }
+                        
+                        if(_token.matches("\\p{P}")){
+                            sb.append(" ISPUNCTUATION");
+                        }
+                        
+                        if(_token.matches("(di|@|d|ke|k)")){
+                            sb.append(" ISPLACEDIRECTIVE");
+                        }
+                        
+                        if(_token.matches(Twokenize.url)){
+                            sb.append(" ISURL");
+                        }
+                        
+                        if(_token.matches(Twokenize.AtMention)){
+                            sb.append(" ISMENTION");
+                        }
+                        
+                        if(_token.matches(Twokenize.Hashtag)){
+                            sb.append(" ISHASHTAG");
+                        }
+                        
+                        if(_token.matches(old_method.Twokenize.varian_bulan)){
+                            sb.append(" ISMONTHNAME");
+                        }
+                        
+                        if(j>0 && j<token.get(k).size()-1){
+                            String previous_token = token.get(k).get(j-1);
+                            String next_token = token.get(k).get(j+1);
+                            
+                            if(previous_token.matches("\\d+") && _token.matches("[/\\-]") && next_token.matches("\\d+")){
+                                sb.append(" ISDATESEPARATOR");
+                            }
+                            
+                            if(kateglo_postag.containsKey(previous_token.toLowerCase())){
+                                sb.append(" Prev"+kateglo_postag.get(previous_token.toLowerCase()));
+                            }
+                            
+                            if(kateglo_postag.containsKey(next_token.toLowerCase())){
+                                sb.append(" Next"+kateglo_postag.get(next_token.toLowerCase()));
+                            }
+                        }
+                        /**/
+                        
+                        
                         // Karena untuk training
                         sb.append(" "+_label);
                         sb.append("\n");
@@ -219,6 +498,8 @@ public class MergePOSAndLabel {
                 
             }
             closeWriter();
+            System.out.println("Size:  = "+(counter));
+            System.out.println("===");
         }
     }
     
@@ -230,12 +511,21 @@ public class MergePOSAndLabel {
             int start_index = i*base;
             int end_index = (i+1) * base-1; // karena angka selalu dimulai dari 0
             
+            System.out.println("Writing: "+"tested/CMUTools/testing_merged_"+i+".untagged");
+            System.out.println("Start_index = "+start_index);
+            System.out.println("End_index = "+end_index);
+            int counter = 0;
+            
+            
+            // Di disable dulu untuk old experiment
+            doReadFileGazetteer(i); // gazetteer
+            
             startWriter("tested/CMUTools/testing_merged_"+i+".untagged");
             for (int k = 0; k < label.size(); k++) {
                 
                 // kalau k didalam itu semua justru malah ditulis tapi tanpa label
                 if (start_index<k && k <= end_index){
-                    
+                    counter++;
                     for (int j = 0; j < label.get(k).size(); j++) {
                         String _token = token.get(k).get(j);
                         String _postag = postag.get(k).get(j);
@@ -245,8 +535,78 @@ public class MergePOSAndLabel {
                         // Fitur 1 : Leksikal
                         //sb.append(_token.toLowerCase().replaceAll("[AIUEOaiueo]", ""));
                         sb.append(_token);
+                        
+                        // Fitur 1.2 : Leksikal sebelum 
+                        if(j>0){
+                            String _prev_token = token.get(k).get(j-1);
+                            sb.append(" "+_prev_token);
+                        }else{
+                            sb.append(" <STARTTAG>");
+                        }
+                        /*
+                        // Fitur 1.3 : Leksikal double sebelum 
+                        if(j>1){
+                            String _prev_token = token.get(k).get(j-2);
+                            sb.append(" "+_prev_token);
+                        }else{
+                            sb.append(" <STARTTAG>");
+                        }
+                        /**/
+                        /*
+                        // Fitur 1.3 : Leksikal after
+                        if(j<label.get(k).size()-1){
+                            String _next_token = token.get(k).get(j+1);
+                            sb.append(" "+_next_token);
+                        }else{
+                            sb.append(" <ENDTAG>");
+                        }
+                        
+                        // Fitur 1.3 : Leksikal double after
+                        if(j<label.get(k).size()-2){
+                            String _next_token = token.get(k).get(j+2);
+                            sb.append(" "+_next_token);
+                        }else{
+                            sb.append(" <ENDTAG2>");
+                        }
+                        
+                        
                         // Fitur 2 : POS_Tag
                         sb.append(" "+_postag);
+                        //Fitur 2.1 : POS_Tag Previous
+                        /*
+                        if(j>0){
+                            String _prev_tag = postag.get(k).get(j-1);
+                            sb.append(" Prev"+_prev_tag);
+                        }else{
+                            sb.append(" <STARTTAG>");
+                        }
+                        
+                        // Fitur 2.2: Post_Tag double previouse
+                        if(j>1){
+                            String _prev_tag = postag.get(k).get(j-2);
+                            sb.append(" Prev2"+_prev_tag);
+                        }else{
+                            sb.append(" <STARTTAG2>");
+                        }
+                        /**/
+                        /*
+                        // Fitur 2.3 : Pos tag after
+                        if(j<label.get(k).size()-1){
+                            String _next_tag = postag.get(k).get(j+1);
+                            sb.append(" Next"+_next_tag);
+                        }else{
+                            sb.append(" <ENDTAG>");
+                        }
+                        
+                        // Fitur 2.4 : Pos tag double after
+                        if(j<label.get(k).size()-2){
+                            String _next_tag = postag.get(k).get(j+2);
+                            sb.append(" Next2"+_next_tag);
+                        }else{
+                            sb.append(" <ENDTAG2>");
+                        }
+                        /**/
+                        //sb.append(_postag);
                         // Fitur 3 : Kapitalisasi
                         if(_token.matches(string_pat_capital)){
                             sb.append(" IS_CAPITAL");
@@ -264,6 +624,76 @@ public class MergePOSAndLabel {
                             sb.append(" FOURTH_SEGMENT");
                         }
                         
+                        // Fitur 5 : Gazetteer
+                        if(gazetteer_nama.contains(_token)){
+                            sb.append(" NAMA_EVENT");
+                        }
+                        
+                        // Fitur 5.1 : Previous Nama Event
+                        if(gazetteer_prev_nama.contains(_token)){
+                            sb.append(" PREV_NAMA_EVENT");
+                        }
+                        
+                        if(gazetteer_loc.contains(_token)){
+                            sb.append(" LOKASI_EVENT");
+                        }
+                        /**/
+                        
+                        
+                        // -----------------
+                        // OLD EXPERIMENT
+                        /*
+                        // Fitur 1 Old : Lookup PosTag..
+                        if(kateglo_postag.containsKey(_token.toLowerCase())){
+                            sb.append(" "+kateglo_postag.get(_token.toLowerCase()));
+                        }
+                        
+                        // Fitur 2 : regex Pattern
+                        if(_token.matches("\\d+")){
+                            sb.append(" ISNUMBER");
+                        }
+                        
+                        if(_token.matches("\\p{P}")){
+                            sb.append(" ISPUNCTUATION");
+                        }
+                        
+                        if(_token.matches("(di|@|d|ke|k)")){
+                            sb.append(" ISPLACEDIRECTIVE");
+                        }
+                        
+                        if(_token.matches(Twokenize.url)){
+                            sb.append(" ISURL");
+                        }
+                        
+                        if(_token.matches(Twokenize.AtMention)){
+                            sb.append(" ISMENTION");
+                        }
+                        
+                        if(_token.matches(Twokenize.Hashtag)){
+                            sb.append(" ISHASHTAG");
+                        }
+                        
+                        if(_token.matches(old_method.Twokenize.varian_bulan)){
+                            sb.append(" ISMONTHNAME");
+                        }
+                        
+                        if(j>0 && j<token.get(k).size()-1){
+                            String previous_token = token.get(k).get(j-1);
+                            String next_token = token.get(k).get(j+1);
+                            
+                            if(previous_token.matches("\\d+") && _token.matches("[/\\-]") && next_token.matches("\\d+")){
+                                sb.append(" ISDATESEPARATOR");
+                            }
+                            
+                            if(kateglo_postag.containsKey(previous_token.toLowerCase())){
+                                sb.append(" Prev"+kateglo_postag.get(previous_token.toLowerCase()));
+                            }
+                            
+                            if(kateglo_postag.containsKey(next_token.toLowerCase())){
+                                sb.append(" Next"+kateglo_postag.get(next_token.toLowerCase()));
+                            }
+                        }
+                        /**/
                         // Tanpa label karena untuk testing..
                         sb.append("\n");
                         writer.write(sb.toString());
@@ -274,6 +704,9 @@ public class MergePOSAndLabel {
                 
             }
             closeWriter();
+            
+            System.out.println("Size:  = "+(end_index-start_index));
+            System.out.println("===");
         }
     }
     
@@ -284,12 +717,17 @@ public class MergePOSAndLabel {
             int start_index = i*base;
             int end_index = (i+1) * base-1; // karena angka selalu dimulai dari 0
             
+            System.out.println("Writing: "+"tested/CMUTools/testing_merged_"+i+".gold_standard");
+            System.out.println("Start_index = "+start_index);
+            System.out.println("End_index = "+end_index);
+            int counter = 0;
+            
             startWriter("tested/CMUTools/testing_merged_"+i+".gold_standard");
             for (int k = 0; k < label.size(); k++) {
                 
                 // kalau k didalam itu semua justru malah ditulis tapi tanpa label
                 if (start_index<k && k <= end_index){
-                    
+                    counter++;
                     for (int j = 0; j < label.get(k).size(); j++) {
                         String _token = token.get(k).get(j);
                         String _postag = postag.get(k).get(j);
@@ -302,6 +740,8 @@ public class MergePOSAndLabel {
                 
             }
             closeWriter();
+            System.out.println("Size:  = "+(end_index-start_index));
+            System.out.println("===");
         }
         
     }
@@ -336,6 +776,8 @@ public class MergePOSAndLabel {
     
     public static void main(String[] args){
         MergePOSAndLabel merger = new MergePOSAndLabel();
+        merger.doReadOldPOSTAG();
+        merger.doReadOldGazetteer();
         merger.doReadFile1();
         merger.doReadFile2();
         try {
@@ -346,11 +788,16 @@ public class MergePOSAndLabel {
         } catch (IOException ex) {
             Logger.getLogger(MergePOSAndLabel.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        
+        // Kalkulasi statistik saja..
+        /*
         try{
             merger.calculateStatistic();
         }catch(Exception e){
             e.printStackTrace();
         }
         System.out.println("Word Counter: "+merger.word_counter.size());
+        */        
     }
 }

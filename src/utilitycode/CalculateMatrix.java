@@ -24,11 +24,11 @@ public class CalculateMatrix {
     ArrayList<Pair> original_pair = new ArrayList<>();
     ArrayList<String> original_sentence = new ArrayList<>();
     ArrayList<String> original_token = new ArrayList<>();
-    public String foldername = "experiment_1";
+    public String foldername = "experiment_18";
     //public int sub_iteration = 2; // 0 1 2 saja .
     //public int current_urutan = 3;
     // public String foldername = "incrimental_learning_1/";
-    public int total_folds = 4;
+    public int total_folds = 1;
     
     public CalculateMatrix(){
         label_standard = new ArrayList<>();
