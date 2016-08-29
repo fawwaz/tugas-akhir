@@ -147,9 +147,9 @@ public class Twokenize {
 
     // This also gets #1 #40 which probably aren't hashtags .. but good as tokens.
     // If you want good hashtag identification, use a different regex.
-    static String Hashtag = "#[a-zA-Z0-9_]+";  //optional: lookbehind for \b
+    public static String Hashtag = "#[a-zA-Z0-9_]+";  //optional: lookbehind for \b
     //optional: lookbehind for \b, max length 15
-    static String AtMention = "[@＠][a-zA-Z0-9_]+"; 
+    public static String AtMention = "[@＠][a-zA-Z0-9_]+"; 
 
     // I was worried this would conflict with at-mentions
     // but seems ok in sample of 5800: 7 changes all email fixes

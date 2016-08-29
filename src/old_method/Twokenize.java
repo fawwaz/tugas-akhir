@@ -167,7 +167,7 @@ public class Twokenize {
     static String bulan_3 		= "(?i)(?<!\\w)(?>jan|feb|mar|apr|mei|jun|jul|agt|sep|okt|nov|des)(?!\\w)";  // kalau hanya (?i)()(?>jan|feb|mar|apr|mei|jun|jul|agt|sep|okt|nov|des) aneh pada landmark berubah jadi land,mar,k 
     static String bulan_4 		= "(?i)(?>january|february|march|april|may|june|july|august|september|october|november|december)";
     static String bulan_5 		= "(?i)(?<!\\w)(?>jan|feb|mar|apr|may|jun|jul|aug|sept|oct|nov|dec)(?!\\w)"; // masih ada yang overlap
-    static String varian_bulan	= "(?>"+bulan_1+"|"+bulan_2+"|"+bulan_4+"|"+bulan_3+"|"+bulan_5+")";
+    public static String varian_bulan	= "(?>"+bulan_1+"|"+bulan_2+"|"+bulan_4+"|"+bulan_3+"|"+bulan_5+")";
     static String tahun 		= "((?:19|20)?\\d\\d)";
     static String awalan_jam	= "(?i)(?>jam|pk|pukul|pk\\.)";
     static String jam			= "(2[0-3]|1[0-9]|0?+[1-9])"; // 0-23 (kalau penulisan

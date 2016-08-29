@@ -20,7 +20,7 @@ public class CounterDifferent {
     ArrayList<String> right = new ArrayList<>();
     
     public void doReadFile_left(){
-        String filename = "tested/CMUTools/POSTagged_gold_standard";
+        String filename = "incrimental_learning_1/incrimental_iteration_0/testing_merged_sub_iteration_1.gold_standard";
         try(BufferedReader br = new BufferedReader(new FileReader(filename))){
             String line;
             while((line = br.readLine())!=null){
@@ -32,7 +32,7 @@ public class CounterDifferent {
     }
     
     public void doReadFile_right(){
-        String filename = "tested/CMUTools/POSTagged";
+        String filename = "incrimental_learning_1/incrimental_iteration_0/testing_merged_sub_iteration_1.result";
         try(BufferedReader br = new BufferedReader(new FileReader(filename))){
             String line;
             while((line = br.readLine())!=null){
@@ -46,11 +46,13 @@ public class CounterDifferent {
     public void countDifference(){
         int diff_counter = 0;
         for (int i = 0; i < left.size(); i++) {
-            if(!left.get(i).equals(right.get(i))){
+            if(!left.get(i).trim().equals(right.get(i).trim())){
                 diff_counter++;
             }
         }
         System.out.println("Found Diff : "+diff_counter);
+        System.out.println("From : "+left.size());
+                
     }
     
     public static void main(String[] args){
