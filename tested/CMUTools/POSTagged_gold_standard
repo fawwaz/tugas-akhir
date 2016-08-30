@@ -1111,7 +1111,7 @@ Kualitas	A
 premium	A
 dgn	P
 harga	N
-terjangkau	a
+terjangkau	A
 di	P
 #Locarvest	#
 !	,
@@ -2179,7 +2179,7 @@ UB	^
 https://t.co/3yoeHhMBtU	U
 https://t.co/7v70aN8P0G	U
 
-InterSPORT	G
+InterSPORT	^
 Lead	V
 for	P
 Speed	N
@@ -2771,7 +2771,7 @@ RT	~
 @garudaorganizer	@
 :	~
 Bingug	V
-cr	C
+cr	V
 kerja	N
 ?	,
 dtg	V
@@ -3814,7 +3814,7 @@ TODAY	N
 @welovehonda	@
 @WahanaHonda	@
 SAFETY	N
-RIDING	I
+RIDING	N
 DAY	N
 -	,
 w/	G
@@ -6205,7 +6205,7 @@ Nasional	^
 III	$
 2015	$
 di	P
-Stadion	^N
+Stadion	N
 Sriwedari	^
 #KotaSolo	^
 #EventSolo	#
@@ -6486,7 +6486,7 @@ https://t.co/qHaIulHoHW	U
 
 MALAM	N
 INI	^
-#LekasanNgayogjazz	%
+#LekasanNgayogjazz	^
 vol	G
 .	,
 01	$
@@ -7339,7 +7339,7 @@ Training	N
 SEM	G
 Analysis	N
 for	P
-REsearch	M
+REsearch	N
 in	P
 Social	A
 Science	N
@@ -11644,7 +11644,7 @@ Be	V
 Yourself	O
 ”	,
 |	,
-Reg	M
+Reg	G
 s/d	G
 9	$
 Nov'15	G
@@ -11892,7 +11892,7 @@ belanja	V
 Sayur	N
 &	&
 Buah	N
-Kualitas	a
+Kualitas	A
 premium	A
 dgn	P
 harga	N
@@ -13848,7 +13848,7 @@ Pengajian	N
 Akbar	A
 dlm	P
 rangka	N
-memperingati	^V
+memperingati	V
 Tahun	N
 Baru	A
 Hijriyah	^
@@ -19110,7 +19110,7 @@ unipa	^
 komika	N
 @SUC_CampusSBY	@
 &	&
-spesial	r
+spesial	R
 perfom	V
 @Pul_lung	@
 &	&
@@ -20226,7 +20226,7 @@ at	P
 BDG	^
 https://t.co/i9Si8tjO0s	U
 
-Datang	v
+Datang	V
 &	&
 Jadilah	V
 saksi	N
@@ -20371,7 +20371,7 @@ BIO	G
 Mention	V
 @JogjaUpdate	@
 u/	G
-berbagi	v
+berbagi	V
 info/event	G
 |	,
 tdk	R
@@ -25085,7 +25085,7 @@ Info	N
 8753	$
 https://t.co/h5PAmgGwV0	U
 
-Audisi	M
+Audisi	N
 #DutaBatikJatim	^
 24	$
 Okt	^

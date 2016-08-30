@@ -36,6 +36,7 @@ public class MergePOSAndLabel {
     ArrayList<ArrayList<String>> label    = new ArrayList<>();
     ArrayList<ArrayList<String>> postag   = new ArrayList<>();
     public HashMap<String, Integer> word_counter = new HashMap<>();
+    public HashMap<String, String> token_to_cluster = new HashMap<>();
     
     private FileWriter filewriter;
     private PrintWriter writer;
@@ -48,6 +49,7 @@ public class MergePOSAndLabel {
     ArrayList<String> gazetteer_nama = new ArrayList<>();
     ArrayList<String> gazetteer_prev_nama = new ArrayList<>();
     ArrayList<String> gazetteer_loc = new ArrayList<>();
+    ArrayList<String> gazeteer_expert_event = new ArrayList<>();
     
     // Old features .. 
     HashMap<String,String> kateglo_postag = new HashMap<>();
@@ -203,6 +205,43 @@ public class MergePOSAndLabel {
         }catch(IOException e){
             e.printStackTrace();
         }
+        
+        filename = "tested/Cluster_After_Mapping_All_no_minimum";
+        try(BufferedReader br = new BufferedReader(new FileReader(filename))){
+            String line;
+            while((line = br.readLine())!=null){
+                if(line.equals("")){
+                    
+                }else{
+                    String[] splitted = line.split("\\s");
+                    String token = splitted[0].trim();
+                    String cluster = splitted[splitted.length - 1].trim();
+                    if(cluster.equals("--NOTFOUND--")){
+                        token_to_cluster.put(token,"");
+                    }else{
+                        token_to_cluster.put(token,cluster);
+                    }
+                    
+                }
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        
+        filename = "tested/gazetteer_expert_event";
+        try(BufferedReader br = new BufferedReader(new FileReader(filename))){
+            String line;
+            while((line = br.readLine())!=null){
+                if(line.equals("")){
+                    
+                }else{
+                    gazeteer_expert_event.add(line);
+                }
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        System.out.println("gazeteer_expert_event"+gazeteer_expert_event);
     }
     
     public void doReadOldPOSTAG(){
@@ -293,6 +332,39 @@ public class MergePOSAndLabel {
         closeWriter();
     }
     
+    private String[] GetClusterPrefix(String token){
+        String[] retval = new String[4];
+        String suitable_cluster = "";
+        if(token_to_cluster.containsKey(token)){
+            suitable_cluster = token_to_cluster.get(token);
+        }
+        int leading_0 = 17 - suitable_cluster.length();
+        StringBuffer sb = new StringBuffer();
+        
+        for (int i = 0; i < leading_0; i++) {sb.append("0");}
+        sb.append(suitable_cluster);
+        
+        String final_cluster = sb.toString();
+        
+        retval[0] = final_cluster.substring(0, 4);
+        retval[1] = final_cluster.substring(0, 8);
+        retval[2] = final_cluster.substring(0, 12);
+        retval[3] = final_cluster.substring(0, 16);
+        return retval;
+    }
+    
+    private boolean isInsidetoken(String token){
+        boolean insidetoken = false;
+        for (int i = 0; i < gazeteer_expert_event.size(); i++) {
+            String get = gazeteer_expert_event.get(i);
+            if(token.toLowerCase().contains(get.toLowerCase())){
+                insidetoken = true;
+                break;
+            }
+        }
+        return insidetoken;
+    }
+    
     public void doWritingTraining() throws IOException{
         // aasumsi jml data ada 17 folds = 3 base = 5 start 1 0 end 1 5
         
@@ -324,10 +396,18 @@ public class MergePOSAndLabel {
                         StringBuffer sb = new StringBuffer();
                         // Fitur 1 : Leksikal
                         //sb.append(_token.toLowerCase().replaceAll("[AIUEOaiueo]", ""));
-                        sb.append(_token);
                         
+                        //sb.append(_token);
+                        
+                        // Fitur Clustering : ... spesial..
+                        String[] cluster_kata = GetClusterPrefix(_token);
+                        sb.append(cluster_kata[0]);
+                        sb.append(" "+cluster_kata[1]);
+                        sb.append(" "+cluster_kata[2]);
+                        sb.append(" "+cluster_kata[3]);
                         
                         // Fitur 1.1 : Leksikal sebelum 
+                        /*
                         if(j>0){
                             String _prev_token = token.get(k).get(j-1);
                             sb.append(" "+_prev_token);
@@ -361,7 +441,7 @@ public class MergePOSAndLabel {
                         /**/
                         // Fitur 2 : POS_Tag
                         sb.append(" "+_postag);
-                        /*
+                        
                         //Fitur 2.1 : POS_Tag Previous
                         if(j>0){
                             String _prev_tag = postag.get(k).get(j-1);
@@ -369,7 +449,7 @@ public class MergePOSAndLabel {
                         }else{
                             sb.append(" <STARTTAG>");
                         }
-                        
+                        /*
                         // Fitur 2.2: Post_Tag double previouse
                         if(j>1){
                             String _prev_tag = postag.get(k).get(j-2);
@@ -414,19 +494,28 @@ public class MergePOSAndLabel {
                         }
                         
                         // Fitur 5 : List Name
-                        if(gazetteer_nama.contains(_token)){
+                        if(gazetteer_nama.contains(_token) || gazeteer_expert_event.contains(_token)){
                             sb.append(" NAMA_EVENT");
                         }
                         
+                        /*
                         // Fitur 5.1 : Previous Nama Event
                         if(gazetteer_prev_nama.contains(_token)){
                             sb.append(" PREV_NAMA_EVENT");
                         }
+                        */
                         
                         if(gazetteer_loc.contains(_token)){
                             sb.append(" LOKASI_EVENT");
                         }
                         /**/
+                        
+                        // Fitur 6 : Gazetteer Event Expert
+                        if(_token.matches(Twokenize.Hashtag) || _token.matches(Twokenize.AtMention)){
+                            if(isInsidetoken(_token)){
+                                sb.append(" NAME_EVENT_CLUE");
+                            }
+                        }
                         
                         // ----------------------------------------------
                         // OLD EXPERIMENT... 
@@ -536,6 +625,15 @@ public class MergePOSAndLabel {
                         //sb.append(_token.toLowerCase().replaceAll("[AIUEOaiueo]", ""));
                         sb.append(_token);
                         
+                        
+                        // Fitur Clustering : ... spesial..
+                        String[] cluster_kata = GetClusterPrefix(_token);
+                        sb.append(cluster_kata[0]);
+                        sb.append(" "+cluster_kata[1]);
+                        sb.append(" "+cluster_kata[2]);
+                        sb.append(" "+cluster_kata[3]);
+                        
+                        /*
                         // Fitur 1.2 : Leksikal sebelum 
                         if(j>0){
                             String _prev_token = token.get(k).get(j-1);
@@ -568,19 +666,20 @@ public class MergePOSAndLabel {
                         }else{
                             sb.append(" <ENDTAG2>");
                         }
+                        /**/
                         
                         
                         // Fitur 2 : POS_Tag
                         sb.append(" "+_postag);
                         //Fitur 2.1 : POS_Tag Previous
-                        /*
+                        
                         if(j>0){
                             String _prev_tag = postag.get(k).get(j-1);
                             sb.append(" Prev"+_prev_tag);
                         }else{
                             sb.append(" <STARTTAG>");
                         }
-                        
+                        /*
                         // Fitur 2.2: Post_Tag double previouse
                         if(j>1){
                             String _prev_tag = postag.get(k).get(j-2);
@@ -628,17 +727,24 @@ public class MergePOSAndLabel {
                         if(gazetteer_nama.contains(_token)){
                             sb.append(" NAMA_EVENT");
                         }
-                        
+                        /*
                         // Fitur 5.1 : Previous Nama Event
                         if(gazetteer_prev_nama.contains(_token)){
                             sb.append(" PREV_NAMA_EVENT");
                         }
+                        */
                         
                         if(gazetteer_loc.contains(_token)){
                             sb.append(" LOKASI_EVENT");
                         }
                         /**/
                         
+                        // Fitur 6 : Gazetteer Event Expert
+                        if(_token.matches(Twokenize.Hashtag) || _token.matches(Twokenize.AtMention)){
+                            if(isInsidetoken(_token)){
+                                sb.append(" NAME_EVENT_CLUE");
+                            }
+                        }
                         
                         // -----------------
                         // OLD EXPERIMENT

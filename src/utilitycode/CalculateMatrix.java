@@ -24,11 +24,11 @@ public class CalculateMatrix {
     ArrayList<Pair> original_pair = new ArrayList<>();
     ArrayList<String> original_sentence = new ArrayList<>();
     ArrayList<String> original_token = new ArrayList<>();
-    public String foldername = "experiment_18";
+    public String foldername = "experiment_23";
     //public int sub_iteration = 2; // 0 1 2 saja .
     //public int current_urutan = 3;
     // public String foldername = "incrimental_learning_1/";
-    public int total_folds = 1;
+    public int total_folds = 4;
     
     public CalculateMatrix(){
         label_standard = new ArrayList<>();
@@ -91,7 +91,7 @@ public class CalculateMatrix {
     // Untuk bikin pair.. sekaligus original wordnya sih.. token apa gitu..
     public void doReadFile_original(int urutan){
         System.out.println("Reading Tagged Original file");
-        String filename = foldername+"/testing_merged_"+urutan+".untagged";
+        String filename = "tested/testing_token_list_"+urutan+".untagged";
         //String filename = foldername+"incrimental_iteration_"+urutan+"/testing_merged_sub_iteration_"+sub_iteration+".untagged";
         Pair p = new Pair();
         p.start_index = 0;
@@ -330,7 +330,7 @@ public class CalculateMatrix {
                     String Supposed_lbel = label_standard.get(j);
                     String System_lbel = label_standard.get(k);
                     ArrayList<Integer> cases = FindCase(Supposed_lbel, System_lbel);
-                    writer2.write("Supposed(Tagged As) : "+Supposed_lbel+"("+System_lbel+")\n\n");
+                    writer2.write("Supposed "+Supposed_lbel+" But Tagged as : "+System_lbel+" Counter : "+cases.size()+"\n\n");
                     
                     writeDataFailedToRekap(writer2, cases);
                     /*
