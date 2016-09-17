@@ -1,0 +1,139 @@
+
+
+
+ -------- Confusion matrix for fold : 0 --------
+			B-Name	I-Name	B-Time	I-Time	B-Location	I-Location	O	<-- Tagged As ..
+B-Name		125		45		6		4		1			4			112		297
+I-Name		17		445		17		22		1			12			295		809
+B-Time		0		11		256		19		0			0			34		320
+I-Time		0		12		79		312		2			2			113		520
+B-Location	3		5		2		1		126			27			51		215
+I-Location	4		33		9		11		4			211			141		413
+O			29		188		33		46		17			24			3160		3497
+			178		739	402		415		151	280	3906		
+   ^
+   |
+standard
+
+				Recall		Precission	F-Measure(F-1)
+B-Name			0.42087543	0.7022472	0.5263158
+I-Name			0.5500618	0.6021651	0.57493544
+B-Time			0.8	0.6368159	0.70914125
+I-Time			0.6	0.7518072	0.6673797
+B-Location		0.5860465	0.8344371	0.6885246
+I-Location		0.5108959	0.75357145	0.6089466
+O				0.9036317	0.80901176	0.85370797
+
+
+Accuracy Averaged : 0.6245016285351345
+Precission Averaged : 0.7271508148738316
+FMeasure Averaged : 0.6612787672451564
+
+
+
+ -------- Confusion matrix for fold : 1 --------
+			B-Name	I-Name	B-Time	I-Time	B-Location	I-Location	O	<-- Tagged As ..
+B-Name		142		31		4		6		2			1			127		313
+I-Name		16		454		14		23		1			11			351		870
+B-Time		0		10		258		25		0			0			26		319
+I-Time		0		13		68		322		0			0			88		491
+B-Location	3		5		0		1		141			15			69		234
+I-Location	0		45		6		8		7			243			201		510
+O			20		152		26		20		5			13			2983		3219
+			181		710	376		405		156	283	3845		
+   ^
+   |
+standard
+
+				Recall		Precission	F-Measure(F-1)
+B-Name			0.4536741	0.7845304	0.5748988
+I-Name			0.5218391	0.6394366	0.57468355
+B-Time			0.80877745	0.6861702	0.74244606
+I-Time			0.65580446	0.7950617	0.7187499
+B-Location		0.6025641	0.90384614	0.7230769
+I-Location		0.4764706	0.85865724	0.6128625
+O				0.92668533	0.77581275	0.844564
+
+
+Accuracy Averaged : 0.635116445166724
+Precission Averaged : 0.7776450089045933
+FMeasure Averaged : 0.6844688143048968
+
+
+
+ -------- Confusion matrix for fold : 2 --------
+			B-Name	I-Name	B-Time	I-Time	B-Location	I-Location	O	<-- Tagged As ..
+B-Name		127		36		3		2		4			1			136		309
+I-Name		19		480		19		15		2			27			341		903
+B-Time		1		9		258		23		0			0			39		330
+I-Time		0		12		62		301		0			0			116		491
+B-Location	2		5		0		1		143			13			57		221
+I-Location	2		37		7		9		14			225			210		504
+O			24		193		29		24		14			22			3026		3332
+			175		772	378		375		177	288	3925		
+   ^
+   |
+standard
+
+				Recall		Precission	F-Measure(F-1)
+B-Name			0.41100323	0.72571427	0.5247933
+I-Name			0.53156143	0.6217617	0.5731343
+B-Time			0.7818182	0.6825397	0.7288136
+I-Time			0.6130346	0.80266666	0.69515014
+B-Location		0.64705884	0.8079096	0.71859294
+I-Location		0.44642857	0.78125	0.5681818
+O				0.90816325	0.77095544	0.8339535
+
+
+Accuracy Averaged : 0.6198668777942657
+Precission Averaged : 0.7418281946863446
+FMeasure Averaged : 0.663231372833252
+
+
+
+ -------- Confusion matrix for fold : 3 --------
+			B-Name	I-Name	B-Time	I-Time	B-Location	I-Location	O	<-- Tagged As ..
+B-Name		129		48		3		4		0			2			126		312
+I-Name		31		522		11		24		2			16			320		926
+B-Time		0		3		254		20		0			0			49		326
+I-Time		1		11		51		300		0			0			112		475
+B-Location	2		3		1		1		150			14			41		212
+I-Location	0		16		0		7		3			234			165		425
+O			36		198		23		33		12			30			3144		3476
+			199		801	343		389		167	296	3957		
+   ^
+   |
+standard
+
+				Recall		Precission	F-Measure(F-1)
+B-Name			0.41346154	0.6482412	0.50489235
+I-Name			0.5637149	0.6516854	0.6045165
+B-Time			0.7791411	0.74052477	0.7593423
+I-Time			0.6315789	0.7712082	0.6944444
+B-Location		0.7075472	0.8982036	0.7915567
+I-Location		0.55058825	0.7905405	0.64909846
+O				0.9044879	0.7945413	0.8459572
+
+
+Accuracy Averaged : 0.6500742648329053
+Precission Averaged : 0.7564207230295453
+FMeasure Averaged : 0.6928297110966274
+
+
+
+ ====================================
+ ==== Overall System Performance ====
+ ====================================
+				Recall		Precission	F-Measure(F-1)
+B-Name			0.42475358	0.71518326	0.532971
+I-Name			0.5417943	0.6287622	0.5820475
+B-Time			0.7924342	0.68651265	0.7356804
+I-Time			0.62510455	0.78018594	0.6940882
+B-Location		0.6358042	0.86109906	0.73149735
+I-Location		0.49609584	0.7960048	0.61124444
+O				0.91074204	0.7875804	0.8446954
+
+
+Accuracy Averaged : 0.6323898136615753
+Precission Averaged : 0.7507611768586295
+FMeasure Averaged : 0.6760320493153164
